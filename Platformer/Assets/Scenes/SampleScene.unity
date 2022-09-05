@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.18362653, g: 0.22787318, b: 0.2980329, a: 1}
+  m_IndirectSpecularColor: {r: 0.1836268, g: 0.22787356, b: 0.29803303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -493,7 +493,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.12062983, y: -8.816926e-16, z: 1.07140814e-16, w: 0.9926976}
+  m_LocalRotation: {x: 0.12062984, y: 0.0000000073961735, z: -8.9876234e-10, w: 0.9926976}
   m_LocalPosition: {x: -11.67, y: 4.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1358,7 +1358,7 @@ GameObject:
   - component: {fileID: 931492927}
   - component: {fileID: 931492926}
   m_Layer: 6
-  m_Name: ground2 (1)
+  m_Name: ground3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1552,7 +1552,7 @@ GameObject:
   - component: {fileID: 1002604351}
   - component: {fileID: 1002604350}
   m_Layer: 6
-  m_Name: ground2 (3)
+  m_Name: ground4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1993,7 +1993,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.164251, y: 1}
+    m_SensorSize: {x: 1.7809523, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2009,7 +2009,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449607497}
-  m_LocalRotation: {x: 0.12062983, y: -8.816926e-16, z: 1.07140814e-16, w: 0.9926976}
+  m_LocalRotation: {x: 0.12062984, y: 0.0000000073961735, z: -8.9876234e-10, w: 0.9926976}
   m_LocalPosition: {x: -11.67, y: 4.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2128,7 +2128,7 @@ GameObject:
   - component: {fileID: 1582114956}
   - component: {fileID: 1582114955}
   m_Layer: 6
-  m_Name: ground4
+  m_Name: ground6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2527,7 +2527,7 @@ GameObject:
   - component: {fileID: 2003680212}
   - component: {fileID: 2003680211}
   m_Layer: 6
-  m_Name: ground2 (2)
+  m_Name: ground5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
