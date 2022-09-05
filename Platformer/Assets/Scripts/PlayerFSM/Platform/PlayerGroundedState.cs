@@ -14,12 +14,13 @@ public class PlayerGroundedState : PlayerBaseState
     {
         
         InitializeSubState();
+        
         Ctx.CurrentMovementZ = 0;
         Ctx.CurrentMovementY = Ctx.GroundedGravity;
     }
     public override void UpdateState() 
     {
-        //Debug.Log("in the grounded update");
+        
         CheckSwitchState();
     }
     public override void ExitState()
@@ -28,13 +29,13 @@ public class PlayerGroundedState : PlayerBaseState
     }
     public override void CheckSwitchState() 
     {
-        if (Ctx.isJumpPressed && Ctx.CharacterController.isGrounded)
+        if (Ctx.isJumpPressed && Ctx.CheckIfGrounded())
         {
             
             SwitchState(Factory.platformJump());
 
         }
-        if(!Ctx.CharacterController.isGrounded&& !Ctx.isJumpPressed)
+        if(!Ctx.CheckIfGrounded()&& !Ctx.isJumpPressed)
         {
             
             SwitchState(Factory.platformFalling());
@@ -47,7 +48,7 @@ public class PlayerGroundedState : PlayerBaseState
     {
         if(!Ctx.IsMovePressed && !Ctx.isJumpPressed)
         {
-            //Debug.Log("idle is beign set"); 
+            
             SetSubState(Factory.platformIdle());
         }else if(Ctx.IsMovePressed && !Ctx.isJumpPressed)
         {

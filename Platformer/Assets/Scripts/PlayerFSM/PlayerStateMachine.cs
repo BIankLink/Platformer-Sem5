@@ -23,18 +23,23 @@ public class PlayerStateMachine : LivingEntity
     [SerializeField] GameObject orientation;
     public PlayerStates _current;
     [SerializeField]float dashVelocity=3f;
+    [SerializeField] float distToWallGround;
     [SerializeField] float distToGround;
     public float gravity = -9.8f;
+    public float Wallgravity = 9.8f;
     float groundedGravity = -.05f;
-
+    [SerializeField] float distanceToWall;
     float initialJumpVelocity;
+    float initialWallJumpVelocity;
     [SerializeField] float maxJumpHeight = 0.85f;
     [SerializeField] float maxJumpTime = 0.85f;
+    [SerializeField] float maxWallJumpHeight = 0.85f;
+    [SerializeField] float maxWallJumpTime = 0.85f;
     bool isJumping = false;
     [SerializeField] float damage=1f;
     bool jumpCancel;
     [SerializeField] LayerMask wall;
-
+    [SerializeField]Transform rayOrigin;
     //State Variable
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
@@ -48,11 +53,13 @@ public class PlayerStateMachine : LivingEntity
     public float MaxJumpTime { get { return maxJumpTime; }}
     public float CurrentMovementY { get { return currentMovement.y; } set { currentMovement.y = value; }}
     public float InitialJumpVelocity { get { return initialJumpVelocity; }}
+    public float InitialWallJumpVelocity { get { return initialWallJumpVelocity; }}
 
     public CharacterController CharacterController { get { return characterController; } }
 
     public float GroundedGravity { get { return groundedGravity; }}
     public float Gravity { get { return gravity; }}
+    public float WallGravity { get { return Wallgravity; }}
 
     public bool IsMovePressed { get { return isMovePressed; }set { isMovePressed = value; } }
 
@@ -92,13 +99,16 @@ public class PlayerStateMachine : LivingEntity
         
         
         SetUpJumpVariables();
+        SetUpWallJumpVariables();
     }
    
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(orientation.transform.position, Vector3.forward, Color.red, distToGround);
+        //Debug.DrawRay(orientation.transform.position, Vector3.forward, Color.red, distToWallGround); 
+        //Debug.DrawRay(orientation.transform.position, Vector3.down, Color.red, distToGround);
         //Debug.Log(CheckIfWallGrounded());
+        //Debug.Log(CheckIfGrounded());
         HandleInput();
         handleRotation();
         _currentState.UpdateStates();
@@ -174,6 +184,12 @@ public class PlayerStateMachine : LivingEntity
         gravity = (-2 * maxJumpHeight) / Mathf.Pow(timeToApex, 2);
         initialJumpVelocity = (2 * maxJumpHeight) / timeToApex;
     }
+    void SetUpWallJumpVariables()
+    {
+        float timeToApex = maxWallJumpTime / 2;
+        Wallgravity = (-2 * maxWallJumpHeight) / Mathf.Pow(timeToApex, 2);
+        initialWallJumpVelocity = (2 * maxWallJumpHeight) / timeToApex;
+    }
 
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -200,9 +216,22 @@ public class PlayerStateMachine : LivingEntity
 
     public bool CheckIfWallGrounded()
     {
-        return Physics.Raycast(orientation.transform.position, Vector3.forward, distToGround + 0.1f,wall);
+        return Physics.Raycast(orientation.transform.position, Vector3.forward, distToWallGround + 0.1f,wall);
+        
+    } 
+    public bool CheckIfWallJumpGrounded()
+    {
+        return Physics.Raycast(orientation.transform.position, Vector3.forward, distanceToWall,wall);
         
     }
-    
+    public bool CheckIfGrounded()
+    {
+      return  Physics.CheckSphere(rayOrigin.position, distToGround ,wall);
+        
+    }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(rayOrigin.position, distToGround);
+    }
 }

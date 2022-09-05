@@ -13,18 +13,31 @@ public class PlayerDashJumpState : PlayerBaseState
         InitializeSubState();
         HandleJump();
     }
-    public override void UpdateState() { }
+    public override void UpdateState() 
+    {
+        
+        CheckSwitchState();
+    }
     public override void ExitState() 
     { 
         //exit Animation
     }
     public override void CheckSwitchState()
     {
+        if(Ctx.CheckIfWallJumpGrounded() && !Ctx.IsAttacking)
+        {
+            SwitchState(Factory.wallJumpFalling());
+        }
+        if (Ctx.CheckIfWallGrounded() && !Ctx.IsAttacking)
+        {
+            SwitchState(Factory.wallGrounded());
+
+        }
         if (!Ctx.CheckIfWallGrounded() && !Ctx.IsAttacking)
         {
             SwitchState(Factory.wallFalling());
 
-        }
+        } 
     }
     public override void InitializeSuperState() { }
     public override void InitializeSubState()
@@ -37,8 +50,9 @@ public class PlayerDashJumpState : PlayerBaseState
     }
     void HandleJump()
     {
-        //Ctx.Animator.SetBool("Jump", true);
-        //Ctx.IsJumping = true;
-        //Ctx.CurrentMovementY = Ctx.InitialJumpVelocity * 0.5f;
+        Ctx.Animator.SetBool("Jump", true);
+        Ctx.IsJumping = true;
+        Ctx.CurrentMovementZ = /*-(Ctx.InitialWallJumpVelocity * 0.5f)*/-2f;
     }
+   
 }

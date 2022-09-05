@@ -26,7 +26,7 @@ public class PlayerJumpCancelState : PlayerBaseState
     }
     public override void CheckSwitchState()
     {
-        if (!Ctx.IsMovePressed && Ctx.CharacterController.isGrounded)
+        if (!Ctx.IsMovePressed && Ctx.CheckIfGrounded())
         {
             
             SwitchState(Factory.platformIdle());

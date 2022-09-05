@@ -37,7 +37,7 @@ public class PlayerIdleState : PlayerBaseState
             SwitchState(Factory.platformAttack());
             
         }
-        if (Ctx.JumpCancel && !Ctx.CharacterController.isGrounded)
+        if (Ctx.JumpCancel && !Ctx.CheckIfGrounded())
         {
             
             SwitchState(Factory.platformJumpCancel());

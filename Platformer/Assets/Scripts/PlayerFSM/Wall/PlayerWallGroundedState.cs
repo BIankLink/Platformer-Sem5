@@ -12,10 +12,14 @@ public class PlayerWallGroundedState : PlayerBaseState
     public override void EnterState() 
     { 
         InitializeSubState();
+        Ctx.Animator.SetTrigger("Land");
         Ctx.CurrentMovementY = 0;
         Ctx.CurrentMovementZ = -Ctx.GroundedGravity;
     }
-    public override void UpdateState() { }
+    public override void UpdateState() 
+    { 
+        CheckSwitchState();
+    }
     public override void ExitState() { }
     public override void CheckSwitchState()
     {

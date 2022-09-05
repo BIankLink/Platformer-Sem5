@@ -39,17 +39,17 @@ public class PlayerPlatformState : PlayerBaseState
     }
     public override void InitializeSuperState() 
     {
-        if (Ctx.CharacterController.isGrounded)
+        if (Ctx.CheckIfGrounded())
         {
             //Debug.Log("Grounded");
             SetSuperState(Factory.platformGrounded());
         }
-        else if (!Ctx.characterController.isGrounded && Ctx.isJumpPressed)
+        else if (!Ctx.CheckIfGrounded() && Ctx.isJumpPressed)
         {
             //Debug.Log("jumping");
             SetSuperState(Factory.platformJump());
         }
-        else if(!Ctx.isJumpPressed && !Ctx.characterController.isGrounded)
+        else if(!Ctx.isJumpPressed && !Ctx.CheckIfGrounded())
         {
             
             

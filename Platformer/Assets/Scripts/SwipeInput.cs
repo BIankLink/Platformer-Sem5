@@ -36,11 +36,11 @@ public class SwipeInput : MonoBehaviour
     } 
     IEnumerator leftOnce()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         left = false;
     }IEnumerator rightOnce()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         right = false;
     }IEnumerator Attacking()
     {

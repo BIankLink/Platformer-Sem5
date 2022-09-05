@@ -29,7 +29,7 @@ public class PlayerJumpState : PlayerBaseState
     }
     public override void CheckSwitchState() 
     {
-        if(!Ctx.CharacterController.isGrounded &&!Ctx.isJumpPressed)
+        if(!Ctx.CheckIfGrounded() &&!Ctx.isJumpPressed)
         {
             SwitchState(Factory.platformFalling());
             

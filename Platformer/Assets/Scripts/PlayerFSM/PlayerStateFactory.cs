@@ -29,7 +29,8 @@ public class PlayerStateFactory
         _states[PlayerStates.WallDashJump]=new PlayerDashJumpState(_context, this);
         _states[PlayerStates.WallGrounded]=new PlayerWallGroundedState(_context, this);
         _states[PlayerStates.WallFalling]=new PlayerWallFallingState(_context, this);
-        _states[PlayerStates.WallUpAttack]= new PlayerUpAttackState(_context, this);
+        _states[PlayerStates.WallUpAttack] = new PlayerUpAttackState(_context, this);
+        _states[PlayerStates.wallJumpFalling]= new PlayerWallJumpFalling(_context, this);
     }
 
     #region Platform
@@ -104,6 +105,12 @@ public class PlayerStateFactory
     {
         return _states[PlayerStates.WallIdle];
     }
+
+    public PlayerBaseState wallJumpFalling()
+    {
+        return _states[PlayerStates.wallJumpFalling];
+    }
+
     #endregion
 
 

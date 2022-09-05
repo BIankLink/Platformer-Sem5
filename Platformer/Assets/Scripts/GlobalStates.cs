@@ -22,5 +22,6 @@ namespace GlobalStates
         WallUpAttack,
         WallGrounded,
         WallFalling,
+        wallJumpFalling,
     };
 }

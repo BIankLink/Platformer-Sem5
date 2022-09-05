@@ -29,7 +29,7 @@ public class PlayerFallingState : PlayerBaseState
     }
     public override void CheckSwitchState()
     {
-        if (Ctx.CharacterController.isGrounded)
+        if (Ctx.CheckIfGrounded())
         {
             
             SwitchState(Factory.platformGrounded());
@@ -53,7 +53,7 @@ public class PlayerFallingState : PlayerBaseState
         }
         if (!Ctx.IsMovePressed && !Ctx.IsAttacking)
         {
-            Debug.Log("Switch attack");
+           
             SetSubState(Factory.platformIdle());
         }
         if (Ctx.JumpCancel)
