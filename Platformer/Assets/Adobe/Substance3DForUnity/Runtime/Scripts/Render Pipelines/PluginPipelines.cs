@@ -60,6 +60,11 @@ namespace Adobe.Substance
             return (current == Pipeline.URP);
         }
 
+        public static bool SupportPhysicalSize()
+        {
+            return false;
+        }
+
         public static void GetCurrentPipelineInUse()
         {
             if (IsUNKNOWN())

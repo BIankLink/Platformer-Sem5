@@ -128,6 +128,9 @@ namespace Adobe.Substance
             string shaderName = graph.OutputMaterial.shader.name;
             var channelName = outputTexture.Description.Channel;
 
+            if (string.IsNullOrEmpty(channelName))
+                return "UnknownMap";
+
             if (outputTexture.IsBaseColor() || outputTexture.IsDiffuse())
             {
                 string mainTexture = "invalid";
@@ -354,7 +357,7 @@ namespace Adobe.Substance
                 return false;
             }
 
-            if(Application.platform == RuntimePlatform.OSXEditor
+            if (Application.platform == RuntimePlatform.OSXEditor
                     || Application.platform == RuntimePlatform.OSXPlayer)
             {
                 return false;
@@ -375,6 +378,12 @@ namespace Adobe.Substance
 
         private static bool CheckIfURPStandardOutput(SubstanceOutputDescription description)
         {
+            if (description == null)
+                return false;
+
+            if (string.IsNullOrEmpty(description.Channel))
+                return false;
+
             if (string.Equals(description.Channel, "baseColor", StringComparison.OrdinalIgnoreCase)
                 || string.Equals(description.Channel, "diffuse", StringComparison.OrdinalIgnoreCase))
             {
@@ -390,6 +399,12 @@ namespace Adobe.Substance
 
         private static bool CheckIfHRPStandardOutput(SubstanceOutputDescription description)
         {
+            if (description == null)
+                return false;
+
+            if (string.IsNullOrEmpty(description.Channel))
+                return false;
+
             switch (description.Channel)
             {
                 case "baseColor":
@@ -414,6 +429,12 @@ namespace Adobe.Substance
 
         private static bool CheckIfStandardPipelineOutput(SubstanceOutputDescription description)
         {
+            if (description == null)
+                return false;
+
+            if (string.IsNullOrEmpty(description.Channel))
+                return false;
+
             var channel = description.Channel.ToLower();
 
             if ("basecolor" == channel)
@@ -434,6 +455,34 @@ namespace Adobe.Substance
                 return Shader.Find(URPShaderName);
 
             return Shader.Find(StandardShaderName);
+        }
+
+        public static void ApplyPhysicalSize(Material material, Vector3 physicalSize, bool enablePhysicalSize)
+        {
+            if (PluginPipelines.IsHDRP())
+                ApplyPhysicalSizeHDRP(material, physicalSize, enablePhysicalSize);
+        }
+
+        private static void ApplyPhysicalSizeHDRP(Material material, Vector3 physicalSize, bool enablePhysicalSize)
+        {
+            if (enablePhysicalSize)
+            {
+                material.SetFloat("_UVBase", 5);
+                material.SetFloat("_UVEmissive", 5);
+                material.SetFloat("_TexWorldScale", 100);
+                material.EnableKeyword("_MAPPING_PLANAR");
+                material.EnableKeyword("_EMISSIVE_MAPPING_TRIPLANAR");
+                material.mainTextureScale = new Vector2(1f / physicalSize.x, 1f / physicalSize.y);
+            }
+            else
+            {
+                material.SetFloat("_UVBase", 0);
+                material.SetFloat("_UVEmissive", 0);
+                material.SetFloat("_TexWorldScale", 1);
+                material.DisableKeyword("_MAPPING_PLANAR");
+                material.DisableKeyword("_EMISSIVE_MAPPING_TRIPLANAR");
+                material.mainTextureScale = new Vector2(1, 1);
+            }
         }
     }
 }

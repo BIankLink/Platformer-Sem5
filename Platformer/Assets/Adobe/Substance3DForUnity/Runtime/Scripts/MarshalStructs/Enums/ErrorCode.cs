@@ -1,9 +1,3 @@
-//! @file result.cs
-//! @brief Sbsario error code enum type mapping
-//! @author Galen Helfter - Adobe
-//! @date 20210608
-//! @copyright Adobe. All rights reserved.
-
 namespace Adobe.Substance
 {
     //! @brief Enum type mapping from sbsario to C#

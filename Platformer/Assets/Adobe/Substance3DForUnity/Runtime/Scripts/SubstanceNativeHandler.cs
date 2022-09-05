@@ -104,6 +104,16 @@ namespace Adobe.Substance
             return thumbnailData;
         }
 
+        public Vector3 GetPhysicalSize(int graphID)
+        {
+            ErrorCode result = (ErrorCode)NativeMethods.sbsario_sbsar_get_physical_size(_handler, (IntPtr)graphID, out NativePhysicalSize nativePhysicalSize);
+
+            if (result != ErrorCode.SBSARIO_ERROR_OK)
+                throw new SubstanceException(result);
+
+            return new Vector3(nativePhysicalSize.X, nativePhysicalSize.Y, nativePhysicalSize.Z);
+        }
+
         #region Presets
 
         public string CreatePresetFromCurrentState(int graphID)
@@ -175,6 +185,24 @@ namespace Adobe.Substance
             var label = Marshal.PtrToStringAnsi(inputDesc.mIdentifier);
             var channel = Marshal.PtrToStringAnsi(inputDesc.mChannelUsage);
 
+            if (string.IsNullOrEmpty(channel))
+            {
+                Debug.LogWarning($"Output {outputID} does not have a channel type. This output will not be rendered. ");
+                channel = "unkown";
+            }
+
+            if (string.IsNullOrEmpty(identifier))
+            {
+                Debug.LogWarning($"Output {outputID} does not have a identifier.");
+                identifier = "unkown";
+            }
+
+            if (string.IsNullOrEmpty(label))
+            {
+                Debug.LogWarning($"Output {outputID} does not have a label.");
+                label = "unkown";
+            }
+
             return new SubstanceOutputDescription()
             {
                 Identifier = identifier,
@@ -209,25 +237,14 @@ namespace Adobe.Substance
             };
         }
 
-        public SubstanceOutputDescription CreateOutputCopy(int graphID, int outputID)
+        public int CreateOutputCopy(int graphID, int outputID)
         {
             ErrorCode result = (ErrorCode)NativeMethods.sbsario_sbsar_create_output_copy(_handler, (IntPtr)graphID, (IntPtr)outputID, out NativeOutputDesc inputDesc);
 
             if (result != ErrorCode.SBSARIO_ERROR_OK)
                 throw new SubstanceException(result);
 
-            var identifier = Marshal.PtrToStringAnsi(inputDesc.mIdentifier);
-            var label = Marshal.PtrToStringAnsi(inputDesc.mIdentifier);
-            var channel = Marshal.PtrToStringAnsi(inputDesc.mChannelUsage);
-
-            return new SubstanceOutputDescription()
-            {
-                Identifier = identifier,
-                Label = label,
-                Index = (int)inputDesc.mIndex,
-                Type = inputDesc.mValueType.ToUnity(),
-                Channel = channel
-            };
+            return (int)inputDesc.mIndex;
         }
 
         public uint GetOutputUID(int graphID, int outputIndex)

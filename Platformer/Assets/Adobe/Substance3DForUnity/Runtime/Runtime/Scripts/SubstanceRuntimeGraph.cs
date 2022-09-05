@@ -119,9 +119,9 @@ namespace Adobe.Substance.Runtime
         }
 
         /// <summary>
-        /// Replaces the render target material.
+        /// Attaches a new graph object to this runtime handler.
         /// </summary>
-        /// <param name="material">Attaches a new Substance Material to be managed by this object.</param>
+        /// <param name="graph">Target substance graph.</param>
         public void AttachGraph(SubstanceGraphSO graph)
         {
             GraphSO = graph;

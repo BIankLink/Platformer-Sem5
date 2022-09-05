@@ -1,9 +1,3 @@
-//! @file nativeinputdesc.cs
-//! @brief Sbsario input descriptor type mapped to C#
-//! @author Galen Helfter - Adobe
-//! @date 20210608
-//! @copyright Adobe. All rights reserved.
-
 using System;
 using System.Runtime.InteropServices;
 

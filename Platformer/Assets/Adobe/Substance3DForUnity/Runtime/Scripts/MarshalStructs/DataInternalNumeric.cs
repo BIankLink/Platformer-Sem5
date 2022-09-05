@@ -1,9 +1,3 @@
-//! @file result.cs
-//! @brief Sbsario render result and data type mapping to C#
-//! @author Galen Helfter - Adobe
-//! @date 20210608
-//! @copyright Adobe. All rights reserved.
-
 using System;
 using System.Runtime.InteropServices;
 

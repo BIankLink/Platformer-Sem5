@@ -149,6 +149,14 @@ namespace Adobe.Substance
             }
         }
 
+        internal static uint sbsario_sbsar_get_physical_size(IntPtr sbsar_handle, IntPtr graph, out NativePhysicalSize physicalSize)
+        {
+            lock (_locker)
+            {
+                return NativeMethodsImpl.sbsario_sbsar_get_physical_size(sbsar_handle, graph, out physicalSize);
+            }
+        }
+
         internal static IntPtr sbsario_sbsar_get_input_count(IntPtr sbsar_handle, IntPtr graph)
         {
             lock (_locker)
@@ -997,6 +1005,29 @@ namespace Adobe.Substance
 
             [DllImport(NativeAssembly)]
             internal static extern uint sbsario_sbsar_get_graph_thumbnail(IntPtr sbsar_handle, IntPtr graph, out NativeThumbnail thumbnail);
+
+#endif
+
+
+#if ALG_SBSARIO_DYNAMIC_LOAD
+
+            private delegate uint sbsario_sbsar_get_physical_size_delegate(IntPtr sbsar_handle, IntPtr graph, out NativePhysicalSize physicaSize);
+
+            public static uint sbsario_sbsar_get_physical_size(IntPtr sbsar_handle, IntPtr graph, out NativePhysicalSize physicaSize)
+            {
+                string myName = System.Reflection.MethodBase.GetCurrentMethod().Name;
+
+                if (DLLHelpers.DllHandle == IntPtr.Zero)
+                    throw new SubstanceEngineNotFoundException(substancePath);
+
+                var function = DLLHelpers.GetFunction(myName, typeof(sbsario_sbsar_get_physical_size_delegate)) as sbsario_sbsar_get_physical_size_delegate;
+                return function.Invoke(sbsar_handle, graph, out physicaSize);
+            }
+
+#else
+
+            [DllImport(NativeAssembly)]
+            internal static extern uint sbsario_sbsar_get_physical_size(IntPtr sbsar_handle, IntPtr graph, out NativePhysicalSize physicaSize);
 
 #endif
 

@@ -1,9 +1,3 @@
-//! @file imageformat.cs
-//! @brief Define sbsario image format type enums
-//! @author Galen Helfter - Adobe
-//! @date 20210608
-//! @copyright Adobe. All rights reserved.
-
 namespace Adobe.Substance
 {
     //! @brief Image format

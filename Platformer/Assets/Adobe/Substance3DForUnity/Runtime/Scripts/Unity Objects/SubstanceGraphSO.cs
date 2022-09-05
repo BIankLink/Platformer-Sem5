@@ -81,6 +81,24 @@ namespace Adobe.Substance
         public List<SubstanceOutputTexture> Output = default;
 
         /// <summary>
+        /// True if this graph has physical size.
+        /// </summary>
+        [SerializeField]
+        public bool HasPhysicalSize;
+
+        /// <summary>
+        /// Graph physical size. If HasPhysicalSize is false this will be Vector3.zero.
+        /// </summary>
+        [SerializeField]
+        public Vector3 PhysicalSize;
+
+        /// <summary>
+        /// If se to true physical size will be applyed to the material.
+        /// </summary>
+        [SerializeField]
+        public bool EnablePhysicalSize;
+
+        /// <summary>
         /// Sbsar file thumbnail data.
         /// </summary>
         [SerializeField]

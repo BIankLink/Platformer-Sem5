@@ -142,8 +142,8 @@ namespace Adobe.Substance
                     continue;
 
                 var outputIndex = output.Index;
-                var desc = fileHandler.CreateOutputCopy(graphIndex, outputIndex);
-                output.VirtualOutputIndex = desc.Index;
+                var newIndex = fileHandler.CreateOutputCopy(graphIndex, outputIndex);
+                output.VirtualOutputIndex = newIndex;
             }
         }
 

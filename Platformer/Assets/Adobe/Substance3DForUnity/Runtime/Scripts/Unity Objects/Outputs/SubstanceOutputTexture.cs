@@ -47,7 +47,12 @@ namespace Adobe.Substance
             GraphIndex = graphIndex;
             Description = description;
             IsStandardOutput = isStandard;
-            IsAlphaAssignable = !string.Equals(description.Channel, "normal", System.StringComparison.OrdinalIgnoreCase);
+
+            if (!string.IsNullOrEmpty(description.Channel))
+                IsAlphaAssignable = !string.Equals(description.Channel, "normal", System.StringComparison.OrdinalIgnoreCase);
+            else
+                IsAlphaAssignable = false;
+
             IsVirtual = false;
             sRGB = false;
             OutputTexture = null;

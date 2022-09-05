@@ -1,9 +1,3 @@
-//! @file nativevaluetype.cs
-//! @brief Value type enumerations
-//! @author Galen Helfter - Adobe
-//! @date 20210608
-//! @copyright Adobe. All rights reserved.
-
 namespace Adobe.Substance
 {
     //! @brief Enum describing whether the data is an input or output

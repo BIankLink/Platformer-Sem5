@@ -21,6 +21,8 @@ namespace Adobe.SubstanceEditor
 
         private bool _showExportPresentationHandler = false;
 
+        private bool _showPhysicalSize = false;
+
         private SubstanceGraphSO _target = null;
 
         private SubstanceNativeHandler _handler = null;
@@ -40,6 +42,9 @@ namespace Adobe.SubstanceEditor
         private SerializedProperty _outputRemapedProperty;
         private SerializedProperty _graphOutputs;
         private SerializedProperty _presetProperty;
+        private SerializedProperty _physicalSizelProperty;
+        private SerializedProperty _hasPhysicalSizeProperty;
+        private SerializedProperty _enablePhysicalSizeProperty;
 
         public void OnEnable()
         {
@@ -68,8 +73,20 @@ namespace Adobe.SubstanceEditor
             _outputRemapedProperty = serializedObject.FindProperty("OutputRemaped");
             _graphOutputs = serializedObject.FindProperty("Output");
             _presetProperty = serializedObject.FindProperty("CurrentStatePreset");
+            _physicalSizelProperty = serializedObject.FindProperty("PhysicalSize");
+            _hasPhysicalSizeProperty = serializedObject.FindProperty("HasPhysicalSize");
+            _enablePhysicalSizeProperty = serializedObject.FindProperty("EnablePhysicalSize");
 
-            SubstanceEditorEngine.instance.TryGetHandlerFromInstance(_target, out _handler);
+            if (!SubstanceEditorEngine.instance.TryGetHandlerFromInstance(_target, out _handler))
+            {
+                if (!SubstanceEditorEngine.instance.IsInitialized)
+                    return;
+
+                SubstanceEditorEngine.instance.InitializeInstance(_target, null);
+
+                if (SubstanceEditorEngine.instance.TryGetHandlerFromInstance(_target, out _handler))
+                    _target.RuntimeInitialize(_handler, _target.IsRuntimeOnly);
+            }
         }
 
         public void OnDisable()
@@ -98,8 +115,8 @@ namespace Adobe.SubstanceEditor
 
         public override void OnInspectorGUI()
         {
-            if(_handler == null)
-                if(!SubstanceEditorEngine.instance.TryGetHandlerFromInstance(_target, out _handler))
+            if (_handler == null)
+                if (!SubstanceEditorEngine.instance.TryGetHandlerFromInstance(_target, out _handler))
                     return;
 
             if (_materialPreviewEditor == null)
@@ -181,14 +198,18 @@ namespace Adobe.SubstanceEditor
 
             GUILayout.Space(8);
 
-            if (DrawInputs())
+            DrawInputs(out bool serializedObject, out bool renderGraph);
+
+            if (renderGraph)
             {
                 var newPreset = _handler.CreatePresetFromCurrentState(_target.Index);
                 _presetProperty.stringValue = newPreset;
                 SubstanceEditorEngine.instance.SubmitAsyncRenderWork(_handler, _target);
                 valuesChanged = true;
-                UpdateInputsVisibilty();
             }
+
+            if (serializedObject)
+                valuesChanged = true;
 
             DrawPresentExport(_target);
 
@@ -206,10 +227,6 @@ namespace Adobe.SubstanceEditor
             }
 
             return valuesChanged;
-        }
-
-        private void UpdateInputsVisibilty()
-        {
         }
 
         #region Texture Generation Settings
@@ -265,39 +282,89 @@ namespace Adobe.SubstanceEditor
 
         #endregion Texture Generation Settings
 
+        #region Physical size
+
+        private bool DrawPhysicalSize()
+        {
+            if (!_hasPhysicalSizeProperty.boolValue)
+                return false;
+
+            _showPhysicalSize = EditorGUILayout.Foldout(_showPhysicalSize, "Physical Size");
+            bool valueChanged = false;
+
+            if (_showPhysicalSize)
+            {
+                var currentValue = _physicalSizelProperty.vector3Value;
+                var enablePhysicaSize = _enablePhysicalSizeProperty.boolValue;
+
+                if (EditorGUILayout.Toggle("Use Physical Size", enablePhysicaSize) != enablePhysicaSize)
+                {
+                    _enablePhysicalSizeProperty.boolValue = !enablePhysicaSize;
+                    valueChanged = true;
+                }
+
+                var newValue = new Vector3();
+
+                newValue.x = EditorGUILayout.FloatField("X:", currentValue.x);
+                newValue.y = EditorGUILayout.FloatField("Y:", currentValue.y);
+                newValue.z = EditorGUILayout.FloatField("Z:", currentValue.z);
+
+                if (newValue != currentValue)
+                {
+                    _physicalSizelProperty.vector3Value = newValue;
+                    valueChanged = true;
+                }
+            }
+            return valueChanged;
+        }
+
+        #endregion Physical size
+
         #region Input draw
 
         /// <summary>
         /// Draws substance file inputs.
         /// </summary>
-        /// <returns>True if any input value has changed.</returns>
-        private bool DrawInputs()
+        /// <param name="serializeObject">True if object properties have changed.</param>
+        /// <param name="renderGraph">True if substance graph must be re rendered.</param>
+        private void DrawInputs(out bool serializeObject, out bool renderGraph)
         {
-            if (_handler == null)
-            {
-                if (!SubstanceEditorEngine.instance.TryGetHandlerFromInstance(_target, out _handler))
-                {
-                    return false;
-                }
-            }
-
-            bool changed = false;
+            renderGraph = false;
+            serializeObject = false;
 
             EditorGUILayout.Space();
 
             if (DrawGrouplessInputs(_inputGroupingHelper.GrouplessInputs))
-                changed = true;
+            {
+                renderGraph = true;
+                serializeObject = true;
+            }
+
+            EditorGUILayout.Space();
+
+            if (PluginPipelines.SupportPhysicalSize())
+            {
+                if (DrawPhysicalSize())
+                {
+                    renderGraph = true;
+                    serializeObject = true;
+                    MaterialUtils.ApplyPhysicalSize(_target.OutputMaterial, _physicalSizelProperty.vector3Value, _enablePhysicalSizeProperty.boolValue);
+                    UpdateGraphMaterialLabel();
+                }
+            }
 
             EditorGUILayout.Space();
 
             foreach (var groupInfo in _inputGroupingHelper.InputGroups)
             {
                 if (DrawInputGroup(groupInfo))
-                    changed = true;
+                {
+                    renderGraph = true;
+                    serializeObject = true;
+                }
+
                 EditorGUILayout.Space();
             }
-
-            return changed;
         }
 
         /// <summary>
