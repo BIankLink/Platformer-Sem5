@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4151d5500d6aaf04aa931d315d76b334
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: dda12f74ff9116a42b23482252b2c482, type: 3}
+  _instancesCopy:
+  - {fileID: 11400000, guid: 5deb2263f4d60d94f97e15e83b259617, type: 2}
+  _fileAsset: {fileID: 6013892654665635331, guid: 4151d5500d6aaf04aa931d315d76b334,
+    type: 3}
+  _assetPath: Assets/Temp/Materials/sand_uniform_001 (1)_graph_0/sand_uniform_001
+    (1).sbsar

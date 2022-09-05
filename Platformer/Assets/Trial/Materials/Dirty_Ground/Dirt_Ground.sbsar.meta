@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4dd8d91442f40ea489a19761eff10b90
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: dda12f74ff9116a42b23482252b2c482, type: 3}
+  _instancesCopy:
+  - {fileID: 11400000, guid: 3429f08cf80c3c047933165e1d4ad953, type: 2}
+  _fileAsset: {instanceID: 0}
+  _assetPath: Assets/Temp/Materials/Dirty_Ground/Dirt_Ground.sbsar
