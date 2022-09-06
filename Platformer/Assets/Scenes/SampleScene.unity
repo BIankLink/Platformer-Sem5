@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.1836268, g: 0.22787356, b: 0.29803303, a: 1}
+  m_IndirectSpecularColor: {r: 0.18362653, g: 0.22787318, b: 0.2980329, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -881,7 +881,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.12062984, y: 0.0000000073961735, z: -8.9876234e-10, w: 0.9926976}
+  m_LocalRotation: {x: 0.12062983, y: -8.816926e-16, z: 1.07140814e-16, w: 0.9926976}
   m_LocalPosition: {x: -11.67, y: 4.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4158,7 +4158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTouchPosition: {x: 0, y: 0}
   currentTouchPosition: {x: 0, y: 0}
-  pixelDistToDetect: 60
+  pixelDistToDetect: 100
   fingerDown: 0
   moveDir: 0
   up: 0
@@ -4195,13 +4195,13 @@ MonoBehaviour:
   distToWallGround: 1
   distToGround: 0.15
   gravity: -9.8
-  Wallgravity: -9.8
-  distanceToWall: 5
+  Wallgravity: 9.8
+  distanceToWall: 8
   maxJumpHeight: 0.85
   maxJumpTime: 1.2
-  maxWallJumpHeight: 1.5
-  maxWallJumpTime: 0.2
-  damage: 0.85
+  maxWallJumpHeight: 3
+  maxWallJumpTime: 2
+  damage: 1
   wall:
     serializedVersion: 2
     m_Bits: 64
@@ -4446,7 +4446,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7837838, y: 1}
+    m_SensorSize: {x: 2.164251, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4462,7 +4462,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449607497}
-  m_LocalRotation: {x: 0.12062984, y: 0.0000000073961735, z: -8.9876234e-10, w: 0.9926976}
+  m_LocalRotation: {x: 0.12062983, y: -8.816926e-16, z: 1.07140814e-16, w: 0.9926976}
   m_LocalPosition: {x: -11.67, y: 4.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -10,6 +10,7 @@ public class SwipeInput : MonoBehaviour
     public Vector2 startTouchPosition;
     public Vector2 currentTouchPosition;
     public int pixelDistToDetect = 50;
+    
     float tapRange = 10;
     public bool fingerDown;
     float screenWidth;
@@ -101,47 +102,76 @@ public class SwipeInput : MonoBehaviour
             if (i >= 0 && myTouches[i].phase == TouchPhase.Moved && i <= 2)
             {
                 currentTouchPosition = myTouches[i].position;
-                Vector2 distance = currentTouchPosition - startTouchPosition;
-
+                Vector2 direction = currentTouchPosition - startTouchPosition;
+                var angle = Vector2.Angle(Vector2.up,direction.normalized);
+                float distance = Vector2.Distance(startTouchPosition, currentTouchPosition);
                 if (fingerDown)
                 {
-                    if (distance.y > pixelDistToDetect)
+                    if (distance > pixelDistToDetect)
                     {
-                        Debug.Log("up");
-                        up = true;
+                        if (direction.x > 0)
+                        {
+                            if (angle < 67.5)
+                            {
+                                Debug.Log("up");
+                                up = true;
 
-                        StartCoroutine(uponce());
-                        fingerDown = false;
+                                StartCoroutine(uponce());
+                                fingerDown = false;
 
-                    }
-                    else if (distance.y < -pixelDistToDetect)
-                    {
-                        Debug.Log("down");
-                        down = true;
-                        fingerDown = false;
+                            }
+                            else if (angle < 112.5f)
+                            {
+                                right = true;
+                                attacking = true;
+                                moveRight = false;
+                                moveLeft = false;
+                                moveDir = 0;
+                                StartCoroutine(rightOnce());
+                                fingerDown = false;
+                                //Debug.Log("right");
+                            }
+                            else if (angle < 180f)
+                            {
+                                Debug.Log("down");
+                                down = true;
+                                fingerDown = false;
 
-                    }
-                    if (distance.x < -pixelDistToDetect && Mathf.Abs(distance.x) > Mathf.Abs(distance.y) + 300)
-                    {
-                        left = true;
-                        attacking = true;
-                        moveLeft = false;
-                        moveRight = false;
-                        moveDir = 0;
-                        StartCoroutine(leftOnce());
-                        fingerDown = false;
-                        Debug.Log("left");
-                    }
-                    else if (distance.x > pixelDistToDetect && Mathf.Abs(distance.x) > Mathf.Abs(distance.y) + 300)
-                    {
-                        right = true;
-                        attacking = true;
-                        moveRight = false;
-                        moveLeft = false;
-                        moveDir = 0;
-                        StartCoroutine(rightOnce());
-                        fingerDown = false;
-                        //Debug.Log("right");
+                            }
+
+                        }
+                        else
+                        {
+                            if (angle < 67.5)
+                            {
+                                Debug.Log("up");
+                                up = true;
+
+                                StartCoroutine(uponce());
+                                fingerDown = false;
+
+                            }
+                            else if (angle < 112.5f)
+                            {
+                                left = true;
+                                attacking = true;
+                                moveLeft = false;
+                                moveRight = false;
+                                moveDir = 0;
+                                StartCoroutine(leftOnce());
+                                fingerDown = false;
+                                Debug.Log("left");
+                            }
+                            else if (angle < 180f)
+                            {
+                                Debug.Log("down");
+                                down = true;
+                                fingerDown = false;
+
+                            }
+                            
+
+                        }
                     }
                 }
 

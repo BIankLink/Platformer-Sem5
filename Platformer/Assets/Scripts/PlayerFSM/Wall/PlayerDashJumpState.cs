@@ -33,7 +33,7 @@ public class PlayerDashJumpState : PlayerBaseState
             SwitchState(Factory.wallGrounded());
 
         }
-        if (!Ctx.CheckIfWallGrounded() && !Ctx.IsAttacking)
+        if (!Ctx.CheckIfWallGrounded() && !Ctx.IsAttacking && !Ctx.CheckIfWallJumpGrounded())
         {
             SwitchState(Factory.wallFalling());
 
