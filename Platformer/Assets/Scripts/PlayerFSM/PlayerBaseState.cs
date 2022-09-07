@@ -105,7 +105,7 @@ public abstract class PlayerBaseState
         {
             newSuperstate.SetParentState(this);
         }
-        Debug.Log(_currentSuperState);
+        //Debug.Log(_currentSuperState);
     }
 
     protected void SetSubState(PlayerBaseState newSubState) 

@@ -19,8 +19,9 @@ public class PlayerDashJumpState : PlayerBaseState
         CheckSwitchState();
     }
     public override void ExitState() 
-    { 
+    {
         //exit Animation
+        Ctx.Animator.SetBool("Jump", false);
     }
     public override void CheckSwitchState()
     {
@@ -52,7 +53,7 @@ public class PlayerDashJumpState : PlayerBaseState
     {
         Ctx.Animator.SetBool("Jump", true);
         Ctx.IsJumping = true;
-        Ctx.CurrentMovementZ = /*-(Ctx.InitialWallJumpVelocity * 0.5f)*/-2f;
+        Ctx.CurrentMovementZ = (Ctx.InitialWallJumpVelocity * 0.5f);
     }
    
 }

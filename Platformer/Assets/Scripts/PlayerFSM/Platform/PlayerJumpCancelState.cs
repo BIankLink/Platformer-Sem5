@@ -13,6 +13,7 @@ public class PlayerJumpCancelState : PlayerBaseState
     public override void EnterState() 
     {
         
+       
         HandleJumpCancel();
     }
     public override void UpdateState() 

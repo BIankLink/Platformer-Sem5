@@ -73,6 +73,7 @@ public class PlayerFallingState : PlayerBaseState
             float newYVelocity = Ctx.CurrentMovementY + (Ctx.Gravity * fallMultiplier * Time.deltaTime);
             float nextYVelocity = Mathf.Max((previousYVelocity + newYVelocity) * 0.5f, -20f);
             Ctx.CurrentMovementY = nextYVelocity;
+            
         }
         else
         {

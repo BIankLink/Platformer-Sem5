@@ -27,12 +27,12 @@ public class PlayerWallState : PlayerBaseState
     {
         Debug.Log("worked");
         Ctx.CurrentMovementZ = 0.5f;
-        Ctx.CurrentMovementY = 1.5f;
+        Ctx.CurrentMovementY = Ctx.SwitchJump;
         Ctx.CurrentMovementX = 0;
     }
     public override void CheckSwitchState()
     {
-        if (!Ctx.IsSwitching)
+        if (!Ctx.IsSwitching && CurrentSuperState == Factory.wallGrounded())
         {
             
             SwitchState(Factory.platform());

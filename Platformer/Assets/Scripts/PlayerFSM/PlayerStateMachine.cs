@@ -9,7 +9,7 @@ public class PlayerStateMachine : LivingEntity
     public CharacterController characterController;
 
     [SerializeField]Vector2 currentMovementInput;
-    Vector3 currentMovement;
+   [SerializeField]Vector3 currentMovement;
     Vector3 appliedMovement;
     SwipeInput inputManager;
     [SerializeField]bool isMovePressed;
@@ -36,6 +36,7 @@ public class PlayerStateMachine : LivingEntity
     [SerializeField] float maxWallJumpHeight = 0.85f;
     [SerializeField] float maxWallJumpTime = 0.85f;
     bool isJumping = false;
+    bool canSwitch;
     [SerializeField] float damage=1f;
     bool jumpCancel;
     [SerializeField] LayerMask wall;
@@ -43,7 +44,7 @@ public class PlayerStateMachine : LivingEntity
     //State Variable
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
-
+    [SerializeField]float switchJump = 1;
     //Getters Abnd Setters
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; }}
     public bool isJumpPressed { get { return _isJumpPressed; }}
@@ -54,9 +55,9 @@ public class PlayerStateMachine : LivingEntity
     public float CurrentMovementY { get { return currentMovement.y; } set { currentMovement.y = value; }}
     public float InitialJumpVelocity { get { return initialJumpVelocity; }}
     public float InitialWallJumpVelocity { get { return initialWallJumpVelocity; }}
-
+    public bool CanSwitch { get { return canSwitch; } set { canSwitch = value; }}
     public CharacterController CharacterController { get { return characterController; } }
-
+    public float SwitchJump { get { return switchJump; } }
     public float GroundedGravity { get { return groundedGravity; }}
     public float Gravity { get { return gravity; }}
     public float WallGravity { get { return Wallgravity; }}
@@ -139,8 +140,8 @@ public class PlayerStateMachine : LivingEntity
         }else if (!inputManager.left || inputManager.right)
         {
             _isAttacking= false;
-        } 
-
+        }
+       
         if (inputManager.wallRunningInput)
         {
             _isSwitching = true;

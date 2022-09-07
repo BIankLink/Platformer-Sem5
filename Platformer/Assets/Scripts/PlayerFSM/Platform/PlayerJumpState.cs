@@ -14,7 +14,7 @@ public class PlayerJumpState : PlayerBaseState
     {
         InitializeSubState();
         HandleJump();
-        
+        Ctx.CanSwitch = false;
         //Debug.Log("jump");
     }
     public override void UpdateState()

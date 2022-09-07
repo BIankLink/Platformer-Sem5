@@ -13,7 +13,7 @@ public class PlayerWallJumpFalling : PlayerBaseState
     public override void EnterState()
     {
         InitializeSubState();
-            Debug.Log("EnteredJumpFalling");
+           // Debug.Log("EnteredJumpFalling");
 
     }
     public override void UpdateState()
@@ -63,7 +63,7 @@ public class PlayerWallJumpFalling : PlayerBaseState
     }
     void HandleGravity()
     {
-        bool isFalling = Ctx.CurrentMovementZ <= 0 || !Ctx.IsAttacking;
+        bool isFalling = Ctx.CurrentMovementZ >= 0.5 || !Ctx.IsAttacking;
         float fallMultiplier = 2f;
 
         if (isFalling)
@@ -71,8 +71,10 @@ public class PlayerWallJumpFalling : PlayerBaseState
 
             float previousYVelocity = Ctx.CurrentMovementZ;
             float newYVelocity = Ctx.CurrentMovementZ + (Ctx.WallGravity * fallMultiplier * Time.deltaTime);
-            float nextYVelocity = Mathf.Max((previousYVelocity + newYVelocity) * 0.5f, 5);
+            float nextYVelocity = (previousYVelocity + newYVelocity) * 0.5f;
+            Debug.Log(nextYVelocity);
             Ctx.CurrentMovementZ = nextYVelocity;
+
         }
         else
         {
@@ -80,7 +82,6 @@ public class PlayerWallJumpFalling : PlayerBaseState
             float newYVelocity = Ctx.CurrentMovementZ + (Ctx.WallGravity * Time.deltaTime);
             float nextYVelocity = (previousYVelocity + newYVelocity) * 0.5f;
             Ctx.CurrentMovementZ = nextYVelocity;
-            Debug.Log(nextYVelocity);
         }
     }
 }

@@ -6,7 +6,7 @@ using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class SwipeInput : MonoBehaviour
 {
-
+    PlayerStateMachine player;
     public Vector2 startTouchPosition;
     public Vector2 currentTouchPosition;
     public int pixelDistToDetect = 50;
@@ -21,18 +21,21 @@ public class SwipeInput : MonoBehaviour
     float tapCounter;
     float startTime;
     float endTime;
+    [SerializeField]float SwitchCoolDown = 1;
+    float switchTimer;
     [SerializeField] float startTimer=.25f;
     Touch touch;
     // Start is called before the first frame update
     void Start()
     {
         screenWidth = Screen.width;
+        player = GetComponent<PlayerStateMachine>();
     }
 
 
     IEnumerator uponce()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.05f);
         up = false;
     } 
     IEnumerator leftOnce()
@@ -53,7 +56,11 @@ public class SwipeInput : MonoBehaviour
     {
         Touch[] myTouches = Input.touches;
 
-
+        if (switchTimer <=SwitchCoolDown)
+        {
+            
+            switchTimer += Time.deltaTime;
+        }
 
 
         for (int i = 0; i < myTouches.Length; i++)
@@ -114,27 +121,38 @@ public class SwipeInput : MonoBehaviour
                             if (angle < 67.5)
                             {
                                 Debug.Log("up");
-                                up = true;
-
+                                up = true; 
+                                if (player.CanSwitch)
+                                {
+                                    wallRunningInput = false;
+                                }
+                               
                                 StartCoroutine(uponce());
                                 fingerDown = false;
 
                             }
-                            else if (angle < 112.5f)
+                            else if (angle < 150)
                             {
-                                right = true;
-                                attacking = true;
-                                moveRight = false;
-                                moveLeft = false;
-                                moveDir = 0;
-                                StartCoroutine(rightOnce());
-                                fingerDown = false;
+                                //right = true;
+                                //attacking = true;
+                                //if (!wallRunningInput)
+                                //{
+                                //    moveRight = false;
+                                //    moveLeft = false;
+                                //    moveDir = 0;
+                                //}
+                                //StartCoroutine(rightOnce());
+                                //fingerDown = false;
                                 //Debug.Log("right");
                             }
                             else if (angle < 180f)
                             {
                                 Debug.Log("down");
                                 down = true;
+                                if (player.CanSwitch)
+                                {
+                                    wallRunningInput = true;
+                                }
                                 fingerDown = false;
 
                             }
@@ -146,26 +164,37 @@ public class SwipeInput : MonoBehaviour
                             {
                                 Debug.Log("up");
                                 up = true;
-
+                                if (player.CanSwitch)
+                                {
+                                    wallRunningInput = false;
+                                }
+                                
                                 StartCoroutine(uponce());
                                 fingerDown = false;
 
                             }
-                            else if (angle < 112.5f)
+                            else if (angle < 150)
                             {
-                                left = true;
-                                attacking = true;
-                                moveLeft = false;
-                                moveRight = false;
-                                moveDir = 0;
-                                StartCoroutine(leftOnce());
-                                fingerDown = false;
-                                Debug.Log("left");
+                                //left = true;
+                                //attacking = true;
+                                //if (!wallRunningInput)
+                                //{
+                                //    moveRight = false;
+                                //    moveLeft = false;
+                                //    moveDir = 0;
+                                //}
+                                //StartCoroutine(leftOnce());
+                                //fingerDown = false;
+                                ////Debug.Log("left");
                             }
                             else if (angle < 180f)
                             {
                                 Debug.Log("down");
                                 down = true;
+                                if (player.CanSwitch)
+                                {
+                                    wallRunningInput = true;
+                                }
                                 fingerDown = false;
 
                             }
@@ -261,18 +290,53 @@ public class SwipeInput : MonoBehaviour
 
             if (tapCounter == 2)
             {
-                if (wallRunningInput)
-                {
-                    Debug.Log("DoubleTap1");
-                    wallRunningInput = false;
+                
+                   if(startTouchPosition.x < screenWidth / 2)
+                   {
+                        Debug.Log("right");
+                        left = true;
+                        attacking = true;
+                        if (!wallRunningInput)
+                        {
+                            moveRight = false;
+                            moveLeft = false;
+                            moveDir = 0;
+                        }
+                        StartCoroutine(leftOnce());
+                        fingerDown = false;
 
-                }
-                else
-                {
-                    Debug.Log("DoubleTap2");
-                    wallRunningInput = true;
+                   }
+                   else if(startTouchPosition.x > screenWidth / 2)
+                   {
+                        Debug.Log("right");
+                        right = true;
+                        attacking = true;
+                        if (!wallRunningInput)
+                        {
+                            moveRight = false;
+                            moveLeft = false;
+                            moveDir = 0;
+                        }
+                        StartCoroutine(rightOnce());
+                        fingerDown = false;
+                   }
 
-                }
+
+                        //if (wallRunningInput)
+                        //{
+                        //    switchTimer = 0f;
+                        //    Debug.Log("DoubleTap1");
+                        //    wallRunningInput = false;
+
+                        //}
+                        //else
+                        //{
+                        //    switchTimer = 0f;
+                        //    Debug.Log("DoubleTap2");
+                        //    wallRunningInput = true;
+
+                        //}
+                
             }
 
         }
@@ -281,8 +345,36 @@ public class SwipeInput : MonoBehaviour
     }
     private IEnumerator Countdown()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
         tapCounter = 0;
     }
 
+    //void DashLeft()
+    //{
+    //    left = true;
+    //    attacking = true;
+    //    if (!wallRunningInput)
+    //    {
+    //        moveRight = false;
+    //        moveLeft = false;
+    //        moveDir = 0;
+    //    }
+    //    StartCoroutine(leftOnce());
+    //    fingerDown = false;
+    //    Debug.Log("left");
+    //}
+    //void DashRight()
+    //{
+    //    right = true;
+    //    attacking = true;
+    //    if (!wallRunningInput)
+    //    {
+    //        moveRight = false;
+    //        moveLeft = false;
+    //        moveDir = 0;
+    //    }
+    //    StartCoroutine(rightOnce());
+    //    fingerDown = false;
+    //    Debug.Log("left");
+    //}
 }

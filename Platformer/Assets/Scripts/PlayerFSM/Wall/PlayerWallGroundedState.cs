@@ -11,7 +11,9 @@ public class PlayerWallGroundedState : PlayerBaseState
 
     public override void EnterState() 
     { 
+
         InitializeSubState();
+        Ctx.CanSwitch = true;
         Ctx.Animator.SetTrigger("Land");
         Ctx.CurrentMovementY = 0;
         Ctx.CurrentMovementZ = -Ctx.GroundedGravity;
@@ -20,7 +22,10 @@ public class PlayerWallGroundedState : PlayerBaseState
     { 
         CheckSwitchState();
     }
-    public override void ExitState() { }
+    public override void ExitState() 
+    {
+        Ctx.CanSwitch = false;
+    }
     public override void CheckSwitchState()
     {
         if (Ctx.IsAttacking && Ctx.CheckIfWallGrounded())
@@ -41,12 +46,12 @@ public class PlayerWallGroundedState : PlayerBaseState
     {
         if (!Ctx.IsMovePressed && !Ctx.IsAttacking)
         {
-            Debug.Log("idle is beign set");
+           
             SetSubState(Factory.wallIdle());
         }
         else if (Ctx.IsMovePressed && !Ctx.IsAttacking)
         {
-            Debug.Log("run is beign set");
+            
             SetSubState(Factory.wallRun());
         }
         if (Ctx.isJumpPressed)

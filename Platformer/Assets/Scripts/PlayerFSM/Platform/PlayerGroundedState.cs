@@ -12,7 +12,7 @@ public class PlayerGroundedState : PlayerBaseState
 
     public override void EnterState() 
     {
-        
+        Ctx.CanSwitch = true;
         InitializeSubState();
         
         Ctx.CurrentMovementZ = 0;
@@ -25,7 +25,8 @@ public class PlayerGroundedState : PlayerBaseState
     }
     public override void ExitState()
     {
-       // Debug.Log("in the grounded EXIT");
+        Ctx.CanSwitch = false;
+        // Debug.Log("in the grounded EXIT");
     }
     public override void CheckSwitchState() 
     {
