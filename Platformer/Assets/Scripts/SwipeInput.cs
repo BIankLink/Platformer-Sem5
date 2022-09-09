@@ -11,20 +11,20 @@ public class SwipeInput : MonoBehaviour
     public Vector2 currentTouchPosition;
     public int pixelDistToDetect = 50;
     [SerializeField]Joystick joystick;
-    float tapRange = 10;
+    //float tapRange = 10;
     public bool fingerDown;
     float screenWidth;
     float ScreenWidthHalf;
     [SerializeField]public float moveDir;
     public bool up, down, left, right,moveLeft,moveRight,wallRunningInput=false;
     float timer=0f;
-    bool attacking;
+    //bool attacking;
     float tapCounter;
     float startTime;
     float endTime;
     [SerializeField]float SwitchCoolDown = 1;
     float switchTimer;
-    [SerializeField] float startTimer=.25f;
+    //[SerializeField] float startTimer=.25f;
     Touch touch;
     // Start is called before the first frame update
     void Start()
@@ -51,7 +51,7 @@ public class SwipeInput : MonoBehaviour
     }IEnumerator Attacking()
     {
         yield return new WaitForSeconds(2f);
-        attacking = false;
+        //attacking = false;
     }
 
     public void handleInput()
@@ -322,7 +322,7 @@ public class SwipeInput : MonoBehaviour
                     if (currentTouchPosition.x - startTouchPosition.x > 0)
                     {
                         right = true;
-                        attacking = true;
+                        //attacking = true;
                         if (!wallRunningInput)
                         {
                             moveRight = false;
@@ -336,7 +336,7 @@ public class SwipeInput : MonoBehaviour
                     else if (currentTouchPosition.x - startTouchPosition.x < 0)
                     {
                         left = true;
-                        attacking = true;
+                       //attacking = true;
                         if (!wallRunningInput)
                         {
                             moveRight = false;
