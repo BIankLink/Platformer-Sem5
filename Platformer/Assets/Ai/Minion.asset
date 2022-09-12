@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7810962773089011549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163c147d123e4a945b688eddc64e3ea5, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4e53cf143c560864387a0b5c43432721
+  position: {x: 0, y: 0}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: 3584142911799709108}
+--- !u!114 &-5672761241647828552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4171954b812bff6499464d6113ba123a, type: 3}
+  m_Name: FollowPlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 94e563175f04bb54b9f68b48de30b6c5
+  position: {x: -184.99992, y: 515}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  speed: 5
+  stoppingDistance: 3
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 1
+  waypointIndex: 0
+--- !u!114 &-3886523780983237372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
+  m_Name: MoveToPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 55f5f2b564e11ca46b2568bc387d996f
+  position: {x: 92.00001, y: 515}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  speed: 5
+  stoppingDistance: 0.1
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 1
+  waypointIndex: 0
+--- !u!114 &-450864577676205960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4489e3e257543504c8fc9f891246af6c, type: 3}
+  m_Name: MoveToPosition
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0c9546aa52734554a909afdd37594662
+  position: {x: 276.40253, y: 505.195}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  speed: 5
+  stoppingDistance: 0.1
+  updateRotation: 1
+  acceleration: 40
+  tolerance: 1
+  waypointIndex: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: Minion
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -7810962773089011549}
+  treeState: 0
+  nodes:
+  - {fileID: -7810962773089011549}
+  - {fileID: 3584142911799709108}
+  - {fileID: 2697745775442520422}
+  - {fileID: 1576915082900874529}
+  - {fileID: -3886523780983237372}
+  - {fileID: -450864577676205960}
+  - {fileID: 8088450258744382533}
+  - {fileID: -5672761241647828552}
+  - {fileID: 1928455692650068189}
+  blackboard:
+    WayPoints:
+    - {fileID: 7372006708590902928, guid: 7748022eee39a61429e39942e3001655, type: 3}
+    - {fileID: 8534841471953062433, guid: 47f55f07f4e5d784ca3e58440f1ae15d, type: 3}
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+--- !u!114 &1576915082900874529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4e1deb449c8372a4ca819db7a05eab93
+  position: {x: -184.83499, y: 367.89664}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 8088450258744382533}
+  - {fileID: -5672761241647828552}
+--- !u!114 &1928455692650068189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61431bba79d7d7843b82bf1de71703f5, type: 3}
+  m_Name: Sequencer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 53ec8b4057382ba42814a4d902096559
+  position: {x: 200.99998, y: 360.1869}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: -3886523780983237372}
+  - {fileID: -450864577676205960}
+--- !u!114 &2697745775442520422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460be9e34c566ea45b9e282b1adcb028, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 01a1bc1329f2e674eb58a660c3f44f5c
+  position: {x: 0.0000076293945, y: 216.0199}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  children:
+  - {fileID: 1576915082900874529}
+  - {fileID: 1928455692650068189}
+--- !u!114 &3584142911799709108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb5496e8cd973748a10b3e3ef436ebd, type: 3}
+  m_Name: Repeat
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d128ca8250eb0af409684a1acb3424b4
+  position: {x: 0.0000104904175, y: 97.646126}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  child: {fileID: 2697745775442520422}
+  restartOnSuccess: 1
+  restartOnFailure: 0
+--- !u!114 &8088450258744382533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1862eb01a54ac8148b879d907e28e9c3, type: 3}
+  m_Name: FieldOfView
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d936e5bac43269343a8f86228513b76a
+  position: {x: -537, y: 515}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 1
+  viewRadius: 10
+  viewAngle: 360
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 128
+  visibleTarget: {fileID: 0}
+  itself: {fileID: 0}
