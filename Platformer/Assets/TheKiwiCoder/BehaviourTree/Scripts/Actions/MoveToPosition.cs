@@ -12,6 +12,7 @@ public class MoveToPosition : ActionNode
     public float tolerance = 1.0f;
     public int waypointIndex = 0;
     protected override void OnStart() {
+       
         context.agent.stoppingDistance = stoppingDistance;
         context.agent.speed = speed;
         context.agent.destination = blackboard.WayPoints[waypointIndex].transform.position;
