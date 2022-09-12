@@ -7,18 +7,28 @@ public class CrackedPlatforms : MonoBehaviour
     public float duration = 2f;
     public float breakduration = 1f;
 
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision other)
+    //{
+    //    Debug.Log("colliding");
+    //    if (other.gameObject.CompareTag("Player"))
+    //    {
+
+    //        if (other.gameObject.transform.position.y > transform.position.y || other.gameObject.transform.position.y < transform.position.y)
+    //        {
+    //            StartCoroutine(Cracking());
+    //        }
+    //    }
+
+    //}
+
+    public void Crack()
     {
-        if (collision.transform.position.y > transform.position.y || collision.transform.position.y < transform.position.y)
-        {
-            StartCoroutine(Cracking());
-        }
-        
+        StartCoroutine(Cracking()); 
     }
 
 
 
-    IEnumerator Cracking()
+    public IEnumerator Cracking()
     {
         yield return new WaitForSeconds(breakduration);
         //trigger animation

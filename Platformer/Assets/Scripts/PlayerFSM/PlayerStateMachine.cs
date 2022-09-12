@@ -213,6 +213,14 @@ public class PlayerStateMachine : LivingEntity
                 //}
             }
         }
+        if (hit.gameObject.GetComponent<CrackedPlatforms>())
+        {
+            hit.gameObject.GetComponent<CrackedPlatforms>().Crack();
+        }
+        if (hit.gameObject.GetComponent<FallingPlatforms>())
+        {
+            hit.gameObject.GetComponent<FallingPlatforms>().Fall();
+        }
     }
 
     public bool CheckIfWallGrounded()

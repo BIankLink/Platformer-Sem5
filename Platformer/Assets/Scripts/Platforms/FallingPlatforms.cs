@@ -13,17 +13,12 @@ public class FallingPlatforms : MonoBehaviour
         StartPos = transform.position;  
         rb = GetComponent<Rigidbody>();
     }
-    private void OnCollisionEnter(Collision other)
+    
+
+    public void Fall()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            StartCoroutine(Cracking());
-        }
-        
-
+        StartCoroutine(Cracking());
     }
-
-
 
     IEnumerator Cracking()
     {
