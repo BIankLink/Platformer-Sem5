@@ -221,7 +221,14 @@ public class PlayerStateMachine : LivingEntity
         {
             hit.gameObject.GetComponent<FallingPlatforms>().Fall();
         }
+        //if (hit.gameObject.GetComponent<SaveMachine>())
+        //{
+        //    Debug.Log("saved");
+        //    hit.gameObject.GetComponent<SaveMachine>().mysave();
+        //}
     }
+
+   
 
     public bool CheckIfWallGrounded()
     {
