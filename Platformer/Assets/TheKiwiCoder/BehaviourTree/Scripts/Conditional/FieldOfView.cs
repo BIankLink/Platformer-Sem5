@@ -53,7 +53,8 @@ namespace TheKiwiCoder
         protected override void OnStart()
         {
             itself =context.gameObject;
-            
+            viewRadius = context.sensor.distance;
+            viewAngle = context.sensor.angle;
             base.OnStart();
         }
 
