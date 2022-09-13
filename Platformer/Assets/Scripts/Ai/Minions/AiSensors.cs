@@ -47,7 +47,7 @@ public class AiSensors : MonoBehaviour
         Vector3 bottomLeft = Quaternion.Euler(0, -angle, 0) * Vector3.forward * distance;
         Vector3 bottomRight = Quaternion.Euler(0, angle, 0) * Vector3.forward * distance;
 
-        Vector3 topCenter = bottomCenter + Vector3.up * height;
+        Vector3 topCenter = bottomCenter ;
         Vector3 topLeft = bottomLeft + Vector3.up * height;
         Vector3 topRight = bottomRight + Vector3.up * height;
 
