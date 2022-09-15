@@ -19,7 +19,8 @@ namespace TheKiwiCoder {
         public BoxCollider boxCollider;
         public CapsuleCollider capsuleCollider;
         public CharacterController characterController;
-        public AiSensors sensor;
+        public FieldOfView fov;
+        //public AiSensors sensor;
         // Add other game specific systems here
 
         public static Context CreateFromGameObject(GameObject gameObject) {
@@ -34,7 +35,9 @@ namespace TheKiwiCoder {
             context.boxCollider = gameObject.GetComponent<BoxCollider>();
             context.capsuleCollider = gameObject.GetComponent<CapsuleCollider>();
             context.characterController = gameObject.GetComponent<CharacterController>();
-            context.sensor = gameObject.GetComponentInChildren<AiSensors>();
+            //context.sensor = gameObject.GetComponentInChildren<AiSensors>();
+            context.fov = gameObject.GetComponent<FieldOfView>();
+            
             
             // Add whatever else you need here...
 

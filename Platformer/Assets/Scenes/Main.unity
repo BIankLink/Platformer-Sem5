@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.1836268, g: 0.22787356, b: 0.29803303, a: 1}
+  m_IndirectSpecularColor: {r: 0.18362653, g: 0.22787318, b: 0.2980329, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1015,6 +1015,7 @@ GameObject:
   - component: {fileID: 1299491153}
   - component: {fileID: 1299491152}
   - component: {fileID: 1299491151}
+  - component: {fileID: 1299491154}
   m_Layer: 0
   m_Name: VisionCone
   m_TagString: Untagged
@@ -1044,7 +1045,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299491149}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9abd29b4036e766408f25c0694f8f5e6, type: 3}
   m_Name: 
@@ -1106,6 +1107,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299491149}
+  m_Mesh: {fileID: 0}
+--- !u!64 &1299491154
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299491149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &1406119129
 GameObject:
@@ -1273,7 +1288,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.775, y: 1}
+    m_SensorSize: {x: 2.164251, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1563,13 +1578,14 @@ GameObject:
   - component: {fileID: 1962273302}
   - component: {fileID: 1962273301}
   - component: {fileID: 1962273300}
+  - component: {fileID: 1962273307}
   m_Layer: 0
   m_Name: minion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1962273300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1624,6 +1640,7 @@ MonoBehaviour:
   wayPoints:
   - {fileID: 1053368095}
   - {fileID: 504693815}
+  meshFilter: {fileID: 1299491153}
 --- !u!136 &1962273303
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1704,6 +1721,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962273307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962273299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39df619a589d63747a0f0a69d53d8efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 6.48
+  viewAngle: 87
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 512
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 128
+  visibleTarget: {fileID: 0}
+  meshResolution: 1
+  edgeResolveIterations: 4
+  edgeDstThreshold: 0.5
+  maskCutawayDst: 0.1
+  viewMeshFilter: {fileID: 1299491153}
 --- !u!224 &1990238896 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,

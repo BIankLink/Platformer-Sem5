@@ -51,7 +51,7 @@ MonoBehaviour:
   stoppingDistance: 3
   updateRotation: 1
   acceleration: 40
-  tolerance: 1
+  tolerance: 3.5
   waypointIndex: 0
 --- !u!114 &-3886523780983237372
 MonoBehaviour:
@@ -245,7 +245,7 @@ MonoBehaviour:
   drawGizmos: 0
   child: {fileID: 2697745775442520422}
   restartOnSuccess: 1
-  restartOnFailure: 0
+  restartOnFailure: 1
 --- !u!114 &8088450258744382533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1862eb01a54ac8148b879d907e28e9c3, type: 3}
-  m_Name: FieldOfView
+  m_Name: PlayerCheck
   m_EditorClassIdentifier: 
   state: 0
   started: 0
@@ -268,14 +268,5 @@ MonoBehaviour:
     itself: {fileID: 0}
     Player: {fileID: 0}
   description: 
-  drawGizmos: 1
-  viewRadius: 10
-  viewAngle: 360
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 128
-  visibleTarget: {fileID: 0}
-  itself: {fileID: 0}
+  drawGizmos: 0
+  target: {fileID: 0}

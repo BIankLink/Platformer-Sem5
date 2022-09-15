@@ -15,7 +15,7 @@ public class FollowPlayer : ActionNode
     {
         context.agent.stoppingDistance = stoppingDistance;
         context.agent.speed = speed;
-        context.agent.destination = blackboard.Player.position;
+        context.agent.destination = context.fov.visibleTarget.position;
         context.agent.updateRotation = updateRotation;
         context.agent.acceleration = acceleration;
     }

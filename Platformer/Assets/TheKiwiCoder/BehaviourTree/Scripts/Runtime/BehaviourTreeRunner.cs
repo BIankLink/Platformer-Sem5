@@ -10,13 +10,13 @@ namespace TheKiwiCoder {
         public GameObject[] wayPoints;
         // Storage container object to hold game object subsystems
         Context context;
-
+        [SerializeField]MeshFilter meshFilter;
         // Start is called before the first frame update
         void Start() {
             context = CreateBehaviourTreeContext();
             tree = tree.Clone();
             tree.Bind(context);
-           
+            
             //tree.blackboard.itself = this.gameObject;
         }
 
@@ -24,6 +24,7 @@ namespace TheKiwiCoder {
         void Update() {
             if (tree) {
                 tree.Update();
+                
             }
         }
 
