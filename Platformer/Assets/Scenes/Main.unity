@@ -1579,13 +1579,14 @@ GameObject:
   - component: {fileID: 1962273301}
   - component: {fileID: 1962273300}
   - component: {fileID: 1962273307}
+  - component: {fileID: 1962273308}
   m_Layer: 0
   m_Name: minion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &1962273300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1747,6 +1748,19 @@ MonoBehaviour:
   edgeDstThreshold: 0.5
   maskCutawayDst: 0.1
   viewMeshFilter: {fileID: 1299491153}
+--- !u!114 &1962273308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962273299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f696d47f653b0dd419a84a734a234608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 5
 --- !u!224 &1990238896 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2929252283123773938, guid: aaa2c939c0359ac4dbce3f49e8b90252,
