@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65e587316e9a2a418e8272b125861f3, type: 3}
+  m_Name: Base
+  m_EditorClassIdentifier: 
+  nameType: BossBase
+  bulletResource: {fileID: 8264666052431224310, guid: a3e796b200e25404d8522d1242f89741,
+    type: 3}
+  minRotation: 1
+  maxRotation: 180
+  numberOfBullets: 5
+  isRandom: 0
+  isParent: 1
+  cooldown: 2
+  bulletSpeed: 5
+  maxBounces: 4
+  hasLifeTime: 0
+  lifetime: 4
