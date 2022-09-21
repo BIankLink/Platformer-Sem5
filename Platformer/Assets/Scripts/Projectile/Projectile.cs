@@ -12,16 +12,18 @@ public class Projectile : MonoBehaviour
     public float timer;
     public float lifeTime;
     public string type;
-    public float rotation;
-
-    private void OnEnable()
+    public float rotationtobe;
+    Vector3 moveDirection;
+    
+    private void Start()
     {
         timer = lifeTime;
-        transform.rotation = Quaternion.Euler(rotation, 0,0);
     }
+   
     private void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(moveDirection * speed * Time.deltaTime);
+
         if (hasLifeTime)
         {
             timer -= Time.deltaTime;
@@ -31,18 +33,24 @@ public class Projectile : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
+        
     }
-
+    public void SetMoveDirection(Vector3 dir)
+    {
+        moveDirection = dir;
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "BossWall" && currentBounces<= maxBounces)
         {
+
             ContactPoint point = collision.contacts[0];
             Vector3 newDir = Vector3.zero;
             Vector3 curDire = this.transform.TransformDirection(Vector3.forward);
-            currentBounces++;
+
             newDir = Vector3.Reflect(curDire, point.normal);
-            transform.rotation = Quaternion.FromToRotation(Vector3.forward, newDir);
+            transform.rotation = Quaternion.FromToRotation(Vector3.up, newDir);
+
         }
         if (currentBounces > maxBounces)
         {

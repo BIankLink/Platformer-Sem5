@@ -509,7 +509,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702710956}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 3.58, z: -6.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -517,7 +517,7 @@ Transform:
   - {fileID: 1944326305}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1060176530
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1808919873}
-  - component: {fileID: 1808919872}
+  - component: {fileID: 1808919874}
   m_Layer: 0
   m_Name: ProjectileManager
   m_TagString: Untagged
@@ -959,18 +959,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1808919872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1808919871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c02c3e476b13d84bb770afe2434ae89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1808919873
 Transform:
   m_ObjectHideFlags: 0
@@ -979,13 +967,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808919871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9123149, y: -0.1385122, z: 0.8138567}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1808919874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808919871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef92c08fea3075f4ca4eefe1a246aa8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledProjectile: {fileID: 8264666052431224310, guid: a3e796b200e25404d8522d1242f89741,
+    type: 3}
+  projectiles: []
 --- !u!1 &1944326304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,14 +1030,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1944326304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37acc90239edf9f469b58a6396aed111, type: 3}
+  m_Script: {fileID: 11500000, guid: 683aaaea9c4f3514597dab3dc857e3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDatas:
-  - {fileID: 11400000, guid: 117f899a559b6bf42a5feca3ecf2133d, type: 2}
-  index: 0
-  isSequenceRandom: 0
-  spawnAutomatically: 1
-  weapon: {fileID: 1944326304}
-  timer: 0
-  rotations: []
+  projectileCount: 10
+  startAngle: 90
+  endAngle: 270

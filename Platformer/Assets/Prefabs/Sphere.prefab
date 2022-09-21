@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4457756405077676213}
   - component: {fileID: 817627957953876009}
   - component: {fileID: 7837280940570828136}
-  - component: {fileID: 3377259650402822056}
   - component: {fileID: 4638000288457997134}
+  - component: {fileID: 4743334317060519666}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -28,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8264666052431224310}
-  m_LocalRotation: {x: 0, y: 0.76962245, z: 0, w: 0.6384993}
-  m_LocalPosition: {x: 0, y: 0.1869, z: -0.1418}
+  m_LocalRotation: {x: 0.006170632, y: -2.6972688e-10, z: 0.999981, w: -0.000000043710557}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 100.64, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4457756405077676213
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -99,25 +99,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3377259650402822056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8264666052431224310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b92b2bb13dda814b827dd12108b87d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  maxBounces: 0
-  hasLifeTime: 0
-  timer: 0
-  lifeTime: 0
-  type: 
-  rotation: 0
 --- !u!54 &4638000288457997134
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -132,5 +113,24 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &4743334317060519666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264666052431224310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b92b2bb13dda814b827dd12108b87d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  maxBounces: 4
+  hasLifeTime: 0
+  timer: 0
+  lifeTime: 0
+  type: 
+  rotationtobe: 0
