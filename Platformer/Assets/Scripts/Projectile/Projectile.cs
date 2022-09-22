@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Projectile : MonoBehaviour
 {
     public float speed;
     public int maxBounces;
-    int currentBounces=0;
+    [SerializeField]int currentBounces=0;
     public bool hasLifeTime;
     public float timer;
     public float lifeTime;
@@ -18,8 +19,14 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         timer = lifeTime;
+        transform.rotation = Quaternion.Euler(0, 0, rotationtobe);
+        
     }
-   
+    private void OnEnable()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, rotationtobe);
+    }
+
     private void Update()
     {
         transform.Translate(moveDirection * speed * Time.deltaTime);
@@ -46,10 +53,10 @@ public class Projectile : MonoBehaviour
 
             ContactPoint point = collision.contacts[0];
             Vector3 newDir = Vector3.zero;
-            Vector3 curDire = this.transform.TransformDirection(Vector3.forward);
-
-            newDir = Vector3.Reflect(curDire, point.normal);
-            transform.rotation = Quaternion.FromToRotation(Vector3.up, newDir);
+            Vector3 curDire = this.transform.TransformDirection(moveDirection);
+            currentBounces++;
+            newDir = Vector3.Reflect(curDire, point.normal);         
+            transform.rotation = Quaternion.FromToRotation(moveDirection, newDir);
 
         }
         if (currentBounces > maxBounces)

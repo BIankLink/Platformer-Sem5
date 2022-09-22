@@ -2,42 +2,76 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Type{Bouncy};
 public class FireProjectiles : MonoBehaviour
 {
     [SerializeField]
     int projectileCount = 5;
 
+    [SerializeField]bool isRandom;
     [SerializeField]
-    float startAngle = 0f, endAngle = 270f;
-
+    float startAngle = 0f, endAngle = -90f;
+    public Type type;
     Vector3 projectileMoveDirection;
-
+    /*[HideInInspector]*/ public float[] rotations;
     // Start is called before the first frame update
     void Start()
     {
         Fire();
     }
+    public float[] RandomRotations()
+    {
+        for (int i = 0; i <projectileCount; i++)
+        {
+            rotations[i] = Random.Range(startAngle, endAngle);
+        }
+        return rotations;
 
+    }
+
+    // This will set random rotations evenly distributed between the min and max Rotation.
+    public float[] DistributedRotations()
+    {
+        for (int i = 0; i < projectileCount; i++)
+        {
+            float fraction;
+            if (projectileCount <= 1)
+            {
+                fraction = (float)i / ((float)projectileCount);
+            }
+            else
+            {
+                fraction = (float)i / ((float)projectileCount - 1);
+            }
+
+            var difference = endAngle - startAngle;
+            var fractionOfDifference = fraction * difference;
+            rotations[i] = fractionOfDifference + startAngle; // We add minRotation to undo Difference
+
+        }
+
+        return rotations;
+    }
     void Fire()
     {
-        float angleStep = (endAngle - startAngle) / projectileCount;
-        float angle = startAngle;
-
-        for(int i = 0; i < projectileCount+1; i++)
+        rotations = new float[projectileCount];
+        if (isRandom)
         {
-            float proDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
-            float proDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
+            RandomRotations();
+        }
+        else
+        {
+            DistributedRotations();
+        }
 
-            Vector3 proMoveVector = new Vector3(proDirX, proDirY, 0f);
-            Vector3 proDir = (proMoveVector - transform.position).normalized;
-
-            GameObject pro = ProjectilePool.instance.GetProjectile();
-            pro.transform.position = transform.position;
-            pro.transform.rotation = transform.rotation;
-            pro.SetActive(true);
-            pro.GetComponent<Projectile>().SetMoveDirection(proDir);
-
-            angle += angleStep;
+        for (int i = 0; i < projectileCount; i++)
+        {
+            
+            GameObject pro = ProjectilePool.instance.SpwanFromPool(type.ToString(), transform.position,transform.rotation);
+            pro.GetComponent<Projectile>().SetMoveDirection(gameObject.transform.forward);
+            
+            pro.GetComponent<Projectile>().rotationtobe = rotations[i];
+            
         }
     }
    

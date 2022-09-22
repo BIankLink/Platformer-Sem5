@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 702710959}
   - component: {fileID: 702710958}
   - component: {fileID: 702710957}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,9 +986,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef92c08fea3075f4ca4eefe1a246aa8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledProjectile: {fileID: 8264666052431224310, guid: a3e796b200e25404d8522d1242f89741,
-    type: 3}
-  projectiles: []
+  pools:
+  - tag: Bouncy
+    prefab: {fileID: 8264666052431224310, guid: a3e796b200e25404d8522d1242f89741,
+      type: 3}
+    size: 15
 --- !u!1 &1944326304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,14 +1015,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944326304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.386, z: 0.683}
+  m_LocalRotation: {x: 0.00014121176, y: 0.0000058114515, z: 0.008726629, w: 0.999962}
+  m_LocalPosition: {x: 0.000000059604645, y: 0.38599992, z: 0.68300015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 702710960}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.016, y: 0.001, z: 1}
 --- !u!114 &1944326306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1033,6 +1035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683aaaea9c4f3514597dab3dc857e3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileCount: 10
-  startAngle: 90
-  endAngle: 270
+  projectileCount: 4
+  isRandom: 0
+  startAngle: 0
+  endAngle: -90
+  type: 0
+  rotations: []
