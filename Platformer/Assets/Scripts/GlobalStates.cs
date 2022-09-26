@@ -15,6 +15,7 @@ namespace GlobalStates
         PlatformFalling,
         PlatformJump,
         PlatformJumpCancel,
+        PlatformWallSliding,
         Wall,
         WallIdle,
         WallRun,

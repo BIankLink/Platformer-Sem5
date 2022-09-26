@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GlobalStates;
-
+using UnityEngine.Rendering.Universal;
 
 public class PlayerStateMachine : LivingEntity
 {
@@ -40,11 +40,14 @@ public class PlayerStateMachine : LivingEntity
     [SerializeField] float damage=1f;
     bool jumpCancel;
     [SerializeField] LayerMask wall;
+    [SerializeField]LayerMask wallSlide;
     [SerializeField]Transform rayOrigin;
     //State Variable
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
     [SerializeField]float switchJump = 1;
+    bool isSliding;
+    
     //Getters Abnd Setters
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; }}
     public bool isJumpPressed { get { return _isJumpPressed; }}
@@ -79,7 +82,11 @@ public class PlayerStateMachine : LivingEntity
     public bool JumpCancel { get { return jumpCancel; }}
     public SwipeInput InputManager { get { return inputManager; }set { } }
 
-    public Vector3 PlatformPosition { get { return platformPos; }set { platformPos = value; } } 
+    public Vector3 PlatformPosition { get { return platformPos; }set { platformPos = value; } }
+    public bool IsSliding { get { return isSliding; } }
+    public LayerMask WallSliding { get { return wallSlide; } }
+    public LayerMask Wall { get { return wall; } }
+    public float DistToGround { get { return distToGround; } }
     protected override void Start()
     {
         base.Start();
@@ -233,19 +240,19 @@ public class PlayerStateMachine : LivingEntity
     public bool CheckIfWallGrounded()
     {
         return Physics.Raycast(orientation.transform.position, Vector3.forward, distToWallGround + 0.1f,wall);
-        
-    } 
+
+    }
+    
     public bool CheckIfWallJumpGrounded()
     {
         return Physics.Raycast(orientation.transform.position, Vector3.forward, distanceToWall,wall);
         
     }
     public bool CheckIfGrounded()
-    {
+    { 
       return  Physics.CheckSphere(rayOrigin.position, distToGround ,wall);
         
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(rayOrigin.position, distToGround);

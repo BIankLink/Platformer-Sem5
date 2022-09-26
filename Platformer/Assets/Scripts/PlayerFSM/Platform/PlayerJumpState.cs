@@ -34,6 +34,10 @@ public class PlayerJumpState : PlayerBaseState
             SwitchState(Factory.platformFalling());
             
         }
+        if(CheckIfWallSliding() && !Ctx.isJumpPressed)
+        {
+
+        }
        
     }
     public override void InitializeSuperState() { }
@@ -60,5 +64,11 @@ public class PlayerJumpState : PlayerBaseState
         Ctx.CurrentMovementY = Ctx.InitialJumpVelocity * 0.5f;
     }
 
-    
+    public bool CheckIfWallSliding()
+    {
+        return Physics.Raycast(Ctx.transform.position, Vector3.right, Ctx.DistToGround, Ctx.WallSliding);
+
+    }
+
+
 }

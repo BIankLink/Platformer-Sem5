@@ -20,7 +20,7 @@ public class PlayerGroundedState : PlayerBaseState
     }
     public override void UpdateState() 
     {
-        
+        CheckWallSwitch();
         CheckSwitchState();
     }
     public override void ExitState()
@@ -61,5 +61,20 @@ public class PlayerGroundedState : PlayerBaseState
             SetSubState(Factory.platformAttack());
         }     
 
+    }
+    public void CheckWallSwitch()
+    {
+        Collider[] colliders = Physics.OverlapSphere(Ctx.transform.position, Ctx.DistToGround, Ctx.Wall);
+        if (colliders.Length > 0)
+        {
+            if (colliders[0].gameObject.CompareTag("WallThere"))
+            {
+                Ctx.CanSwitch = true;
+            }
+            else
+            {
+                Ctx.CanSwitch = false;
+            }
+        }
     }
 }

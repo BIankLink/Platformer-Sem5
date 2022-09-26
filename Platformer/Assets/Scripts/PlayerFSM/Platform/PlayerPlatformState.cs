@@ -29,11 +29,9 @@ public class PlayerPlatformState : PlayerBaseState
     }
     public override void CheckSwitchState()
     {
-        if (Ctx.IsSwitching)
+        if (Ctx.IsSwitching && Ctx.CanSwitch)
         {
-            
-            SwitchState(Factory.wall());
-            
+            SwitchState(Factory.wall());            
         }
         
     }
@@ -51,8 +49,6 @@ public class PlayerPlatformState : PlayerBaseState
         }
         else if(!Ctx.isJumpPressed && !Ctx.CheckIfGrounded())
         {
-            
-            
             SetSuperState(Factory.platformFalling());
             //Debug.Log(CurrentSuperState);
         }

@@ -23,6 +23,7 @@ public class PlayerStateFactory
         _states[PlayerStates.PlatformFalling]= new PlayerFallingState(_context, this);
         _states[PlayerStates.PlatformJump]= new PlayerJumpState(_context, this);
         _states[PlayerStates.PlatformJumpCancel]=new PlayerJumpCancelState(_context, this);
+        _states[PlayerStates.PlatformWallSliding] = new PlayerWallSliding(_context, this);
         _states[PlayerStates.Wall]= new PlayerWallState(_context, this);
         _states[PlayerStates.WallIdle]= new PlayerWallIdleState(_context, this);
         _states[PlayerStates.WallRun]= new PlayerWallRunState(_context, this);
