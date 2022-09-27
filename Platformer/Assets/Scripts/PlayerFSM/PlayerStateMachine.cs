@@ -228,6 +228,10 @@ public class PlayerStateMachine : LivingEntity
         {
             hit.gameObject.GetComponent<FallingPlatforms>().Fall();
         }
+        if (hit.gameObject.layer==wallSlide)
+        {
+            isSliding = true;
+        }
         //if (hit.gameObject.GetComponent<SaveMachine>())
         //{
         //    Debug.Log("saved");
@@ -255,7 +259,7 @@ public class PlayerStateMachine : LivingEntity
     }
     public bool CheckIfWallSliding()
     {
-        return Physics.Raycast(transform.position, Vector3.right, DistToGround, WallSliding);
+        return isSliding;
 
     }
     private void OnDrawGizmos()
