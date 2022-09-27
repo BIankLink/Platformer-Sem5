@@ -11,7 +11,7 @@ public class PlayerWallSliding : PlayerBaseState
     }
     public override void CheckSwitchState()
     {
-        if (!Ctx.CheckIfGrounded() && !Ctx.isJumpPressed)
+        if (!Ctx.CheckIfGrounded() && !Ctx.isJumpPressed && !Ctx.CheckIfWallSliding())
         {
             SwitchState(Factory.platformFalling());
         }
@@ -24,6 +24,7 @@ public class PlayerWallSliding : PlayerBaseState
     public override void EnterState()
     {
         Ctx.CurrentMovementX += 0.5f;
+        Ctx.CurrentMovementY = Ctx.GroundedGravity;
     }
 
     public override void ExitState()

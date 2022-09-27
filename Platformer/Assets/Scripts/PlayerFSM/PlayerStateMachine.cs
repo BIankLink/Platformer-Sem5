@@ -253,6 +253,11 @@ public class PlayerStateMachine : LivingEntity
       return  Physics.CheckSphere(rayOrigin.position, distToGround ,wall);
         
     }
+    public bool CheckIfWallSliding()
+    {
+        return Physics.Raycast(transform.position, Vector3.right, DistToGround, WallSliding);
+
+    }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(rayOrigin.position, distToGround);

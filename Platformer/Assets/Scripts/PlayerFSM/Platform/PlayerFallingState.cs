@@ -31,11 +31,13 @@ public class PlayerFallingState : PlayerBaseState
     {
         if (Ctx.CheckIfGrounded())
         {
-            
             SwitchState(Factory.platformGrounded());
-         
         }
-        
+        if (Ctx.CheckIfWallSliding())
+        {
+            SwitchState(Factory.platformWallSliding());
+        }
+
     }
     public override void InitializeSuperState() { }
     public override void InitializeSubState() 
