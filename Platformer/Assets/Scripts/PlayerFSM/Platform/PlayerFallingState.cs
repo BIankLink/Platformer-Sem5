@@ -35,6 +35,7 @@ public class PlayerFallingState : PlayerBaseState
         }
         if (Ctx.CheckIfWallSliding())
         {
+            
             SwitchState(Factory.platformWallSliding());
         }
 

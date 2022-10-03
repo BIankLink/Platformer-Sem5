@@ -30,6 +30,7 @@ public class PlayerStateMachine : LivingEntity
     public float Wallgravity = 9.8f;
     float groundedGravity = -.05f;
     [SerializeField] float distanceToWall;
+    [SerializeField] float distToSlide;
     float initialJumpVelocity;
     float initialWallJumpVelocity;
     [SerializeField] float maxJumpHeight = 0.85f;
@@ -43,6 +44,7 @@ public class PlayerStateMachine : LivingEntity
     [SerializeField] LayerMask wall;
     [SerializeField]LayerMask wallSlide;
     [SerializeField]Transform rayOrigin;
+    [SerializeField] Transform slideOrigin;
     //State Variable
     PlayerBaseState _currentState;
     PlayerStateFactory _states;
@@ -229,10 +231,7 @@ public class PlayerStateMachine : LivingEntity
         {
             hit.gameObject.GetComponent<FallingPlatforms>().Fall();
         }
-        if (hit.gameObject.layer==wallSlide)
-        {
-            isSliding = true;
-        }
+       
         //if (hit.gameObject.GetComponent<SaveMachine>())
         //{
         //    Debug.Log("saved");
@@ -260,12 +259,13 @@ public class PlayerStateMachine : LivingEntity
     }
     public bool CheckIfWallSliding()
     {
-        return isSliding;
+       return Physics.CheckSphere(slideOrigin.position, distToSlide ,wallSlide);
 
     }
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(rayOrigin.position, distToGround);
+        Gizmos.DrawWireSphere(slideOrigin.position, distToSlide);
     }
     void onDeath()
     {

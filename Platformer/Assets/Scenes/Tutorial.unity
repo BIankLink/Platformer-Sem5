@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 8909255460364026220}
   - component: {fileID: 8909255460364026221}
   - component: {fileID: 8909255460364026222}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: forceChangeWall0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -19,17 +19,32 @@ public class PlayerWallSliding : PlayerBaseState
         {
             SwitchState(Factory.platformGrounded());
         }
+        if(Ctx.CheckIfWallSliding() && Ctx.isJumpPressed)
+        {
+            SwitchState(Factory.platformJump());
+        }
     }
 
     public override void EnterState()
     {
-        Ctx.CurrentMovementX += 0.5f;
-        Ctx.CurrentMovementY = Ctx.GroundedGravity;
+        
+        InitializeSubState();
+        
+       
+       
     }
 
     public override void ExitState()
     {
-        Ctx.CurrentMovementX -= 0.5f;
+        if(Ctx.transform.rotation == Quaternion.Euler(0, 90, 0))
+        {
+            Debug.Log("werks");
+            Ctx.CurrentMovementX = -20f;
+        }else if(Ctx.transform.rotation == Quaternion.Euler(0, -90, 0))
+        {
+            Debug.Log("werks1");
+            Ctx.CurrentMovementX = 20;
+        }
     }
 
     public override void InitializeSubState()
@@ -51,6 +66,13 @@ public class PlayerWallSliding : PlayerBaseState
 
     public override void UpdateState()
     {
+        Ctx.CurrentMovementY = Ctx.GroundedGravity;
+
+        if (Ctx.IsMovePressed && Ctx.CheckIfWallSliding())
+        {
+            
+            Ctx.CurrentMovementY = 0;
+        }
         CheckSwitchState();
     }
 
