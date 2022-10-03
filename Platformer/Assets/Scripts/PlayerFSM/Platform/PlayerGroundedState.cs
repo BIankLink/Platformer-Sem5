@@ -14,7 +14,7 @@ public class PlayerGroundedState : PlayerBaseState
     {
         Ctx.CanSwitch = true;
         InitializeSubState();
-        
+        Ctx.CurrentMovementX = 0;
         Ctx.CurrentMovementZ = 0;
         Ctx.CurrentMovementY = Ctx.GroundedGravity;
     }

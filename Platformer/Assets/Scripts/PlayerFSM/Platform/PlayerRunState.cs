@@ -15,8 +15,10 @@ public class PlayerRunState : PlayerBaseState
     public override void UpdateState()
     {
 
-
-        Ctx.Animator.SetFloat("SpeedPercent", Ctx.Speed);
+        if (Ctx.CheckIfGrounded())
+        {
+            Ctx.Animator.SetFloat("SpeedPercent", Ctx.Speed);
+        }
         Ctx.CurrentMovementX = Ctx.AppliedMovement.x; 
             CheckSwitchState();
     }

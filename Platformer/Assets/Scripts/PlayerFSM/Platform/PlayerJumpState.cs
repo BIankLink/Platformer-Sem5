@@ -47,6 +47,10 @@ public class PlayerJumpState : PlayerBaseState
         {
             SetSubState(Factory.platformAttack());
         }
+        if(!Ctx.IsAttacking&& !Ctx.IsMovePressed && !Ctx.JumpCancel)
+        {
+            SetSubState(Factory.platformIdle());
+        }
         if (Ctx.IsMovePressed)
         {
             SetSubState(Factory.platformRun());

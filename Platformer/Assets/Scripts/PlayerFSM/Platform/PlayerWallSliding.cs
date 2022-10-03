@@ -36,14 +36,18 @@ public class PlayerWallSliding : PlayerBaseState
 
     public override void ExitState()
     {
-        if(Ctx.transform.rotation == Quaternion.Euler(0, 90, 0))
+        if (!Ctx.CheckIfGrounded())
         {
-            Debug.Log("werks");
-            Ctx.CurrentMovementX = -20f;
-        }else if(Ctx.transform.rotation == Quaternion.Euler(0, -90, 0))
-        {
-            Debug.Log("werks1");
-            Ctx.CurrentMovementX = 20;
+            if (Ctx.transform.rotation == Quaternion.Euler(0, 90, 0))
+            {
+                
+                Ctx.CurrentMovementX = -1f;
+            }
+            else if (Ctx.transform.rotation == Quaternion.Euler(0, -90, 0))
+            {
+                
+                Ctx.CurrentMovementX = 1;
+            }
         }
     }
 
