@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GlobalStates;
 using UnityEngine.Rendering.Universal;
+using System;
 
 public class PlayerStateMachine : LivingEntity
 {
@@ -104,7 +105,7 @@ public class PlayerStateMachine : LivingEntity
         _currentState.EnterState();
         //_currentState.InitializeSuperState();
 
-        
+        OnDeath += onDeath;
         
         SetUpJumpVariables();
         SetUpWallJumpVariables();
@@ -265,5 +266,9 @@ public class PlayerStateMachine : LivingEntity
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(rayOrigin.position, distToGround);
+    }
+    void onDeath()
+    {
+        GameManager.instance.Die();
     }
 }

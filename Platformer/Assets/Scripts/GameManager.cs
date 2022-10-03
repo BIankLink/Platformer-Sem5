@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
         //        Reload();
         //    }
         //}
-
+        
        
        
     }
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     {
         
             Time.timeScale = 1;
-            SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.werks");
+            SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.tadap");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             
         
@@ -100,8 +100,9 @@ public class GameManager : MonoBehaviour
     public void Die()
     {
        
-        GameObject.Destroy(player.gameObject);
+        //GameObject.Destroy(player.gameObject);
         LevelManager.instance.newGame = false;
+        Reload();
        
 
     }

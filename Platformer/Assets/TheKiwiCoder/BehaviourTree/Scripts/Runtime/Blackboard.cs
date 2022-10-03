@@ -12,6 +12,7 @@ namespace TheKiwiCoder {
         public GameObject[] WayPoints;
         public Vector3 moveToRandomPosition;
         public GameObject itself;
+        public float damage;
         public Transform Player;
     }
 }

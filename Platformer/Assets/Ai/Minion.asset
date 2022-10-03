@@ -20,6 +20,7 @@ MonoBehaviour:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -39,11 +40,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 94e563175f04bb54b9f68b48de30b6c5
-  position: {x: -184.99992, y: 515}
+  position: {x: -334.99994, y: 515}
   blackboard:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -73,6 +75,7 @@ MonoBehaviour:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -102,6 +105,7 @@ MonoBehaviour:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -135,12 +139,14 @@ MonoBehaviour:
   - {fileID: 8088450258744382533}
   - {fileID: -5672761241647828552}
   - {fileID: 1928455692650068189}
+  - {fileID: 4796846970604879388}
   blackboard:
     WayPoints:
     - {fileID: 7372006708590902928, guid: 7748022eee39a61429e39942e3001655, type: 3}
     - {fileID: 8534841471953062433, guid: 47f55f07f4e5d784ca3e58440f1ae15d, type: 3}
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
 --- !u!114 &1576915082900874529
 MonoBehaviour:
@@ -162,12 +168,14 @@ MonoBehaviour:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
   children:
   - {fileID: 8088450258744382533}
   - {fileID: -5672761241647828552}
+  - {fileID: 4796846970604879388}
 --- !u!114 &1928455692650068189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +196,7 @@ MonoBehaviour:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -214,6 +223,7 @@ MonoBehaviour:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
@@ -240,12 +250,37 @@ MonoBehaviour:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
   child: {fileID: 2697745775442520422}
   restartOnSuccess: 1
   restartOnFailure: 1
+--- !u!114 &4796846970604879388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e3731ec815db14eb756abe747c3bb9, type: 3}
+  m_Name: DamagePlayer
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a7bbd72daeeba284192489013ff04d44
+  position: {x: -151.33401, y: 504.99997}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    damage: 0
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
 --- !u!114 &8088450258744382533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +301,7 @@ MonoBehaviour:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
+    damage: 0
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
