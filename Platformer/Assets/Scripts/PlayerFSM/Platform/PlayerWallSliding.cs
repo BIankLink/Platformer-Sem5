@@ -46,7 +46,7 @@ public class PlayerWallSliding : PlayerBaseState
             else if (Ctx.transform.rotation == Quaternion.Euler(0, -90, 0))
             {
                 
-                Ctx.CurrentMovementX = 1;
+                Ctx.CurrentMovementX = 1f;
             }
         }
     }
