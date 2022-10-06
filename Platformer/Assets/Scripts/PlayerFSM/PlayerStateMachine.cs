@@ -231,6 +231,10 @@ public class PlayerStateMachine : LivingEntity
         {
             hit.gameObject.GetComponent<FallingPlatforms>().Fall();
         }
+        if (hit.gameObject.CompareTag("Dead"))
+        {
+            TakeDamage(health);
+        }
        
         //if (hit.gameObject.GetComponent<SaveMachine>())
         //{
@@ -269,6 +273,7 @@ public class PlayerStateMachine : LivingEntity
     }
     void onDeath()
     {
+        Debug.Log("werks");
         GameManager.instance.Die();
     }
 }

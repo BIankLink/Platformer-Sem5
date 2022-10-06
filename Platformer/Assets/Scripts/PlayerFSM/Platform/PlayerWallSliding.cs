@@ -19,7 +19,7 @@ public class PlayerWallSliding : PlayerBaseState
         {
             SwitchState(Factory.platformGrounded());
         }
-        if(Ctx.CheckIfWallSliding() && Ctx.isJumpPressed)
+        if(Ctx.CheckIfWallSliding() && Ctx.isJumpPressed && !Ctx.IsMovePressed)
         {
             SwitchState(Factory.platformJump());
         }
@@ -38,6 +38,7 @@ public class PlayerWallSliding : PlayerBaseState
     {
         if (!Ctx.CheckIfGrounded())
         {
+            Debug.Log("blah");
             if (Ctx.transform.rotation == Quaternion.Euler(0, 90, 0))
             {
                 
@@ -49,6 +50,7 @@ public class PlayerWallSliding : PlayerBaseState
                 Ctx.CurrentMovementX = 1f;
             }
         }
+       
     }
 
     public override void InitializeSubState()
