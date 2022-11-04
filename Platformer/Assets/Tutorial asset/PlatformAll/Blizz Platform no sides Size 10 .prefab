@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7107893407635931514}
   - component: {fileID: 4990190890362074544}
   - component: {fileID: 3364181149618947296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'Blizz Platform no sides Size 10 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}

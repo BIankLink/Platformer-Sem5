@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4449006784612393558}
   - component: {fileID: 1899106516624938652}
   - component: {fileID: 5410058553108754687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bliss_Platform_Size_15_Without_Sides
   m_TagString: Untagged
   m_Icon: {fileID: 0}

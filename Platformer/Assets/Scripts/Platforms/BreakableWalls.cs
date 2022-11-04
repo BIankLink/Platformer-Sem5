@@ -7,11 +7,13 @@ public class BreakableWalls : LivingEntity
     // Start is called before the first frame update
     public GameObject crackedWall;
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        if(health == 0)
-        {
-            crackedWall.SetActive(true);
-        }
+        crackedWall.SetActive(false);
+        OnDeath += onDeath;
+    }
+    void onDeath()
+    {
+        crackedWall.SetActive(true);
     }
 }
