@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.43916875, g: 0.5044449, b: 0.6698113, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 4f28ee45fb48cdd40b32d8ef2db4cf70, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6abe918ee1229b34f8557fc2a5a39825, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.44268167, g: 0.49180502, b: 0.57160586, a: 1}
+  m_IndirectSpecularColor: {r: 0.783413, g: 1.0363004, b: 1.0417056, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -373,8 +373,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.048329912, y: -1e-45, z: 0, w: 0.99883145}
-  m_LocalPosition: {x: 41.1, y: 6.08, z: -10}
+  m_LocalRotation: {x: 0.04832994, y: 0, z: 0, w: 0.99883145}
+  m_LocalPosition: {x: 337.3, y: 7.17, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1823,7 +1823,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406119129}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.1, y: 3.41, z: 0}
+  m_LocalPosition: {x: 337.3, y: 4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2137,8 +2137,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449607497}
-  m_LocalRotation: {x: 0.048329912, y: -1e-45, z: -0, w: 0.99883145}
-  m_LocalPosition: {x: 41.1, y: 6.08, z: -10}
+  m_LocalRotation: {x: 0.04832994, y: 0, z: 0, w: 0.99883145}
+  m_LocalPosition: {x: 337.3, y: 7.17, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2806,11 +2806,11 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 5.5
-  m_VerticalDamping: 0.5
+  m_HorizontalDamping: 2.5
+  m_VerticalDamping: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_DeadZoneWidth: 0
+  m_DeadZoneWidth: 0.17
   m_DeadZoneHeight: 0.32
   m_SoftZoneWidth: 0.8
   m_SoftZoneHeight: 0.8
@@ -2831,7 +2831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 4
   m_FollowOffset: {x: 0, y: 2.67, z: -10}
-  m_XDamping: 1
+  m_XDamping: 2.5
   m_YDamping: 1
   m_ZDamping: 1
   m_AngularDampingMode: 0
