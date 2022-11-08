@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
     public bool executed;
     public TMP_Text buttonText;
     [SerializeField]PlayableDirector playableDirector;
+
+    
     private void Start()
     {
         executed = false;
@@ -23,6 +25,8 @@ public class MainMenu : MonoBehaviour
         {
             buttonText.text = "New Game";
         }
+        
+
     }
     private void OnEnable()
     {
@@ -44,18 +48,21 @@ public class MainMenu : MonoBehaviour
     IEnumerator newGame()
     {
         yield return new WaitForSeconds(seconds);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        LevelManager.instance.newGame = true;
+        
+        LevelManager.instance.newGame = true; 
+       
     }
     IEnumerator loadGame()
     {
         yield return new WaitForSeconds(seconds);
-        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.werks");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        LevelManager.instance.newGame = false;
+        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.tadap");
+        
+        LevelManager.instance.newGame = false; 
+       
     }
     public void OnStart()
     {
         playableDirector.Resume();
+        
     }
 }

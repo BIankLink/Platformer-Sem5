@@ -21,7 +21,7 @@ public class ScenePartLoader : MonoBehaviour
     private bool shouldLoad;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if(SceneManager.sceneCount > 0)
         {
@@ -89,7 +89,7 @@ public class ScenePartLoader : MonoBehaviour
     {
         if (!isLoaded)
         {
-            SceneManager.LoadSceneAsync(gameObject.name, LoadSceneMode.Additive);
+            SceneManager.LoadScene(gameObject.name, LoadSceneMode.Additive);
             isLoaded = true;
         }
     }

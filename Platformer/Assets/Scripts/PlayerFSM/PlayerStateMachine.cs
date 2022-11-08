@@ -99,7 +99,7 @@ public class PlayerStateMachine : LivingEntity
     }
     void Awake()
     {
-
+        
         animator = GetComponentInChildren<Animator>();
         characterController = GetComponent<CharacterController>();
         inputManager = GetComponent<SwipeInput>();

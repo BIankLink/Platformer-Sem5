@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6abe918ee1229b34f8557fc2a5a39825, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.783413, g: 1.0363004, b: 1.0417056, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,10 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 545643089df98894587b1c9bf7a5f9ee,
+    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 399f5dd293db8534889a56e407634d93,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -451,6 +453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_25 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560159712582603915, guid: 8c176d03d80763a41ad38c7ed2ca7e16,
+        type: 3}
+      propertyPath: m_TagString
+      value: Dead
       objectReference: {fileID: 0}
     - target: {fileID: 4189450231665184305, guid: 8c176d03d80763a41ad38c7ed2ca7e16,
         type: 3}
@@ -830,6 +837,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_25 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560159712582603915, guid: 8c176d03d80763a41ad38c7ed2ca7e16,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
       objectReference: {fileID: 0}
     - target: {fileID: 4189450231665184305, guid: 8c176d03d80763a41ad38c7ed2ca7e16,
         type: 3}
@@ -1388,6 +1400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!1001 &284922936
 PrefabInstance:
@@ -1582,6 +1595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_15 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8579440542812522235, guid: dc2632611b44a1b4cb9877eea4cc7556,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     - target: {fileID: 8960926425450060865, guid: dc2632611b44a1b4cb9877eea4cc7556,
         type: 3}
       propertyPath: m_RootOrder
@@ -1752,6 +1770,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_15 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579440542812522235, guid: dc2632611b44a1b4cb9877eea4cc7556,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
       objectReference: {fileID: 0}
     - target: {fileID: 8960926425450060865, guid: dc2632611b44a1b4cb9877eea4cc7556,
         type: 3}
@@ -2242,6 +2265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_15 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579440542812522235, guid: dc2632611b44a1b4cb9877eea4cc7556,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
       objectReference: {fileID: 0}
     - target: {fileID: 8960926425450060865, guid: dc2632611b44a1b4cb9877eea4cc7556,
         type: 3}
@@ -4521,6 +4549,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_20_Without_Sides (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1986232443295031960, guid: 2a4aa5a2df33f3a40ba01a0f5176bacd,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a4aa5a2df33f3a40ba01a0f5176bacd, type: 3}
 --- !u!1001 &1062958814
@@ -4603,6 +4636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_15 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579440542812522235, guid: dc2632611b44a1b4cb9877eea4cc7556,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
       objectReference: {fileID: 0}
     - target: {fileID: 8960926425450060865, guid: dc2632611b44a1b4cb9877eea4cc7556,
         type: 3}
@@ -5813,6 +5851,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_20_Without_Sides (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1986232443295031960, guid: 2a4aa5a2df33f3a40ba01a0f5176bacd,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a4aa5a2df33f3a40ba01a0f5176bacd, type: 3}
 --- !u!1 &1346205094
@@ -5943,6 +5986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!1 &1368140304
 GameObject:
@@ -6052,6 +6096,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_25_Without_Sides (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1610933952153090882, guid: 598fd51097c5b184aa8a875c690b597a,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
       objectReference: {fileID: 0}
     - target: {fileID: 2094454513242153464, guid: 598fd51097c5b184aa8a875c690b597a,
         type: 3}
@@ -6719,6 +6768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!1 &1540121055
 GameObject:
@@ -7275,6 +7325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!1001 &1685361533
 PrefabInstance:
@@ -7738,6 +7789,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_15_Without_Sides
       objectReference: {fileID: 0}
+    - target: {fileID: 97398178455795529, guid: ec9273faa7b121e49ae1339c7e669cfc,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     - target: {fileID: 725598011514744307, guid: ec9273faa7b121e49ae1339c7e669cfc,
         type: 3}
       propertyPath: m_RootOrder
@@ -8186,6 +8242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!1 &1883835383
 GameObject:
@@ -8840,6 +8897,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_15 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8579440542812522235, guid: dc2632611b44a1b4cb9877eea4cc7556,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     - target: {fileID: 8960926425450060865, guid: dc2632611b44a1b4cb9877eea4cc7556,
         type: 3}
       propertyPath: m_RootOrder
@@ -8983,6 +9045,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_25 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3560159712582603915, guid: 8c176d03d80763a41ad38c7ed2ca7e16,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     - target: {fileID: 4189450231665184305, guid: 8c176d03d80763a41ad38c7ed2ca7e16,
         type: 3}
       propertyPath: m_RootOrder
@@ -9106,6 +9173,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_20 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547649583685189071, guid: d78afe83c48b8a1448ab5b134384ef87,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d78afe83c48b8a1448ab5b134384ef87, type: 3}
@@ -9569,6 +9641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!4 &7138547845094477320
 Transform:
@@ -10474,6 +10547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!1 &7138547845361643953
 GameObject:
@@ -10700,6 +10774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!33 &7138547845410513416
 MeshFilter:
@@ -12479,6 +12554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!1 &7138547846187042000
 GameObject:
@@ -14005,6 +14081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 1
+  slowDuration: 1
   crackedWall: {fileID: 0}
 --- !u!23 &7138547846916229336
 MeshRenderer:

@@ -7,7 +7,7 @@ public class LivingEntity : MonoBehaviour,IDamageable
     public float startingHealth;
     public float health { get;  set; }
     protected bool dead;
-
+    public float slowDuration=1f;
     public event System.Action OnDeath;
 
     protected virtual void Start()
@@ -26,13 +26,20 @@ public class LivingEntity : MonoBehaviour,IDamageable
         health -= damage;
         if (gameObject.CompareTag("Player"))
         {
-            gameObject.GetComponent<PlayerStateMachine>().MoveSpeed *= 0.5f;
+            StartCoroutine(slow());
             gameObject.GetComponent<PlayerStateMachine>().CanSwitch=false;
         }
         if (health <= 0 && !dead)
         {
             Die();
         }
+    }
+
+    IEnumerator slow()
+    {
+        gameObject.GetComponent<PlayerStateMachine>().MoveSpeed /= 2;
+        yield return new WaitForSeconds(slowDuration);
+        gameObject.GetComponent<PlayerStateMachine>().MoveSpeed *= 2;
     }
 
     [ContextMenu("Self Destruct")]
