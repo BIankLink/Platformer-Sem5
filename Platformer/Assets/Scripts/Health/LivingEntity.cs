@@ -24,7 +24,11 @@ public class LivingEntity : MonoBehaviour,IDamageable
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
-
+        if (gameObject.CompareTag("Player"))
+        {
+            gameObject.GetComponent<PlayerStateMachine>().MoveSpeed *= 0.5f;
+            gameObject.GetComponent<PlayerStateMachine>().CanSwitch=false;
+        }
         if (health <= 0 && !dead)
         {
             Die();

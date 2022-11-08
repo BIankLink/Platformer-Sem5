@@ -50,6 +50,8 @@ public class PlayerStateMachine : LivingEntity
     PlayerStateFactory _states;
     [SerializeField]float switchJump = 1;
     bool isSliding;
+    [SerializeField]float attackCooldownTimer;
+    [SerializeField] float attackCooldown = 2f;
     
     //Getters Abnd Setters
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; }}
@@ -73,7 +75,7 @@ public class PlayerStateMachine : LivingEntity
     public bool IsAttacking { get { return _isAttacking; } set { _isAttacking = value; } }
 
     public bool IsSwitching { get { return _isSwitching; }}
-    public float MoveSpeed { get { return moveSpeed; }}
+    public float MoveSpeed { get { return moveSpeed; }set { moveSpeed = value; } }
 
     public float Speed { get { return Mathf.Abs(currentMovementInput.x); } }
 
@@ -93,6 +95,7 @@ public class PlayerStateMachine : LivingEntity
     protected override void Start()
     {
         base.Start();
+        attackCooldownTimer = attackCooldown;
     }
     void Awake()
     {
@@ -116,6 +119,11 @@ public class PlayerStateMachine : LivingEntity
     // Update is called once per frame
     void Update()
     {
+        if(attackCooldownTimer > 0)
+        {
+            attackCooldownTimer-=Time.deltaTime;
+        }
+        
         //Debug.DrawRay(orientation.transform.position, Vector3.forward, Color.red, distToWallGround); 
         //Debug.DrawRay(orientation.transform.position, Vector3.down, Color.red, distToGround);
         //Debug.Log(CheckIfWallGrounded());
@@ -146,7 +154,11 @@ public class PlayerStateMachine : LivingEntity
         }
         if (inputManager.left || inputManager.right)
         {
-            _isAttacking = true;
+            if (attackCooldownTimer <= 0)
+            {
+                _isAttacking = true;
+                attackCooldownTimer = attackCooldown;
+            }
         }else if (!inputManager.left || inputManager.right)
         {
             _isAttacking= false;
