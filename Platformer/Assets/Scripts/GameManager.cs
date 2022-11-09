@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;using UnityEngine.UI;
+using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -13,16 +14,15 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
 
-            //Debug.LogWarning("More than one instance of Inventory found");
+            
             return;
         }
         instance = this;
-
-       
+        
 
     }
     #endregion
-   
+    [SerializeField] GameObject Player;
 
     public PlayerStateMachine player;
    
@@ -34,12 +34,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateMachine>();
-        if(SaveData.current!= null&&!LevelManager.instance.newGame)
-        {
+        player = Player.GetComponent<PlayerStateMachine>();
+        
+
+        
+        if (SaveData.current != null && !LevelManager.instance.newGame)
+        { 
             Loaded();
-            
         }
+        
         if (LevelManager.instance.newGame)
         {
             PlayerData p = new PlayerData(player);
@@ -47,7 +50,7 @@ public class GameManager : MonoBehaviour
             //put values in p
             SaveData s = new SaveData();
             s.playerData = p;
-          
+            
             SerializationManager.Save("Save", s);
             LevelManager.instance.newGame = false;
         }
@@ -77,29 +80,23 @@ public class GameManager : MonoBehaviour
     }
 
     public void Reload()
-    {
-        
-            Time.timeScale = 1;
-            SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.tadap");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            
-        
+    {   
+        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.tadap");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Loaded()
     {
-
-        player.transform.position = new Vector3(SaveData.current.playerData.position[0], SaveData.current.playerData.position[1], SaveData.current.playerData.position[2]);
-        player.transform.rotation = Quaternion.Euler(SaveData.current.playerData.rotation[0], SaveData.current.playerData.rotation[1], SaveData.current.playerData.rotation[2]);
+        
+        Vector3 pos = SaveData.current.playerData.position;
+        Quaternion rot = SaveData.current.playerData.rotation;
+        Instantiate(Player, pos, rot);
+        
         player.health = SaveData.current.playerData.lives;
-       
-
-        
-           
-        
+  
     }
     public void Die()
     {
-       
+        Debug.Log("die");
         //GameObject.Destroy(player.gameObject);
         LevelManager.instance.newGame = false;
         Reload();

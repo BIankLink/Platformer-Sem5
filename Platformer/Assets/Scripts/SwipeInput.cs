@@ -29,6 +29,7 @@ public class SwipeInput : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        joystick = GameObject.FindGameObjectWithTag("JoyStick").GetComponent<Joystick>();
         screenWidth = Screen.width;
         ScreenWidthHalf = screenWidth / 2;
         player = GetComponent<PlayerStateMachine>();

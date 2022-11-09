@@ -791,6 +791,11 @@ PrefabInstance:
       propertyPath: crackedWall
       value: 
       objectReference: {fileID: 1113853023586302084}
+    - target: {fileID: 3552304715212837369, guid: 9507d4718bd9a434d919b13fc655578b,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3947100698495792661, guid: 9507d4718bd9a434d919b13fc655578b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1674,6 +1679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: breakable_rock_inPieces2
+      objectReference: {fileID: 0}
+    - target: {fileID: 951025901310713906, guid: 7722a4ec560286949acc3d012cf82f84,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1270240161214540117, guid: 7722a4ec560286949acc3d012cf82f84,
         type: 3}

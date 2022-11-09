@@ -7,6 +7,8 @@ TagManager:
   - BossWall
   - WallThere
   - Dead
+  - JoyStick
+  - Vcam
   layers:
   - Default
   - TransparentFX

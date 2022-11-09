@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class SaveMachine : MonoBehaviour
 {
-    public PlayerStateMachine player;
+    
    
     
     public void mysave()
     {
-        PlayerData p = new PlayerData(player);
-       
-        //put values in p
-        SaveData s = new SaveData();
-        s.playerData = p;
-       
+        PlayerData p = new PlayerData(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStateMachine>());
+
+         //put values in p
+            SaveData s = new SaveData();
+            s.playerData = p;
         
-        SerializationManager.Save("Save", s);
-       
-      
+            SerializationManager.Save("Save", s);
 
-
+        Debug.Log(p.position);
+        
     }
    
     

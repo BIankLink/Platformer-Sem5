@@ -15,9 +15,9 @@ public class ScenePartLoader : MonoBehaviour
     public Transform player;
     public CheckMethod checkMethod;
     public float loadRange;
-
+    
     //Scene State
-    private bool isLoaded;
+    [SerializeField]private bool isLoaded;
     private bool shouldLoad;
 
     // Start is called before the first frame update
@@ -31,6 +31,8 @@ public class ScenePartLoader : MonoBehaviour
                 if(scene.name == gameObject.name)
                 {
                     isLoaded = true;
+                    Debug.Log("enable");
+                    
                 }
             }
         }
@@ -89,7 +91,7 @@ public class ScenePartLoader : MonoBehaviour
     {
         if (!isLoaded)
         {
-            SceneManager.LoadScene(gameObject.name, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(gameObject.name, LoadSceneMode.Additive);
             isLoaded = true;
         }
     }

@@ -11,7 +11,9 @@ public class SaveTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            save.mysave();
+            
+                save.mysave();
+            
         }
     }
    

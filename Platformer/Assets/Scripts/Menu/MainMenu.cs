@@ -5,17 +5,22 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
 using TMPro;
+using System;
 
 public class MainMenu : MonoBehaviour
 {
     public float seconds;
     public bool executed;
+    public GameObject loadingInterface;
+    public GameObject menu;
+    public Image loadingProgressBar;
     public TMP_Text buttonText;
     [SerializeField]PlayableDirector playableDirector;
+    List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
 
-    
     private void Start()
     {
+        
         executed = false;
         if ((SaveData.current != null))
         {
@@ -25,44 +30,80 @@ public class MainMenu : MonoBehaviour
         {
             buttonText.text = "New Game";
         }
-        
+        Debug.Log(Application.persistentDataPath);
 
     }
     private void OnEnable()
     {
-        Debug.Log("Paused");
-        playableDirector.Pause();
+        //Debug.Log("Paused");
+        //playableDirector.Pause();
+    }
+    public void HideMenu()
+    {
+        menu.SetActive(false);
     }
     public void onLoadGame()
     {
         executed = true;
-        StartCoroutine(loadGame());
+        //StartCoroutine(loadGame());
     }
 
     public void NewGame()
     {
         executed = true;
-        StartCoroutine(newGame());
+        //StartCoroutine(newGame());
     }
 
-    IEnumerator newGame()
+    void newGame()
     {
-        yield return new WaitForSeconds(seconds);
         
-        LevelManager.instance.newGame = true; 
-       
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("Main"));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive));
+        LevelManager.instance.newGame = true;
+
     }
-    IEnumerator loadGame()
+    void loadGame()
     {
-        yield return new WaitForSeconds(seconds);
-        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.tadap");
         
-        LevelManager.instance.newGame = false; 
-       
+        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.tadap");
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("Main"));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive));
+        LevelManager.instance.newGame = false;
+
     }
     public void OnStart()
     {
-        playableDirector.Resume();
+        HideMenu();
+        ShowLoadingScreen();
+        //playableDirector.Resume();
+        if(SaveData.current != null)
+        {
+            loadGame();
+        }
+        else
+        {
+            newGame();
+        }
+        StartCoroutine(LoadingScreen());
         
+    }
+
+    private void ShowLoadingScreen()
+    {
+        loadingInterface.SetActive(true);
+    }
+    IEnumerator LoadingScreen()
+    {
+        float totalProgress = 0;
+        for(int i = 0; i < scenesToLoad.Count; i++)
+        {
+            while (!scenesToLoad[i].isDone)
+            {
+                totalProgress += scenesToLoad[i].progress;
+                loadingProgressBar.fillAmount = totalProgress / scenesToLoad.Count;
+                //Debug.Log(loadingProgressBar.fillAmount);
+                yield return null;
+            }
+        }
     }
 }

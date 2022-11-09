@@ -96,6 +96,7 @@ public class PlayerStateMachine : LivingEntity
     {
         base.Start();
         attackCooldownTimer = attackCooldown;
+       
     }
     void Awake()
     {
@@ -285,7 +286,7 @@ public class PlayerStateMachine : LivingEntity
     }
     void onDeath()
     {
-        Debug.Log("werks");
+        
         GameManager.instance.Die();
     }
 }
