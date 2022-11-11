@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
 
-            //Debug.LogWarning("More than one instance of Inventory found");
+           
             return;
         }
         instance = this;

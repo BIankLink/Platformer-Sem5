@@ -17,29 +17,33 @@ public class ScenePartLoader : MonoBehaviour
     public float loadRange;
     
     //Scene State
-    [SerializeField]private bool isLoaded;
+    [SerializeField]private bool isLoaded=false;
     private bool shouldLoad;
+    
 
     // Start is called before the first frame update
     void Awake()
     {
-        if(SceneManager.sceneCount > 0)
+        
+        if (SceneManager.sceneCount > 0)
         {
-            for( int i = 0; i < SceneManager.sceneCount; i++)
+            for (int i = 0; i < SceneManager.sceneCount; i++)
             {
                 Scene scene = SceneManager.GetSceneAt(i);
-                if(scene.name == gameObject.name)
+                if (scene.name == gameObject.name)
                 {
                     isLoaded = true;
                     Debug.Log("enable");
-                    
+
                 }
             }
         }
+
+        
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(checkMethod == CheckMethod.Distance)
         {
@@ -91,6 +95,7 @@ public class ScenePartLoader : MonoBehaviour
     {
         if (!isLoaded)
         {
+            Debug.Log("LOading");
             SceneManager.LoadSceneAsync(gameObject.name, LoadSceneMode.Additive);
             isLoaded = true;
         }

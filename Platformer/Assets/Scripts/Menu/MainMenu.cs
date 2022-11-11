@@ -20,9 +20,10 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        
+        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.taadap");
         executed = false;
-        if ((SaveData.current != null))
+        
+        if ((SaveData.current.playerData != null))
         {
             buttonText.text = "Continue";
         }
@@ -58,16 +59,16 @@ public class MainMenu : MonoBehaviour
     {
         
         scenesToLoad.Add(SceneManager.LoadSceneAsync("Main"));
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive));
+        //scenesToLoad.Add(SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive));
         LevelManager.instance.newGame = true;
 
     }
     void loadGame()
     {
         
-        SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.tadap");
+        
         scenesToLoad.Add(SceneManager.LoadSceneAsync("Main"));
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive));
+        //scenesToLoad.Add(SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive));
         LevelManager.instance.newGame = false;
 
     }
@@ -76,7 +77,7 @@ public class MainMenu : MonoBehaviour
         HideMenu();
         ShowLoadingScreen();
         //playableDirector.Resume();
-        if(SaveData.current != null)
+        if(SaveData.current.playerData != null)
         {
             loadGame();
         }

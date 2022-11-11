@@ -16,7 +16,7 @@ public class SerializationManager : MonoBehaviour
             Directory.CreateDirectory(Application.persistentDataPath + "/saves");
         }
         Debug.Log("Saving");
-        string path = Application.persistentDataPath + "/saves/" + saveName + ".tadap";
+        string path = Application.persistentDataPath + "/saves/" + saveName + ".taadap";
 
         FileStream file = File.Create(path);
         formatter.Serialize(file, saveData);

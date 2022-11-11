@@ -124,7 +124,7 @@ public class PlayerStateMachine : LivingEntity
         {
             attackCooldownTimer-=Time.deltaTime;
         }
-        
+        //Debug.Log(transform.position);
         //Debug.DrawRay(orientation.transform.position, Vector3.forward, Color.red, distToWallGround); 
         //Debug.DrawRay(orientation.transform.position, Vector3.down, Color.red, distToGround);
         //Debug.Log(CheckIfWallGrounded());

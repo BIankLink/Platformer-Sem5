@@ -9,6 +9,8 @@ TagManager:
   - Dead
   - JoyStick
   - Vcam
+  - Tutorial
+  - Bliss
   layers:
   - Default
   - TransparentFX
