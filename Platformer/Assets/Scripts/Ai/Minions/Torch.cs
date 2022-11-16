@@ -15,7 +15,7 @@ public class Torch : MonoBehaviour
     void Start()
     {
         lightS = GetComponent<Light>();
-        
+        pov = gameObject.GetComponentInParent<FieldOfView>();
     }
 
 

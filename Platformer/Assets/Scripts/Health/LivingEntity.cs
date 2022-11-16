@@ -23,9 +23,11 @@ public class LivingEntity : MonoBehaviour,IDamageable
 
     public virtual void TakeDamage(float damage)
     {
+        
         health -= damage;
         if (gameObject.CompareTag("Player"))
         {
+            Debug.Log("Player  " + health);
             StartCoroutine(slow());
             gameObject.GetComponent<PlayerStateMachine>().CanSwitch=false;
         }

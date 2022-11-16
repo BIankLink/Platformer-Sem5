@@ -82,11 +82,11 @@ public class ScenePartLoader : MonoBehaviour
     }
     private void TriggerCheck()
     {
-        if (shouldLoad)
+        if (shouldLoad && !isLoaded)
         {
             LoadScene();
         }
-        else
+        else if(!isLoaded)
         {
             UnloadScene();
         }

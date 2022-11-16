@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d8a8e143ac24154449714ef649c8615d
-  position: {x: 14, y: 457}
+  position: {x: 159, y: 457}
   blackboard:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
@@ -24,6 +24,31 @@ MonoBehaviour:
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
+--- !u!114 &-3227899616490322910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5134d9de14153468b48928d3e7359a, type: 3}
+  m_Name: Wait
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 251389dc70bd5f44aa4381476160e29a
+  position: {x: -13.224991, y: 457.00003}
+  blackboard:
+    WayPoints: []
+    moveToRandomPosition: {x: 0, y: 0, z: 0}
+    itself: {fileID: 0}
+    damage: 0
+    Player: {fileID: 0}
+  description: 
+  drawGizmos: 0
+  duration: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,11 +69,12 @@ MonoBehaviour:
   - {fileID: 389546767539189864}
   - {fileID: 3764042598219556388}
   - {fileID: -7416928903050637606}
+  - {fileID: -3227899616490322910}
   blackboard:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
-    damage: 1
+    damage: 20
     Player: {fileID: 0}
 --- !u!114 &389546767539189864
 MonoBehaviour:
@@ -126,6 +152,7 @@ MonoBehaviour:
   drawGizmos: 0
   children:
   - {fileID: 389546767539189864}
+  - {fileID: -3227899616490322910}
   - {fileID: -7416928903050637606}
 --- !u!114 &7790133595022551817
 MonoBehaviour:
