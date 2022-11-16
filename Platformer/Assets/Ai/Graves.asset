@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d8a8e143ac24154449714ef649c8615d
-  position: {x: 159, y: 457}
+  position: {x: -62.999992, y: 508}
   blackboard:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
@@ -39,7 +39,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 251389dc70bd5f44aa4381476160e29a
-  position: {x: -13.224991, y: 457.00003}
+  position: {x: -247.85008, y: 508}
   blackboard:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 301840ddcb1ea7045b77c3808978586e
-  position: {x: -224, y: 456.84}
+  position: {x: -422, y: 508}
   blackboard:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
@@ -141,7 +141,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1b58b4737e823c440bb0ad80afbd1225
-  position: {x: 0, y: 274}
+  position: {x: -213, y: 325}
   blackboard:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}

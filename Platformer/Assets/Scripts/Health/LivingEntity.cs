@@ -28,8 +28,8 @@ public class LivingEntity : MonoBehaviour,IDamageable
         if (gameObject.CompareTag("Player"))
         {
             Debug.Log("Player  " + health);
-            StartCoroutine(slow());
-            gameObject.GetComponent<PlayerStateMachine>().CanSwitch=false;
+            
+            //gameObject.GetComponent<PlayerStateMachine>().CanSwitch=false;
         }
         if (health <= 0 && !dead)
         {
@@ -37,12 +37,7 @@ public class LivingEntity : MonoBehaviour,IDamageable
         }
     }
 
-    IEnumerator slow()
-    {
-        gameObject.GetComponent<PlayerStateMachine>().MoveSpeed /= 2;
-        yield return new WaitForSeconds(slowDuration);
-        gameObject.GetComponent<PlayerStateMachine>().MoveSpeed *= 2;
-    }
+    
 
     [ContextMenu("Self Destruct")]
     public virtual void Die()

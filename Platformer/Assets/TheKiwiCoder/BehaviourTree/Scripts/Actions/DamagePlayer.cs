@@ -14,7 +14,9 @@ public class DamagePlayer : ActionNode
 
     protected override State OnUpdate() {
 
-        IDamageable damageableObject = context.fov.visibleTarget.gameObject.GetComponent<IDamageable>();
+        if (context.fov.visibleTarget != null)
+        {
+            IDamageable damageableObject = context.fov.visibleTarget.gameObject.GetComponent<IDamageable>();
         if (damageableObject != null)
         {
             damageableObject.TakeDamage(blackboard.damage);
@@ -23,6 +25,7 @@ public class DamagePlayer : ActionNode
         if (damageableObject == null)
         {
             return State.Failure;
+        }
         }
         
         return State.Success;
