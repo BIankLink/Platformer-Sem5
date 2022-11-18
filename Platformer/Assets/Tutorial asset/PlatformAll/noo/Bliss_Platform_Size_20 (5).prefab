@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5785429367648382122}
   - component: {fileID: 7486709699744916239}
   - component: {fileID: 4612483747799144389}
+  - component: {fileID: 1645408502417929531}
   m_Layer: 6
   m_Name: Bliss_Platform_Size_20 (5)
   m_TagString: Untagged
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1645408502417929531
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6557850152021472784}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 9c2d12b2fb224d3428f06697ea1b66a3, type: 3}

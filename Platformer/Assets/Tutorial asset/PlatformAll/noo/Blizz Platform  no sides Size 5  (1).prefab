@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2176726997047042508}
   - component: {fileID: 2997869299134295657}
   - component: {fileID: 1044383727182027427}
+  - component: {fileID: 584972397920672625}
   m_Layer: 6
   m_Name: Blizz Platform  no sides Size 5  (1)
   m_TagString: Untagged
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &584972397920672625
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548843578771225462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 9590a0a26fe17c249817971819227d1a, type: 3}
