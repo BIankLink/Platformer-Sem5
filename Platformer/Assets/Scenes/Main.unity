@@ -282,7 +282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_LocalRotation: {x: 0.048329893, y: -0.0000000021482844, z: 1.03947836e-10, w: 0.99883145}
-  m_LocalPosition: {x: 30.9, y: 3.3712478, z: -10}
+  m_LocalPosition: {x: -14.4, y: 3.3712478, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb7380ca7a66f743868637036faf5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 8585993508208770409, guid: fa9c7b0996cc3a64f95d875c6ff12f09, type: 3}
+  Player: {fileID: 602306166431623835, guid: 075491f323ab5c9488b7a05fcb671ca8, type: 3}
   startPos: {fileID: 1482461202}
   player: {fileID: 0}
   saveTriggers:
@@ -1993,7 +1993,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449607497}
   m_LocalRotation: {x: 0.048329893, y: -0.0000000021482844, z: 1.03947836e-10, w: 0.99883145}
-  m_LocalPosition: {x: 30.9, y: 3.3712478, z: -10}
+  m_LocalPosition: {x: -14.4, y: 3.3712478, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

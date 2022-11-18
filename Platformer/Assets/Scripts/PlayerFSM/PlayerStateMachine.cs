@@ -197,6 +197,7 @@ public class PlayerStateMachine : LivingEntity
         }
         if (inputManager.left || inputManager.right)
         {
+            
             Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
             transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame);
         }

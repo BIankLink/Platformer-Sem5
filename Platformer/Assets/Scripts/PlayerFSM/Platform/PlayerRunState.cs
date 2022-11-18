@@ -19,12 +19,15 @@ public class PlayerRunState : PlayerBaseState
         {
             Ctx.Animator.SetFloat("SpeedPercent", Ctx.Speed);
         }
-        Ctx.CurrentMovementX = Ctx.AppliedMovement.x; 
+        Ctx.CurrentMovementX = Ctx.AppliedMovement.x;
+        
             CheckSwitchState();
     }
     public override void ExitState() 
     { 
-        Ctx.Animator.SetFloat("SpeedPercent", Ctx.Speed); 
+        Ctx.Animator.SetFloat("SpeedPercent", Ctx.Speed);
+       //Ctx.Animator.SetFloat("HaltDir", 1f);
+        
 
        
     }

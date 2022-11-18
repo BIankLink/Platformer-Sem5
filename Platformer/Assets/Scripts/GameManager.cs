@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
 
-        player = Player.GetComponent<PlayerStateMachine>();
 
 
 
@@ -34,6 +33,7 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Tutorial", LoadSceneMode.Additive);
             StartCoroutine(spawn(Player, startPos.position, startPos.rotation));
+            player = Player.GetComponent<PlayerStateMachine>();
             PlayerData p = new PlayerData(player);
 
             //put values in p
@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
 
 
         }
+           
     }
     #endregion
     [SerializeField] GameObject Player;
@@ -106,8 +107,8 @@ public class GameManager : MonoBehaviour
         }
         Quaternion rot = SaveData.current.playerData.rotation;
         StartCoroutine(spawn(Player, pos, rot));
-        
-        
+
+        player = Player.GetComponent<PlayerStateMachine>();
         player.health = SaveData.current.playerData.lives;
   
     }
