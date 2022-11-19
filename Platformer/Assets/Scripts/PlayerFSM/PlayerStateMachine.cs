@@ -130,8 +130,8 @@ public class PlayerStateMachine : LivingEntity
         //Debug.Log(CheckIfWallGrounded());
         //Debug.Log(CheckIfGrounded());
         HandleInput();
-        handleRotation();
         _currentState.UpdateStates();
+        HandleRotation();
        // Debug.Log(_currentState._currentParentState);
        // Debug.Log(_currentState._currentSuperState);
         //Debug.Log(_currentState._currentSubState);
@@ -180,7 +180,7 @@ public class PlayerStateMachine : LivingEntity
         else { jumpCancel = false; }
     }
 
-    void handleRotation()
+    void HandleRotation()
     {
         Vector3 positionToLookAt;
 

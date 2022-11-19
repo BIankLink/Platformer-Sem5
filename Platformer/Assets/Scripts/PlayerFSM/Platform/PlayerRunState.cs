@@ -15,18 +15,18 @@ public class PlayerRunState : PlayerBaseState
     public override void UpdateState()
     {
 
+        
         if (Ctx.CheckIfGrounded())
         {
             Ctx.Animator.SetFloat("SpeedPercent", Ctx.Speed);
         }
         Ctx.CurrentMovementX = Ctx.AppliedMovement.x;
-        
             CheckSwitchState();
     }
     public override void ExitState() 
     { 
         Ctx.Animator.SetFloat("SpeedPercent", Ctx.Speed);
-       //Ctx.Animator.SetFloat("HaltDir", 1f);
+       
         
 
        
@@ -35,6 +35,7 @@ public class PlayerRunState : PlayerBaseState
     {
         if (!Ctx.IsMovePressed)
         {
+            
             SwitchState(Factory.platformIdle());
             
         }

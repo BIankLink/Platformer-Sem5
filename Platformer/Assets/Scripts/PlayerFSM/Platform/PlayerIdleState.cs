@@ -16,6 +16,7 @@ public class PlayerIdleState : PlayerBaseState
         //Debug.Log("idle");
         Ctx.Animator.SetFloat("SpeedPercent", Ctx.Speed);
         //Ctx.Animator.SetFloat("HaltDir", 0f);
+        
         Ctx.CurrentMovementX = Ctx.AppliedMovement.x;
         //Ctx.CurrentMovementX = 0;
     }
