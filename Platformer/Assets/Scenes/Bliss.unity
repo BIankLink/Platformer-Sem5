@@ -211,6 +211,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_15_Without_Sides (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3829242429433957803, guid: b26f796526311a64eaca91b6ca01eaa1,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     - target: {fileID: 4499064275451746065, guid: b26f796526311a64eaca91b6ca01eaa1,
         type: 3}
       propertyPath: m_RootOrder
@@ -798,6 +803,11 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 66
       objectReference: {fileID: 0}
+    - target: {fileID: 2631460735949987878, guid: 06910bab685bfc944b43c62d84a0ffca,
+        type: 3}
+      propertyPath: viewAngle
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 6048117827144246817, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_RootOrder
@@ -882,6 +892,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2631460735949987878, guid: 06910bab685bfc944b43c62d84a0ffca,
+        type: 3}
+      propertyPath: viewAngle
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 6048117827144246817, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_RootOrder
@@ -1080,6 +1095,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2631460735949987878, guid: 06910bab685bfc944b43c62d84a0ffca,
+        type: 3}
+      propertyPath: viewAngle
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 3530272830931100325, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1666,6 +1686,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2631460735949987878, guid: 06910bab685bfc944b43c62d84a0ffca,
+        type: 3}
+      propertyPath: viewAngle
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 6048117827144246817, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_RootOrder
@@ -2115,6 +2140,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2631460735949987878, guid: 06910bab685bfc944b43c62d84a0ffca,
+        type: 3}
+      propertyPath: viewAngle
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 6048117827144246817, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_RootOrder
@@ -2258,6 +2288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_25_Without_Sides (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 880197495027658403, guid: beda291cea1864747a3dc7842a28a63c,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beda291cea1864747a3dc7842a28a63c, type: 3}
@@ -2429,6 +2464,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: breakable_rock_full (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435266631794027695, guid: 9507d4718bd9a434d919b13fc655578b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9507d4718bd9a434d919b13fc655578b, type: 3}
@@ -3037,6 +3077,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2631460735949987878, guid: 06910bab685bfc944b43c62d84a0ffca,
+        type: 3}
+      propertyPath: viewAngle
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 6048117827144246817, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_RootOrder
@@ -4051,6 +4096,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_25 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4999222139394033001, guid: 304a954f2214e584dbbadff2ffd70d63,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     - target: {fileID: 5632629435282350035, guid: 304a954f2214e584dbbadff2ffd70d63,
         type: 3}
       propertyPath: m_RootOrder
@@ -4707,6 +4757,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_20 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6547649583685189071, guid: d78afe83c48b8a1448ab5b134384ef87,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d78afe83c48b8a1448ab5b134384ef87, type: 3}
 --- !u!1001 &1012023362
@@ -4928,6 +4983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6547649583685189071, guid: d78afe83c48b8a1448ab5b134384ef87,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d78afe83c48b8a1448ab5b134384ef87, type: 3}
@@ -5357,6 +5417,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2631460735949987878, guid: 06910bab685bfc944b43c62d84a0ffca,
+        type: 3}
+      propertyPath: viewAngle
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 6048117827144246817, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_RootOrder
@@ -6364,6 +6429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bliss_Platform_Size_25 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4999222139394033001, guid: 304a954f2214e584dbbadff2ffd70d63,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
       objectReference: {fileID: 0}
     - target: {fileID: 5632629435282350035, guid: 304a954f2214e584dbbadff2ffd70d63,
         type: 3}
@@ -7778,6 +7848,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2631460735949987878, guid: 06910bab685bfc944b43c62d84a0ffca,
+        type: 3}
+      propertyPath: viewAngle
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 3530272830931100325, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9194,6 +9269,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bliss_Platform_Size_20 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6547649583685189071, guid: d78afe83c48b8a1448ab5b134384ef87,
+        type: 3}
+      propertyPath: m_TagString
+      value: WallThere
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d78afe83c48b8a1448ab5b134384ef87, type: 3}
 --- !u!1001 &2124476985
@@ -9307,6 +9387,11 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 66
       objectReference: {fileID: 0}
+    - target: {fileID: 2631460735949987878, guid: 06910bab685bfc944b43c62d84a0ffca,
+        type: 3}
+      propertyPath: viewAngle
+      value: 38
+      objectReference: {fileID: 0}
     - target: {fileID: 3530272830931100325, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9345,7 +9430,7 @@ PrefabInstance:
     - target: {fileID: 6048117827144246817, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.0900002
+      value: 3.53
       objectReference: {fileID: 0}
     - target: {fileID: 6048117827144246817, guid: 06910bab685bfc944b43c62d84a0ffca,
         type: 3}
@@ -11159,7 +11244,7 @@ GameObject:
   - component: {fileID: 7138547845480341006}
   - component: {fileID: 7138547845480341005}
   - component: {fileID: 7138547845480341004}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: breakingPlatform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11256,7 +11341,7 @@ GameObject:
   - component: {fileID: 7138547845507499548}
   - component: {fileID: 7138547845507499539}
   - component: {fileID: 7138547845507499538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: block8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12402,7 +12487,7 @@ GameObject:
   - component: {fileID: 7138547846117670550}
   - component: {fileID: 7138547846117670549}
   - component: {fileID: 7138547846117670548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: breakingPlatform4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13147,7 +13232,6 @@ GameObject:
   - component: {fileID: 7138547846406433160}
   - component: {fileID: 7138547846406433167}
   - component: {fileID: 7138547846406433166}
-  - component: {fileID: 7138547846406433165}
   m_Layer: 0
   m_Name: splash0
   m_TagString: Untagged
@@ -13155,20 +13239,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &7138547846406433165
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7138547846406433164}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &7138547846406433166
 MeshRenderer:
   m_ObjectHideFlags: 0

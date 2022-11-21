@@ -7,7 +7,7 @@ namespace TheKiwiCoder
     public class PlayerCheck : ConditionalNode
     {
         public Transform target;
-        
+        Transform player;
         public override bool Condition()
         {
             
@@ -33,19 +33,18 @@ namespace TheKiwiCoder
             if (target != null)
             {
                 target.gameObject.GetComponent<PlayerStateMachine>().MoveSpeed /= 2;
+                player = target;
                 Debug.Log(target.gameObject.GetComponent<PlayerStateMachine>().MoveSpeed);
                 
+            }
+            if(player!= null)
+            {
+                player.gameObject.GetComponent<PlayerStateMachine>().MoveSpeed *= 2;
+                player = null;
             }
             
             return base.OnUpdate();
         }
 
-        IEnumerator slow()
-        {
-            target.gameObject.GetComponent<PlayerStateMachine>().MoveSpeed /= 2;
-            yield return new WaitForSeconds(5f);
-            target.gameObject.GetComponent<PlayerStateMachine>().MoveSpeed *= 2;
-
-        }
     }
 }
