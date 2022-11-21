@@ -13,8 +13,9 @@ public class PlayerPlatformState : PlayerBaseState
 
     public override void EnterState()
     {
+
         InitializeSuperState();
-        
+        Ctx.Animator.SetBool("Wall", false);
 
     }
     public override void UpdateState() 

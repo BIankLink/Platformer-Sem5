@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &951025901310713906
 GameObject:
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &1941240221809502141
 GameObject:
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &1959174400852217661
 GameObject:
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &2579714741721560471
 GameObject:
@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &2664499063002507009
 GameObject:
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &2890279324209767912
 GameObject:
@@ -959,7 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &3105941326148417371
 GameObject:
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &3320657338115968422
 GameObject:
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &3427206143022396979
 GameObject:
@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &4185314879360512539
 GameObject:
@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &4558466322104007762
 GameObject:
@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &6313904618798738999
 GameObject:
@@ -1739,7 +1739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &6504950676411511867
 GameObject:
@@ -1869,7 +1869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &7472383384601197795
 GameObject:
@@ -1999,7 +1999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &8444541159868136748
 GameObject:
@@ -2129,7 +2129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &8678133893040828597
 GameObject:
@@ -2259,7 +2259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &8736800875039231929
 GameObject:
@@ -2389,7 +2389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &8852749916193180919
 GameObject:
@@ -2519,7 +2519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150
 --- !u!1 &9156701368018886146
 GameObject:
@@ -2649,5 +2649,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63551b3e94611a143bdda7f6b1d67526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDissapear: 2
+  timeToDissapear: 5
   force: 150

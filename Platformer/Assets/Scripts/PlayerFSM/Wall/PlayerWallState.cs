@@ -12,7 +12,8 @@ public class PlayerWallState : PlayerBaseState
     }
 
     public override void EnterState() 
-    { 
+    {
+        Ctx.Animator.SetBool("Wall", true);
         Ctx.CurrentMovementX = 0;
         Ctx.CurrentMovementY = 0;
         Ctx.CurrentMovementZ = -0.5f;
