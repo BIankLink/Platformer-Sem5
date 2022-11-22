@@ -18,7 +18,7 @@ public class CrackedParts : MonoBehaviour
     {
         if (rb != null)
         {
-            rb.AddExplosionForce(force, transform.position, 50f,force,ForceMode.Impulse);
+            rb.AddExplosionForce(force*Time.deltaTime, transform.position, 5f);
         }
     }
 }
