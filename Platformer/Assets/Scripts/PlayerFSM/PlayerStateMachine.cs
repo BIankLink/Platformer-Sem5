@@ -52,6 +52,7 @@ public class PlayerStateMachine : LivingEntity
     bool isSliding;
     [SerializeField]float attackCooldownTimer;
     [SerializeField] float attackCooldown = 2f;
+    public Vector3 externalMoveSpeed;
     
     //Getters Abnd Setters
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; }}
@@ -132,11 +133,12 @@ public class PlayerStateMachine : LivingEntity
         HandleInput();
         _currentState.UpdateStates();
         HandleRotation();
-       // Debug.Log(_currentState._currentParentState);
-       // Debug.Log(_currentState._currentSuperState);
+        // Debug.Log(_currentState._currentParentState);
+        // Debug.Log(_currentState._currentSuperState);
         //Debug.Log(_currentState._currentSubState);
         //Debug.Log(CurrentState);
-        characterController.Move(currentMovement * Time.deltaTime * moveSpeed);
+        Vector3 externalMovement = externalMoveSpeed ;
+        characterController.Move((currentMovement+externalMovement) * Time.deltaTime * moveSpeed);
     }
     public void HandleInput()
     {
@@ -248,6 +250,17 @@ public class PlayerStateMachine : LivingEntity
         if (hit.gameObject.CompareTag("Dead"))
         {
             TakeDamage(health);
+        }
+        if (hit.gameObject.GetComponent<MovingPlatform>())
+        {
+            externalMoveSpeed = hit.gameObject.GetComponent<MovingPlatform>().lastMoveDirection;
+        }
+        else
+        {
+            if (externalMoveSpeed != Vector3.zero)
+            {
+                externalMoveSpeed = Vector3.zero;
+            }
         }
        
         //if (hit.gameObject.GetComponent<SaveMachine>())

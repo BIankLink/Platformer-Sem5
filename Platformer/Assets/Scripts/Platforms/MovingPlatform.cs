@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class MovingPlatform : MonoBehaviour
 {
@@ -9,10 +10,13 @@ public class MovingPlatform : MonoBehaviour
     public float speed= 10;
     public int current;
     public float lookRadius = 0.5f;
-    // Start is called before the first frame update
-    void Start()
+
+    Vector3 previousPosition;
+    public Vector3 lastMoveDirection;
+    private void Start()
     {
-        
+        previousPosition = transform.position;
+        lastMoveDirection = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -26,8 +30,19 @@ public class MovingPlatform : MonoBehaviour
                 current = 0;
             }
         }
+        
         transform.position = Vector3.MoveTowards(transform.position, wayPoints[current], Time.deltaTime * speed);
+        
 
+        
+    }
+    private void FixedUpdate()
+    {
+        if (transform.position != previousPosition)
+        {
+            lastMoveDirection = (transform.position - previousPosition).normalized;
+            previousPosition = transform.position;
+        }
     }
 
     private void OnDrawGizmos()
@@ -35,5 +50,6 @@ public class MovingPlatform : MonoBehaviour
         Gizmos.DrawLine(wayPoints[0], wayPoints[1]);
     }
 
-  
+
+
 }

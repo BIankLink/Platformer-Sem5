@@ -94,9 +94,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418310673077195868}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &951025901310713906
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,9 +275,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263475212532933627}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &1941240221809502141
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,9 +405,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941240221809502141}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &1959174400852217661
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,9 +535,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959174400852217661}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &2579714741721560471
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,9 +665,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2579714741721560471}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -700,7 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &2664499063002507009
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,9 +795,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2664499063002507009}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &2890279324209767912
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,9 +925,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2890279324209767912}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &3105941326148417371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,9 +1055,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3105941326148417371}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &3320657338115968422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,9 +1185,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3320657338115968422}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &3427206143022396979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,9 +1315,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3427206143022396979}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &4185314879360512539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,9 +1445,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4185314879360512539}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1480,7 +1480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &4558466322104007762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,9 +1575,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4558466322104007762}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1610,7 +1610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &6313904618798738999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,9 +1705,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6313904618798738999}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1740,7 +1740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &6504950676411511867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,9 +1835,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6504950676411511867}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &7472383384601197795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,9 +1965,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7472383384601197795}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2000,7 +2000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &8444541159868136748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,9 +2095,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8444541159868136748}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &8678133893040828597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,9 +2225,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8678133893040828597}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2260,7 +2260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &8736800875039231929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,9 +2355,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8736800875039231929}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2390,7 +2390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &8852749916193180919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,9 +2485,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8852749916193180919}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2520,7 +2520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
 --- !u!1 &9156701368018886146
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,9 +2615,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9156701368018886146}
   serializedVersion: 2
-  m_Mass: 0.5
+  m_Mass: 0.01
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2650,4 +2650,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDissapear: 5
-  force: 150
+  force: 1000
