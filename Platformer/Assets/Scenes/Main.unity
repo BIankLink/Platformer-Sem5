@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.1
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 1, g: 0.8254717, b: 0.8254717, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 0.8247433, b: 0.7688679, a: 1}
   m_AmbientEquatorColor: {r: 0.8396226, g: 0.5980331, b: 0.7595883, a: 1}
   m_AmbientGroundColor: {r: 0.6509434, g: 0.30397826, b: 0.61121655, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.79
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.43916875, g: 0.5044449, b: 0.6698113, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 6abe918ee1229b34f8557fc2a5a39825, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 133347283e115d147a5fcce7f47a538f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410087040}
-  m_IndirectSpecularColor: {r: 0.9167764, g: 1.2172819, b: 1.223004, a: 1}
+  m_IndirectSpecularColor: {r: 0.9660254, g: 1.0545847, b: 0.9805351, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: ff06bc174bafcd34798c8b7ea32a9eed,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 399f5dd293db8534889a56e407634d93,
     type: 2}
 --- !u!196 &4
@@ -596,8 +595,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.6981132, g: 0.4691171, b: 0.39186543, a: 1}
-  m_Intensity: 1.5
+  m_Color: {r: 1, g: 0.7560845, b: 0.6556604, a: 1}
+  m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -654,14 +653,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
-  m_LocalRotation: {x: -0.11058499, y: -0.85008824, z: 0.5148637, w: 0.0060244724}
-  m_LocalPosition: {x: 7.67, y: 22.5, z: 5.51}
+  m_LocalRotation: {x: -0.028556677, y: -0.9815798, z: 0.16485964, w: -0.0922337}
+  m_LocalPosition: {x: 188.3, y: 199.9, z: 166.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 60.93, y: 554.8, z: 23.561}
+  m_LocalEulerAnglesHint: {x: 19.203, y: 529.527, z: 1.556}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,6 +758,55 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.2941523, y: 1, z: 2.8677688}
   m_Center: {x: 0.115718365, y: 0, z: 0.088274}
+--- !u!1 &474200321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474200323}
+  - component: {fileID: 474200322}
+  m_Layer: 0
+  m_Name: Postfx
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &474200322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474200321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 938e86b2e580ac54d9a934f1420a4422, type: 2}
+--- !u!4 &474200323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474200321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 111.48529, y: 56.790066, z: 5.776367}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &504693815 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7372006708590902928, guid: 7748022eee39a61429e39942e3001655,
