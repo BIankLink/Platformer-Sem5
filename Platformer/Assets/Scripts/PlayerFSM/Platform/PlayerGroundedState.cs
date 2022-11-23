@@ -21,7 +21,8 @@ public class PlayerGroundedState : PlayerBaseState
     public override void UpdateState() 
     {
         CheckWallSwitch();
-        CheckSwitchState();
+        CheckSwitchState(); 
+        
     }
     public override void ExitState()
     {
@@ -73,7 +74,16 @@ public class PlayerGroundedState : PlayerBaseState
             }
             else
             {
-                Ctx.CanSwitch = false;
+                Ctx.CanSwitch = false; 
+                if (Ctx.JumpCancel && !Ctx.CanSwitch)
+                {
+                    Ctx.Animator.SetBool("switchFail",true);
+                }
+                else
+                {
+                    Ctx.Animator.SetBool("switchFail", false);
+                }
+
             }
         }
     }

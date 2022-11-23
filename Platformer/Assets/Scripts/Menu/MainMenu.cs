@@ -13,8 +13,10 @@ public class MainMenu : MonoBehaviour
     public bool executed;
     public GameObject loadingInterface;
     public GameObject menu;
+    
     public Image loadingProgressBar;
-    public TMP_Text buttonText;
+    public GameObject newGameButton;
+    public GameObject LoadGameButton;
     [SerializeField]PlayableDirector playableDirector;
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
 
@@ -25,11 +27,15 @@ public class MainMenu : MonoBehaviour
         
         if ((SaveData.current.playerData != null))
         {
-            buttonText.text = "Continue";
+            LoadGameButton.SetActive(true);
+            newGameButton.SetActive(true);
+            
+
         }
         else
         {
-            buttonText.text = "New Game";
+            LoadGameButton.SetActive(false);
+
         }
         Debug.Log(Application.persistentDataPath);
 
@@ -43,31 +49,23 @@ public class MainMenu : MonoBehaviour
     {
         menu.SetActive(false);
     }
-    public void onLoadGame()
-    {
-        executed = true;
-        //StartCoroutine(loadGame());
-    }
+   
 
-    public void NewGame()
-    {
-        executed = true;
-        //StartCoroutine(newGame());
-    }
-
-    void newGame()
+    public void newGame()
     {
         
         scenesToLoad.Add(SceneManager.LoadSceneAsync("Main"));
+        OnStart();
         //scenesToLoad.Add(SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive));
         LevelManager.instance.newGame = true;
 
     }
-    void loadGame()
+    public void loadGame()
     {
         
         
         scenesToLoad.Add(SceneManager.LoadSceneAsync("Main"));
+        OnStart();
         //scenesToLoad.Add(SceneManager.LoadSceneAsync("Tutorial", LoadSceneMode.Additive));
         LevelManager.instance.newGame = false;
 
@@ -77,14 +75,7 @@ public class MainMenu : MonoBehaviour
         HideMenu();
         ShowLoadingScreen();
         //playableDirector.Resume();
-        if(SaveData.current.playerData != null)
-        {
-            loadGame();
-        }
-        else
-        {
-            newGame();
-        }
+       
         StartCoroutine(LoadingScreen());
         
     }
@@ -107,4 +98,5 @@ public class MainMenu : MonoBehaviour
             }
         }
     }
+
 }

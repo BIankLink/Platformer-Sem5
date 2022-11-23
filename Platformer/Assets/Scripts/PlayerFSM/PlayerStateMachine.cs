@@ -176,6 +176,7 @@ public class PlayerStateMachine : LivingEntity
         if(inputManager.down)
         {
             jumpCancel = true;
+            
         }
         else { jumpCancel = false; }
     }
