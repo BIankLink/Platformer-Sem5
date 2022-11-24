@@ -330,7 +330,7 @@ public class SwipeInput : MonoBehaviour
                             moveLeft = false;
                             moveDir = 0;
                         }
-                        StartCoroutine(rightOnce());
+                        //StartCoroutine(rightOnce());
                         fingerDown = false;
                         //Debug.Log("right");
                     }
@@ -344,7 +344,7 @@ public class SwipeInput : MonoBehaviour
                             moveLeft = false;
                             moveDir = 0;
                         }
-                        StartCoroutine(leftOnce());
+                        //StartCoroutine(leftOnce());
                         fingerDown = false;
                         ////Debug.Log("left");
                     }
@@ -352,6 +352,11 @@ public class SwipeInput : MonoBehaviour
                 }
 
             }
+        }
+        else
+        {
+            left = false;
+            right = false;
         }
     }
 

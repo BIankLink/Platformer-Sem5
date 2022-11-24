@@ -17,7 +17,7 @@ public class SaveMachine : MonoBehaviour
         
             SerializationManager.Save("Save", s);
 
-        Debug.Log(p.position);
+        //Debug.Log(p.position);
         
     }
    

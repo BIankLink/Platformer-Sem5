@@ -1,0 +1,1576 @@
+fileFormatVersion: 2
+guid: fe040c524c5707044b2f7561882ed17a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: swipe(L&R)_0
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 3878
+        width: 133
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd11478f47a76c42ab78b25b0c48a24
+      internalID: 1027374681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_1
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 3878
+        width: 164
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5bce3c6dd6e094dbbcb72b076ac90b
+      internalID: 387901624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_2
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 3878
+        width: 160
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2e819b497790d4c84611c7712e4b00
+      internalID: -285695261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_3
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 3878
+        width: 156
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95db5d32cd485f44b9a744144a5ff64
+      internalID: 447918160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_4
+      rect:
+        serializedVersion: 2
+        x: 3389
+        y: 3878
+        width: 151
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee107ae148b16948ac0d6fd0b5c36fe
+      internalID: 2056163158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_5
+      rect:
+        serializedVersion: 2
+        x: 4193
+        y: 3878
+        width: 149
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96ce94534d1adf48a3621bed208332c
+      internalID: -664560414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_6
+      rect:
+        serializedVersion: 2
+        x: 4998
+        y: 3874
+        width: 138
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b338600e4db6a3341b41ced26280f5c8
+      internalID: -235684064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_7
+      rect:
+        serializedVersion: 2
+        x: 5803
+        y: 3874
+        width: 136
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d16ed7cfe65241468e9720377505006
+      internalID: 668083217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_8
+      rect:
+        serializedVersion: 2
+        x: 6604
+        y: 3874
+        width: 136
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fefc8b01e27cc664885b0560f1b508b8
+      internalID: -1495823566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_9
+      rect:
+        serializedVersion: 2
+        x: 7405
+        y: 3874
+        width: 136
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b270c4aa8c90f2846a6c442b8448ced6
+      internalID: -374388303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_10
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 3276
+        width: 137
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5148df1fc582f344867813300c23585
+      internalID: -1652822723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_11
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 3276
+        width: 166
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2c7d420dab5024ca353c1abbeb2b36
+      internalID: -1210774950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_12
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 3276
+        width: 230
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03ff4111b4618f4c9482e5974bdc797
+      internalID: -993640810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_13
+      rect:
+        serializedVersion: 2
+        x: 2627
+        y: 3276
+        width: 281
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cda93f8f49c4c4abb4fd9ea07904cd
+      internalID: -2016074163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_14
+      rect:
+        serializedVersion: 2
+        x: 3459
+        y: 3276
+        width: 281
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1a5b06269c81c48a8cf18afa9c1059
+      internalID: -387711037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_15
+      rect:
+        serializedVersion: 2
+        x: 4303
+        y: 3276
+        width: 261
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bd1c61f75266a4e94e36e12e4070c4
+      internalID: 712837846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_16
+      rect:
+        serializedVersion: 2
+        x: 5158
+        y: 3276
+        width: 258
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5d937a7a1fcf04d8f664092331a3c6
+      internalID: 1216884524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_17
+      rect:
+        serializedVersion: 2
+        x: 6010
+        y: 3276
+        width: 233
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da5706ef9aeeef4ba4d82bdafe70528
+      internalID: -583281954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_18
+      rect:
+        serializedVersion: 2
+        x: 6857
+        y: 3276
+        width: 188
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a75c2dcf76a6b84f8e5d663550623ba
+      internalID: 378785505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_19
+      rect:
+        serializedVersion: 2
+        x: 7689
+        y: 3276
+        width: 157
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55d80a8c155a3042b29732ea2dbbb0a
+      internalID: -1036103209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_20
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 2675
+        width: 144
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9f099336325a64987e68bb2d420c78
+      internalID: -208128025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_21
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 2675
+        width: 148
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b681dcf337e4749b13bdf89ddb7db8
+      internalID: 2123137582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_22
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 2675
+        width: 148
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ffba7542cef7be41bfe7e8cc4f4b8b1
+      internalID: -2024918157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_23
+      rect:
+        serializedVersion: 2
+        x: 2897
+        y: 2675
+        width: 150
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f8ee399520b6141a04ac841b4cafcc
+      internalID: 1087680963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_24
+      rect:
+        serializedVersion: 2
+        x: 3693
+        y: 2675
+        width: 153
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54998c62f3b1f7e4784656b7aadb8c8a
+      internalID: 317445383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_25
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 2675
+        width: 156
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb9bbb02bcabe8498ff2288c9e5b240
+      internalID: 2082682995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_26
+      rect:
+        serializedVersion: 2
+        x: 5285
+        y: 2675
+        width: 161
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8c92aa2fe788f48a1482a3511ca58e
+      internalID: 1051696288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_27
+      rect:
+        serializedVersion: 2
+        x: 6080
+        y: 2675
+        width: 164
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3279d897b82ac45870ac6327a40227
+      internalID: -1897950734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_28
+      rect:
+        serializedVersion: 2
+        x: 6877
+        y: 2768
+        width: 121
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180548a659ae0f44cac90f6d1b477fc7
+      internalID: -222822219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_29
+      rect:
+        serializedVersion: 2
+        x: 7674
+        y: 2679
+        width: 169
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea284f5721812bb42bcf672a7c170fab
+      internalID: -863239351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_30
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 2077
+        width: 170
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07082fa8f66e114cb8b4acb787fd18f
+      internalID: -1462143156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_31
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 2077
+        width: 163
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554941473faae924c8bb75fc34d22074
+      internalID: -1121170179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_32
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 2077
+        width: 158
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c900375a20d2a49aab17205490d999
+      internalID: 1681522138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_33
+      rect:
+        serializedVersion: 2
+        x: 2893
+        y: 2077
+        width: 152
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86739b1b817fc3240833bcb4e01a360f
+      internalID: -1168472482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_34
+      rect:
+        serializedVersion: 2
+        x: 3694
+        y: 2077
+        width: 152
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c03492edd2c3c9499242d3c54a9bc02
+      internalID: -276425819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_35
+      rect:
+        serializedVersion: 2
+        x: 4498
+        y: 2077
+        width: 148
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a464c130ce2464eb4c12a447e5c290
+      internalID: 91085334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_36
+      rect:
+        serializedVersion: 2
+        x: 5299
+        y: 2077
+        width: 148
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d42771add3ba9d4d99a1ed6061cd2ec
+      internalID: -1756391827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_37
+      rect:
+        serializedVersion: 2
+        x: 6100
+        y: 2077
+        width: 148
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405d5a1addcd82040b3384fb2954be18
+      internalID: 728528819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_38
+      rect:
+        serializedVersion: 2
+        x: 6878
+        y: 2077
+        width: 151
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0309dc5329f85a34eb794e2cb534d87c
+      internalID: 2092696751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_39
+      rect:
+        serializedVersion: 2
+        x: 7635
+        y: 2077
+        width: 164
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ef89d188dcdfc49bd6b37beae2755b
+      internalID: -756661990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_40
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1475
+        width: 187
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3fe236c6c18434cbec22525d237c41
+      internalID: 59772632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_41
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1475
+        width: 215
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab80f35c460072a4db2b8ad1f57a4ab8
+      internalID: -953617512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_42
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 1475
+        width: 243
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9df1b360552d8418e2a871127ba63b
+      internalID: -849259530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_43
+      rect:
+        serializedVersion: 2
+        x: 2666
+        y: 1475
+        width: 254
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f8828a9fb291841bdd411fad9ea422
+      internalID: -1294312851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_44
+      rect:
+        serializedVersion: 2
+        x: 3451
+        y: 1475
+        width: 219
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce26e8b8b9d00144cb5b7441fe8a7cd3
+      internalID: -905083340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_45
+      rect:
+        serializedVersion: 2
+        x: 4236
+        y: 1475
+        width: 172
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f627f0e971333ad49a7798f792216d82
+      internalID: 181932032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_46
+      rect:
+        serializedVersion: 2
+        x: 5025
+        y: 1475
+        width: 133
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160f7241557deae4fa6dbf2d8910ecb9
+      internalID: 113727507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_47
+      rect:
+        serializedVersion: 2
+        x: 5807
+        y: 1475
+        width: 132
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ec8ea2ba061e948b47ea57592594e5
+      internalID: 342297407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_48
+      rect:
+        serializedVersion: 2
+        x: 6607
+        y: 1475
+        width: 137
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94d31acb5a8bec4484aa2ca91f0d0b3
+      internalID: -677827675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_49
+      rect:
+        serializedVersion: 2
+        x: 7404
+        y: 1475
+        width: 153
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b442217e3e70b2e428caa376d2fca0bc
+      internalID: 1577009675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_50
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 877
+        width: 145
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b956c1531f7354fa3c362148e4a437
+      internalID: -1672635540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_51
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 877
+        width: 137
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8a8c7d20eeab3468a0208bd19d79f3
+      internalID: 1793339866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_52
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 877
+        width: 136
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881c63e71a64eac4cb1f41d2cd8057e7
+      internalID: -742316119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_53
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 877
+        width: 136
+        height: 184
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00680f13da807804098e3c3497572f06
+      internalID: 2127163388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_54
+      rect:
+        serializedVersion: 2
+        x: 3397
+        y: 877
+        width: 140
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a32cc5ce9eaf5d4faed88350abf08b6
+      internalID: -212799210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_55
+      rect:
+        serializedVersion: 2
+        x: 4197
+        y: 878
+        width: 144
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f952999450b9ca04dbad5ebbd9df47e0
+      internalID: 145146330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_56
+      rect:
+        serializedVersion: 2
+        x: 4994
+        y: 879
+        width: 148
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a2a06c7cb94cf4786f02c21e78b2f4
+      internalID: -696751382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_57
+      rect:
+        serializedVersion: 2
+        x: 5791
+        y: 881
+        width: 152
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc3a6daf73b4c74285f02c03b81eef0
+      internalID: -1208813466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_58
+      rect:
+        serializedVersion: 2
+        x: 6588
+        y: 881
+        width: 156
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810cc56074c71ef4b91b001e4e0fd1f6
+      internalID: 446302636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_59
+      rect:
+        serializedVersion: 2
+        x: 7385
+        y: 878
+        width: 156
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6aaca15441a091468ab0cc174e4c83a
+      internalID: 185886331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_60
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 279
+        width: 160
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2ed361b2c4ca947949092bc2344aa7
+      internalID: 1031956614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_61
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 279
+        width: 160
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87e31a86d3cc6e4e9105618aa36e63d
+      internalID: -1433346327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_62
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 279
+        width: 163
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eeb8053b290ab746a0607cb26c690c5
+      internalID: 1157995353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_63
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 279
+        width: 133
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27cf1a6b7fbe6d4eb493f515d23fd27
+      internalID: 945085681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe(L&R)_64
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 279
+        width: 133
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c15a480a8b84048b0f71822a9c0029
+      internalID: -1662357855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      swipe(L&R)_56: -696751382
+      swipe(L&R)_45: 181932032
+      swipe(L&R)_15: 712837846
+      swipe(L&R)_14: -387711037
+      swipe(L&R)_43: -1294312851
+      swipe(L&R)_60: 1031956614
+      swipe(L&R)_19: -1036103209
+      swipe(L&R)_57: -1208813466
+      swipe(L&R)_32: 1681522138
+      swipe(L&R)_53: 2127163388
+      swipe(L&R)_2: -285695261
+      swipe(L&R)_46: 113727507
+      swipe(L&R)_20: -208128025
+      swipe(L&R)_47: 342297407
+      swipe(L&R)_61: -1433346327
+      swipe(L&R)_41: -953617512
+      swipe(L&R)_48: -677827675
+      swipe(L&R)_44: -905083340
+      swipe(L&R)_0: 1027374681
+      swipe(L&R)_63: 945085681
+      swipe(L&R)_1: 387901624
+      swipe(L&R)_35: 91085334
+      swipe(L&R)_50: -1672635540
+      swipe(L&R)_54: -212799210
+      swipe(L&R)_26: 1051696288
+      swipe(L&R)_29: -863239351
+      swipe(L&R)_37: 728528819
+      swipe(L&R)_25: 2082682995
+      swipe(L&R)_23: 1087680963
+      swipe(L&R)_13: -2016074163
+      swipe(L&R)_30: -1462143156
+      swipe(L&R)_4: 2056163158
+      swipe(L&R)_36: -1756391827
+      swipe(L&R)_27: -1897950734
+      swipe(L&R)_38: 2092696751
+      swipe(L&R)_7: 668083217
+      swipe(L&R)_5: -664560414
+      swipe(L&R)_6: -235684064
+      swipe(L&R)_17: -583281954
+      swipe(L&R)_55: 145146330
+      swipe(L&R)_22: -2024918157
+      swipe(L&R)_59: 185886331
+      swipe(L&R)_11: -1210774950
+      swipe(L&R)_12: -993640810
+      swipe(L&R)_31: -1121170179
+      swipe(L&R)_16: 1216884524
+      swipe(L&R)_52: -742316119
+      swipe(L&R)_9: -374388303
+      swipe(L&R)_21: 2123137582
+      swipe(L&R)_34: -276425819
+      swipe(L&R)_62: 1157995353
+      swipe(L&R)_64: -1662357855
+      swipe(L&R)_28: -222822219
+      swipe(L&R)_18: 378785505
+      swipe(L&R)_42: -849259530
+      swipe(L&R)_8: -1495823566
+      swipe(L&R)_10: -1652822723
+      swipe(L&R)_49: 1577009675
+      swipe(L&R)_51: 1793339866
+      swipe(L&R)_24: 317445383
+      swipe(L&R)_3: 447918160
+      swipe(L&R)_58: 446302636
+      swipe(L&R)_39: -756661990
+      swipe(L&R)_33: -1168472482
+      swipe(L&R)_40: 59772632
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

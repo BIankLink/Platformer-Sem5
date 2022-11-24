@@ -593,7 +593,7 @@ MonoBehaviour:
   _isSwitching: 0
   orientation: {fileID: 602306165119822596}
   _current: 0
-  dashVelocity: 8
+  dashVelocity: 100
   distToWallGround: 1
   distToGround: 0.05
   gravity: -9.8
