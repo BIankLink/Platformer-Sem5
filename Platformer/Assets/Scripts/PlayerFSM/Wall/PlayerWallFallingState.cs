@@ -23,7 +23,7 @@ public class PlayerWallFallingState : PlayerBaseState
     {
         if (Ctx.CheckIfWallGrounded())
         {
-            Debug.Log("WallGrounded");
+            //Debug.Log("WallGrounded");
             SwitchState(Factory.wallGrounded());
         }
     }

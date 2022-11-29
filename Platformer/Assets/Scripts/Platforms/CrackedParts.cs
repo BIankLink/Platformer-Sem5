@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class CrackedParts : MonoBehaviour
 {
-    [SerializeField] float timeToDissapear;
-    Rigidbody rb;
-    [SerializeField] float force;
+    [SerializeField] float timeToDissapear=5f;
+    
+    [SerializeField]
+    GameObject[] parts; 
+    [SerializeField] float force=50f;
+    [SerializeField] float radius=5f;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        foreach (GameObject part in parts)
+        {
+            Rigidbody rb = part.GetComponent<Rigidbody>();
+
+            if (rb != null)
+                rb.AddExplosionForce(force, transform.position, radius, 3.0F);
+        }
         Destroy(gameObject,timeToDissapear);
     }
 
-    private void OnEnable()
-    {
-        if (rb != null)
-        {
-            rb.AddExplosionForce(force*Time.deltaTime, transform.position, 5f);
-        }
-    }
+   
 }

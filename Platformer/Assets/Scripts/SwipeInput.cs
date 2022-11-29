@@ -296,11 +296,12 @@ public class SwipeInput : MonoBehaviour
 
                     if (currentTouchPosition.y - startTouchPosition.y > 0)
                     {
-                        Debug.Log("up");
+                        //Debug.Log("up");
                         up = true;
-                        if (player.CanSwitch)
+                        if (player.CanSwitch && switchTimer>= SwitchCoolDown)
                         {
                             wallRunningInput = false;
+                            switchTimer = 0;
                         }
 
                         StartCoroutine(uponce());
@@ -309,11 +310,12 @@ public class SwipeInput : MonoBehaviour
                     }
                     else if (currentTouchPosition.y - startTouchPosition.y < 0)
                     {
-                        Debug.Log("down");
+                        //Debug.Log("down");
                         down = true;
-                        if (player.CanSwitch)
+                        if (player.CanSwitch && switchTimer>= SwitchCoolDown)
                         {
                             wallRunningInput = true;
+                            switchTimer=0;
                         }
                         fingerDown = false;
                     }

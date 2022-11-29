@@ -1263,7 +1263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2268610797576283861}
   - component: {fileID: 1724959165593551649}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: LeftarmColider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2464,7 +2464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2710497893214141620}
   - component: {fileID: 3053631808353693894}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Colider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2701,7 +2701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6182156886167198206}
   - component: {fileID: 5938114793604853180}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ArmColider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

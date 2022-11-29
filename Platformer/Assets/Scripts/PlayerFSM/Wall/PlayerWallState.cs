@@ -26,7 +26,7 @@ public class PlayerWallState : PlayerBaseState
     }
     public override void ExitState() 
     {
-        Debug.Log("worked");
+        //Debug.Log("worked");
         Ctx.CurrentMovementZ = 0.5f;
         Ctx.CurrentMovementY = Ctx.SwitchJump;
         Ctx.CurrentMovementX = 0;
@@ -43,12 +43,12 @@ public class PlayerWallState : PlayerBaseState
     {
         if (Ctx.CheckIfWallGrounded())
         {
-            Debug.Log("Grounded");
+            //Debug.Log("Grounded");
             SetSuperState(Factory.wallGrounded());
         }
         else if (!Ctx.CheckIfWallGrounded() && Ctx.IsAttacking)
         {
-            Debug.Log("jumping");
+            //Debug.Log("jumping");
             SetSuperState(Factory.dashJump());
         }
         else if (!Ctx.isJumpPressed && !Ctx.CheckIfWallGrounded())

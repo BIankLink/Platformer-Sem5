@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
     public void Reload()
     {   
         SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.taadap");
-        LevelManager.instance.newGame = false;
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
     }
