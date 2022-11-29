@@ -593,14 +593,14 @@ MonoBehaviour:
   _isSwitching: 0
   orientation: {fileID: 602306165119822596}
   _current: 0
-  dashVelocity: 100
+  dashVelocity: 60
   distToWallGround: 1
   distToGround: 0.05
   gravity: -9.8
   Wallgravity: 9.8
   distanceToWall: 8
   distToSlide: 0.5
-  maxJumpHeight: 0.85
+  maxJumpHeight: 0.95
   maxJumpTime: 1.2
   maxWallJumpHeight: -0.5
   maxWallJumpTime: 0.5

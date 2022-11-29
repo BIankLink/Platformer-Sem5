@@ -92,6 +92,7 @@ public class PlayerStateMachine : LivingEntity
     public LayerMask WallSliding { get { return wallSlide; } }
     public LayerMask Wall { get { return wall; } }
     public float DistToGround { get { return distToGround; } }
+    [HideInInspector] public Vector3 DashMultiplier { get; set; } = Vector3.zero;
     protected override void Start()
     {
         base.Start();
@@ -136,7 +137,7 @@ public class PlayerStateMachine : LivingEntity
        // Debug.Log(_currentState._currentSuperState);
         //Debug.Log(_currentState._currentSubState);
         //Debug.Log(CurrentState);
-        characterController.Move(currentMovement * Time.deltaTime * moveSpeed);
+        characterController.Move((currentMovement+DashMultiplier) * Time.deltaTime * moveSpeed);
     }
     public void HandleInput()
     {

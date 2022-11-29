@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
     public void Loaded()
     {
         
-        Vector3 pos = SaveData.current.playerData.position;
+        Vector3 pos = new Vector3(SaveData.current.playerData.position.x, SaveData.current.playerData.position.y,0);
         for(int i = 0; i < saveTriggers.Count; i++)
         {
             if (Vector3.Distance(saveTriggers[i].transform.position,pos)<=3)

@@ -23,10 +23,10 @@ public class PlayerAttackState :PlayerBaseState
     }
     public override void ExitState() 
     {
-        Ctx.CurrentMovementX= 0;
+        Ctx.DashMultiplier= Vector3.zero;
         
-        
-       
+
+
     }
     public override void CheckSwitchState() 
     {
@@ -50,10 +50,10 @@ public class PlayerAttackState :PlayerBaseState
         Debug.Log("attackBeing Called");
         if (Ctx.InputManager.right)
         {
-            Ctx.CurrentMovementX = Ctx.DashVelocity;
+            Ctx.DashMultiplier = new Vector3 (Ctx.DashVelocity,0,0);
         }else if (Ctx.InputManager.left)
         {
-            Ctx.CurrentMovementX = -Ctx.DashVelocity;
+            Ctx.DashMultiplier = new Vector3(-Ctx.DashVelocity, 0, 0);
         }
     }
     void handleDamage()
