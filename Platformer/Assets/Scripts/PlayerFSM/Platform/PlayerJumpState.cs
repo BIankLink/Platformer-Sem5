@@ -12,7 +12,7 @@ public class PlayerJumpState : PlayerBaseState
 
     public override void EnterState() 
     {
-        AudioManager.instance.Play("Jump");
+        //AudioManager.instance.Play("Jump");
         InitializeSubState();
         HandleJump();
         Ctx.CanSwitch = false;

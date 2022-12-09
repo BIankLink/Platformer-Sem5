@@ -52,6 +52,7 @@ public class PlayerStateMachine : LivingEntity
     bool isSliding;
     [SerializeField]float attackCooldownTimer;
     [SerializeField] float attackCooldown = 2f;
+    public Vector3 externalMoveSpeed;
     
     //Getters Abnd Setters
     public PlayerBaseState CurrentState { get { return _currentState; } set { _currentState = value; }}
@@ -125,6 +126,7 @@ public class PlayerStateMachine : LivingEntity
         {
             attackCooldownTimer-=Time.deltaTime;
         }
+        Vector3 externalMovement = externalMoveSpeed;
         //Debug.Log(transform.position);
         //Debug.DrawRay(orientation.transform.position, Vector3.forward, Color.red, distToWallGround); 
         //Debug.DrawRay(orientation.transform.position, Vector3.down, Color.red, distToGround);
@@ -137,7 +139,7 @@ public class PlayerStateMachine : LivingEntity
        // Debug.Log(_currentState._currentSuperState);
         //Debug.Log(_currentState._currentSubState);
         //Debug.Log(CurrentState);
-        characterController.Move((currentMovement+DashMultiplier) * Time.deltaTime * moveSpeed);
+        characterController.Move((currentMovement+DashMultiplier+externalMoveSpeed) * Time.deltaTime * moveSpeed);
     }
     public void HandleInput()
     {
@@ -251,7 +253,17 @@ public class PlayerStateMachine : LivingEntity
         {
             TakeDamage(health);
         }
-       
+        if (hit.gameObject.GetComponentInParent<MovingPlatform>())
+        {
+            externalMoveSpeed = hit.gameObject.GetComponentInParent<MovingPlatform>().lastMoveDirection;
+        }
+        else
+        {
+            if (externalMoveSpeed != Vector3.zero)
+            {
+                externalMoveSpeed = Vector3.zero;
+            }
+        }
         //if (hit.gameObject.GetComponent<SaveMachine>())
         //{
         //    Debug.Log("saved");

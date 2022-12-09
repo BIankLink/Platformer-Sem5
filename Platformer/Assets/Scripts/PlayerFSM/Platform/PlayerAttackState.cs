@@ -12,7 +12,7 @@ public class PlayerAttackState :PlayerBaseState
 
     public override void EnterState() 
     {
-        AudioManager.instance.Play("Dash");
+       // AudioManager.instance.Play("Dash");
         Ctx.Animator.SetTrigger("isAttacking");
         HandleForce();
     }
