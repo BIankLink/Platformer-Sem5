@@ -24,7 +24,7 @@ public class MainMenu : MonoBehaviour
     {
         SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.taadap");
         executed = false;
-        
+        AudioManager.instance.Play("Ambience");
         if ((SaveData.current.playerData != null))
         {
             LoadGameButton.SetActive(true);

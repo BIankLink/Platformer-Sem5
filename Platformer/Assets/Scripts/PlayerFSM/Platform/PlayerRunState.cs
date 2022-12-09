@@ -11,7 +11,11 @@ public class PlayerRunState : PlayerBaseState
         _isSubState = true;
     }
 
-    public override void EnterState() {  }
+    public override void EnterState() 
+    {
+        AudioManager.instance.Play("Run");
+    }
+        
     public override void UpdateState()
     {
 
@@ -26,7 +30,7 @@ public class PlayerRunState : PlayerBaseState
     public override void ExitState() 
     { 
         Ctx.Animator.SetFloat("SpeedPercent", Ctx.Speed);
-       
+        AudioManager.instance.Stop("Run");
         
 
        

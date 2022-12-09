@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
 
-
+        AudioManager.instance.Play("Ambience");
 
 
         Debug.Log(SaveData.current);
