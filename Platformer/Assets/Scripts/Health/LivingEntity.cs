@@ -25,12 +25,7 @@ public class LivingEntity : MonoBehaviour,IDamageable
     {
         
         health -= damage;
-        if (gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Player  " + health);
-            
-            //gameObject.GetComponent<PlayerStateMachine>().CanSwitch=false;
-        }
+        
         if (health <= 0 && !dead)
         {
             Die();

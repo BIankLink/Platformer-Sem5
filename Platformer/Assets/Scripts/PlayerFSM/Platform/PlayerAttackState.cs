@@ -48,7 +48,7 @@ public class PlayerAttackState :PlayerBaseState
 
     void HandleForce()
     {
-        Debug.Log("attackBeing Called");
+        
         if (Ctx.InputManager.right)
         {
             Ctx.DashMultiplier = new Vector3 (Ctx.DashVelocity,0,0);

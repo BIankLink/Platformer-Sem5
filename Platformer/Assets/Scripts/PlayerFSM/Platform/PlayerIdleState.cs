@@ -28,7 +28,7 @@ public class PlayerIdleState : PlayerBaseState
     public override void ExitState() { }
     public override void CheckSwitchState()
     {
-        if (Ctx.IsMovePressed)
+        if (Ctx.IsMovePressed && !Ctx.Animator.GetCurrentAnimatorStateInfo(0).IsName("switchFail"))
         {
             SwitchState(Factory.platformRun());
             

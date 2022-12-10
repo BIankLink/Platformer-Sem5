@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         AudioManager.instance.Play("Ambience");
 
 
-        Debug.Log(SaveData.current);
+        //Debug.Log(SaveData.current);
         if (SaveData.current != null && !LevelManager.instance.newGame)
         {
             Loaded();
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
     public void Loaded()
     {
         
-        Vector3 pos = new Vector3(SaveData.current.playerData.position.x, SaveData.current.playerData.position.y,0);
+        Vector3 pos = new Vector3(SaveData.current.playerData.position.x, SaveData.current.playerData.position.y+1,0);
         for(int i = 0; i < saveTriggers.Count; i++)
         {
             if (Vector3.Distance(saveTriggers[i].transform.position,pos)<=3)

@@ -1,0 +1,1078 @@
+fileFormatVersion: 2
+guid: a8092343966da884c86676b960454f9b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SwipeDown_9
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 3912
+        width: 185
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb01c7e3c9466b42a7ca19f5370072c
+      internalID: 968985059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_14
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 3912
+        width: 163
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0153eb204b05e4289aef5fa0476788
+      internalID: 327225978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_21
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 3901
+        width: 145
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7aab48afe5a8104f809631c40bfe6a6
+      internalID: -1425519434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_23
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 3912
+        width: 177
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce9076de913ac34aad2bc018e90d617
+      internalID: -1806894930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_28
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 3912
+        width: 139
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9aa154e86dfb4a4eb02a8a7ee2a842c
+      internalID: -1415998542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_58
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 3311
+        width: 148
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e360a283a9ff0c1499e7e7becb0e4201
+      internalID: 943269421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_66
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 3311
+        width: 146
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34c866ad3d7d9f48a46b75a59d4f1f4
+      internalID: -583824807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_68
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 3311
+        width: 158
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73fd988c6dcfb145904f10311636773
+      internalID: 406743206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_73
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 3309
+        width: 131
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4264565bfe25d72488025686b8279694
+      internalID: 253534080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_74
+      rect:
+        serializedVersion: 2
+        x: 3545
+        y: 3311
+        width: 148
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a02eddbfac92744a9a301eed3422bd
+      internalID: -2114501602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_80
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 2683
+        width: 148
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75c9bdf45f422c4ca237f09387db166
+      internalID: -51883036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_81
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 2655
+        width: 144
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e40308a1f8912c498219351085048c2
+      internalID: 1809863749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_90
+      rect:
+        serializedVersion: 2
+        x: 1960
+        y: 2626
+        width: 129
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f9ccf7a3984f44e8fb3862a2328f70
+      internalID: -930824049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_96
+      rect:
+        serializedVersion: 2
+        x: 2758
+        y: 2595
+        width: 131
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cdbad0fc86b57c44ae9e80ab2269f95
+      internalID: 1641672475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_97
+      rect:
+        serializedVersion: 2
+        x: 3545
+        y: 2559
+        width: 146
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b0c950a5c5f5f4aac81c2ee2a76337
+      internalID: -1848283614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_111
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1941
+        width: 144
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3befabf7f972ba64c974c4cb4349f060
+      internalID: -814876336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_118
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 1913
+        width: 144
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8589c58ec8b88e044ab0d15829e8fd16
+      internalID: -1006957230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_121
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1886
+        width: 157
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a85da31de0a9e489622f0cc8780bee
+      internalID: 1452340883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_125
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 1858
+        width: 135
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a072e4d1383fa7444ae05c615718d3f9
+      internalID: 1162823392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_133
+      rect:
+        serializedVersion: 2
+        x: 3532
+        y: 1830
+        width: 161
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ff3e60a888b1b48a67276471946768
+      internalID: -242647216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_150
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 1194
+        width: 161
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a717bfda5c2d1640b609b59338e864a
+      internalID: -1420286032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_151
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 1194
+        width: 148
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6f081604196224f96a70863e4732f8
+      internalID: 684932150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_153
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 1201
+        width: 159
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95cd5cf50cdf9a43999555a3bad4a2a
+      internalID: 670411872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_155
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 1201
+        width: 169
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab77e6049b4f7d841a09c47269cab1e1
+      internalID: -1707733248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_156
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1194
+        width: 161
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755352eb0f027a64e80ce14841fcf813
+      internalID: -459682167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_174
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 591
+        width: 173
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c21bbd12a14fe4ab77a1efc08a10df
+      internalID: -756382266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_181
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 591
+        width: 150
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98b4f20531e56047b866a60baad04d2
+      internalID: 654305057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_183
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 600
+        width: 160
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a6e9241319e9f42b33be5ca812ed5f
+      internalID: -144559077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_184
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 677
+        width: 135
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0898db189f8d43b4cbcff6663c8177c4
+      internalID: 2133742598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_187
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 690
+        width: 141
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63855d97fb5f28f4caa5e69b1a223b7c
+      internalID: -659804532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_239
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 74
+        width: 172
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09839f6b6288a6f4db5103243abc4b98
+      internalID: -2063304636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SwipeDown_0
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 66
+        width: 199
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1315f2e1a4ee3b499608c62c965d217
+      internalID: 1607157272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SwipeDown_164: 1165309224
+      SwipeDown_12: -1760539396
+      SwipeDown_121: 1452340883
+      SwipeDown_251: -1465301259
+      SwipeDown_135: -679527170
+      SwipeDown_58: 943269421
+      SwipeDown_83: 670837095
+      SwipeDown_192: 158766922
+      SwipeDown_28: -1415998542
+      SwipeDown_33: -1177569169
+      SwipeDown_99: 890832215
+      SwipeDown_254: -1085378943
+      SwipeDown_40: 1359329264
+      SwipeDown_148: -543617956
+      SwipeDown_206: 2030111680
+      SwipeDown_231: -1977160599
+      SwipeDown_176: 978593547
+      SwipeDown_2: -613104938
+      SwipeDown_14: 327225978
+      SwipeDown_140: -70836226
+      SwipeDown_115: 218273009
+      SwipeDown_130: -1304376572
+      SwipeDown_230: 2096639918
+      SwipeDown_87: 2035408668
+      SwipeDown_243: 948296746
+      SwipeDown_111: -814876336
+      SwipeDown_134: -2111901044
+      SwipeDown_136: 1658636520
+      SwipeDown_147: 535548088
+      SwipeDown_196: -2055851932
+      SwipeDown_175: -1225920389
+      SwipeDown_69: -2024584293
+      SwipeDown_159: -1633422704
+      SwipeDown_20: -1730216376
+      SwipeDown_72: 884964756
+      SwipeDown_172: 352669181
+      SwipeDown_104: 1634842647
+      SwipeDown_92: 1550886878
+      SwipeDown_64: -1079361422
+      SwipeDown_34: 136875211
+      SwipeDown_118: -1006957230
+      SwipeDown_117: -772475192
+      SwipeDown_174: -756382266
+      SwipeDown_5: -925161490
+      SwipeDown_258: 250723028
+      SwipeDown_42: -1240688639
+      SwipeDown_81: 1809863749
+      SwipeDown_114: -344260575
+      SwipeDown_217: 1646981148
+      SwipeDown_199: 1353442138
+      SwipeDown_79: -1187945763
+      SwipeDown_101: -233270810
+      SwipeDown_3: -744945501
+      SwipeDown_189: 2094492353
+      SwipeDown_205: 2117505284
+      SwipeDown_214: 1104367186
+      SwipeDown_154: 1935109734
+      SwipeDown_204: -637727971
+      SwipeDown_63: -1280570969
+      SwipeDown_110: 2085789586
+      SwipeDown_80: -51883036
+      SwipeDown_238: 178151095
+      SwipeDown_10: 398703783
+      SwipeDown_86: 820962419
+      SwipeDown_71: 525553903
+      SwipeDown_145: -1617975961
+      SwipeDown_208: -855755425
+      SwipeDown_149: 808497519
+      SwipeDown_94: -1253606086
+      SwipeDown_242: -35591385
+      SwipeDown_35: -1691735442
+      SwipeDown_95: 1438269318
+      SwipeDown_247: -1730707662
+      SwipeDown_139: -92978031
+      SwipeDown_223: -1889652425
+      SwipeDown_245: 2066124858
+      SwipeDown_182: -107125648
+      SwipeDown_201: 1172472438
+      SwipeDown_235: -999758960
+      SwipeDown_84: 1642138630
+      SwipeDown_96: 1641672475
+      SwipeDown_21: -1425519434
+      SwipeDown_47: 1718967374
+      SwipeDown_142: 1955031974
+      SwipeDown_153: 670411872
+      SwipeDown_23: -1806894930
+      SwipeDown_165: 1980982291
+      SwipeDown_252: -368986951
+      SwipeDown_89: -2100632287
+      SwipeDown_91: -1638615740
+      SwipeDown_228: 1229745870
+      SwipeDown_158: -40019892
+      SwipeDown_122: 882820463
+      SwipeDown_171: -1944757527
+      SwipeDown_68: 406743206
+      SwipeDown_120: 6838367
+      SwipeDown_160: -1660125381
+      SwipeDown_107: 1807998283
+      SwipeDown_70: -1450895424
+      SwipeDown_221: -818485915
+      SwipeDown_32: -649867664
+      SwipeDown_183: -144559077
+      SwipeDown_0: 1607157272
+      SwipeDown_241: 1229088600
+      SwipeDown_195: -1617092974
+      SwipeDown_150: -1420286032
+      SwipeDown_90: -930824049
+      SwipeDown_239: -2063304636
+      SwipeDown_227: 1502616967
+      SwipeDown_24: -219045840
+      SwipeDown_37: -1032619226
+      SwipeDown_48: 486278790
+      SwipeDown_197: 1798467135
+      SwipeDown_138: 1118694106
+      SwipeDown_15: 578924447
+      SwipeDown_56: -394773471
+      SwipeDown_162: -728595340
+      SwipeDown_240: -805802125
+      SwipeDown_246: -1415130878
+      SwipeDown_249: -1960848908
+      SwipeDown_25: -1380863407
+      SwipeDown_157: 1810630765
+      SwipeDown_151: 684932150
+      SwipeDown_119: -836203933
+      SwipeDown_186: 2132165384
+      SwipeDown_59: -602813977
+      SwipeDown_203: 962788691
+      SwipeDown_125: 1162823392
+      SwipeDown_209: 171402047
+      SwipeDown_163: 1340026686
+      SwipeDown_188: -58095440
+      SwipeDown_41: -1787711139
+      SwipeDown_73: 253534080
+      SwipeDown_29: -1889886397
+      SwipeDown_66: -583824807
+      SwipeDown_38: -177400660
+      SwipeDown_161: 1830867690
+      SwipeDown_168: -1111547602
+      SwipeDown_132: 2070576108
+      SwipeDown_100: 309234215
+      SwipeDown_234: -429187799
+      SwipeDown_169: 1890119026
+      SwipeDown_218: 1033108577
+      SwipeDown_216: 939738783
+      SwipeDown_4: -1630713926
+      SwipeDown_229: 1293042839
+      SwipeDown_113: 1713330145
+      SwipeDown_259: 1489834225
+      SwipeDown_116: -2084989602
+      SwipeDown_26: -254836563
+      SwipeDown_141: -1473904508
+      SwipeDown_184: 2133742598
+      SwipeDown_52: 1328981717
+      SwipeDown_82: -476479003
+      SwipeDown_255: 1579454682
+      SwipeDown_19: -1785564173
+      SwipeDown_43: -779361936
+      SwipeDown_166: -610619050
+      SwipeDown_193: -2060553470
+      SwipeDown_213: -1971845981
+      SwipeDown_237: 2123894316
+      SwipeDown_220: -1426678370
+      SwipeDown_256: -1324461813
+      SwipeDown_156: -459682167
+      SwipeDown_173: -396298030
+      SwipeDown_105: 699603093
+      SwipeDown_36: 179949548
+      SwipeDown_67: 74085289
+      SwipeDown_39: -1890384527
+      SwipeDown_198: -1877091313
+      SwipeDown_200: 1953864124
+      SwipeDown_190: -737948617
+      SwipeDown_210: -340005423
+      SwipeDown_202: 1167118660
+      SwipeDown_75: 1367053341
+      SwipeDown_57: 224694844
+      SwipeDown_53: -1471231602
+      SwipeDown_253: -1756182364
+      SwipeDown_8: -985734462
+      SwipeDown_137: 758574834
+      SwipeDown_78: 1368819134
+      SwipeDown_30: 510752130
+      SwipeDown_108: -1991760726
+      SwipeDown_61: 631474358
+      SwipeDown_124: -614639730
+      SwipeDown_7: 797661623
+      SwipeDown_236: -227316641
+      SwipeDown_219: -1756165295
+      SwipeDown_103: 1635921863
+      SwipeDown_98: -2105165883
+      SwipeDown_85: -220229082
+      SwipeDown_112: 1556680618
+      SwipeDown_180: -1830011296
+      SwipeDown_76: -1879246069
+      SwipeDown_185: 2023794193
+      SwipeDown_46: -1668170230
+      SwipeDown_181: 654305057
+      SwipeDown_109: 720106451
+      SwipeDown_126: -982906451
+      SwipeDown_212: -1788151386
+      SwipeDown_51: 1843099568
+      SwipeDown_178: -214123808
+      SwipeDown_128: -292130853
+      SwipeDown_102: -531709462
+      SwipeDown_16: 942303901
+      SwipeDown_65: -1747852327
+      SwipeDown_177: 177262227
+      SwipeDown_144: -310856208
+      SwipeDown_49: 1974494210
+      SwipeDown_179: -584368341
+      SwipeDown_211: 258566648
+      SwipeDown_11: -1240504389
+      SwipeDown_17: -266255744
+      SwipeDown_194: 1678737135
+      SwipeDown_146: 1853436462
+      SwipeDown_167: -646861702
+      SwipeDown_62: 1856554317
+      SwipeDown_77: 459375718
+      SwipeDown_106: -1899686107
+      SwipeDown_224: -1569718474
+      SwipeDown_60: -947801464
+      SwipeDown_225: 157656794
+      SwipeDown_74: -2114501602
+      SwipeDown_233: 395329611
+      SwipeDown_6: 1641313878
+      SwipeDown_88: 1852606485
+      SwipeDown_248: -1981633960
+      SwipeDown_131: 1552453138
+      SwipeDown_18: -1008488505
+      SwipeDown_31: 691438880
+      SwipeDown_232: 206878393
+      SwipeDown_133: -242647216
+      SwipeDown_22: -1936022741
+      SwipeDown_155: -1707733248
+      SwipeDown_123: -1734307759
+      SwipeDown_1: -836785186
+      SwipeDown_44: 88080449
+      SwipeDown_54: -1648421879
+      SwipeDown_187: -659804532
+      SwipeDown_250: 1272730939
+      SwipeDown_207: 1875101794
+      SwipeDown_152: -626447765
+      SwipeDown_244: 237035785
+      SwipeDown_97: -1848283614
+      SwipeDown_13: -678113274
+      SwipeDown_222: -1204706861
+      SwipeDown_9: 968985059
+      SwipeDown_27: 1756020959
+      SwipeDown_93: 1244913946
+      SwipeDown_226: 1057055558
+      SwipeDown_127: -879317235
+      SwipeDown_143: 1610459674
+      SwipeDown_50: -754624663
+      SwipeDown_257: -332585133
+      SwipeDown_55: 1371169837
+      SwipeDown_170: 1959191497
+      SwipeDown_191: -1815474136
+      SwipeDown_215: 382373668
+      SwipeDown_129: -578294770
+      SwipeDown_45: 1862070016
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

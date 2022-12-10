@@ -95,7 +95,7 @@ public class ScenePartLoader : MonoBehaviour
     {
         if (!isLoaded)
         {
-            Debug.Log("LOading");
+            
             SceneManager.LoadSceneAsync(gameObject.name, LoadSceneMode.Additive);
             isLoaded = true;
         }

@@ -10,6 +10,7 @@ public class StartCutscene : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             splashArt.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -98,6 +98,7 @@ public class PlayerStateMachine : LivingEntity
     {
         base.Start();
         attackCooldownTimer = attackCooldown;
+        
        
     }
     void Awake()
@@ -134,7 +135,10 @@ public class PlayerStateMachine : LivingEntity
         //Debug.Log(CheckIfGrounded());
         HandleInput();
         _currentState.UpdateStates();
-        HandleRotation();
+        if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("switchFail"))
+        {
+            HandleRotation();
+        }
        // Debug.Log(_currentState._currentParentState);
        // Debug.Log(_currentState._currentSuperState);
         //Debug.Log(_currentState._currentSubState);
@@ -184,7 +188,7 @@ public class PlayerStateMachine : LivingEntity
         else { jumpCancel = false; }
     }
 
-    void HandleRotation()
+    public void HandleRotation()
     {
         Vector3 positionToLookAt;
 
@@ -193,8 +197,7 @@ public class PlayerStateMachine : LivingEntity
         positionToLookAt.z = 0;
 
         Quaternion currentRotation = transform.rotation;
-
-        if (isMovePressed)
+        if (isMovePressed && currentMovementInput!= Vector2.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
             transform.rotation = Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame);
