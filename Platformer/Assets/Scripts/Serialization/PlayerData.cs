@@ -11,6 +11,8 @@ public class PlayerData
     //public float[] rotation;
     public Vector3 position;
     public Quaternion rotation;
+    public bool firstBlood;
+
  
 
     public PlayerData(PlayerStateMachine player)
@@ -18,6 +20,7 @@ public class PlayerData
         lives = player.health;
         position = player.transform.position;
         rotation = player.transform.rotation;
+        firstBlood = GameManager.instance.firstDestroyedGrave;
         //position = new float[3];
         //position[0] = player.transform.position.x;
         //position[1] = player.transform.position.y;

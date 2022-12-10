@@ -52,7 +52,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform startPos;
     public PlayerStateMachine player;
     [SerializeField] List<SaveTrigger> saveTriggers = new List<SaveTrigger>();
-    
+    public bool firstDestroyedGrave;
+    public GameObject fadeblackSplash2;
     //public Button Load;
 
    
@@ -86,7 +87,13 @@ public class GameManager : MonoBehaviour
        
        
     }
-
+    private void FixedUpdate()
+    {
+        if (firstDestroyedGrave)
+        {
+            fadeblackSplash2.SetActive(true);
+        }
+    }
     public void Reload()
     {   
         SaveData.current = (SaveData)SerializationManager.Load(Application.persistentDataPath + "/saves/Save.taadap");
@@ -108,7 +115,7 @@ public class GameManager : MonoBehaviour
         }
         Quaternion rot = SaveData.current.playerData.rotation;
         StartCoroutine(spawn(Player, pos, rot));
-
+        firstDestroyedGrave = SaveData.current.playerData.firstBlood;
         player = Player.GetComponent<PlayerStateMachine>();
         player.health = SaveData.current.playerData.lives;
   

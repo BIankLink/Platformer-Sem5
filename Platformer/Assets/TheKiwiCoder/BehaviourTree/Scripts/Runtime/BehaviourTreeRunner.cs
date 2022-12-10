@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace TheKiwiCoder {
-    public class BehaviourTreeRunner : MonoBehaviour {
+    public class BehaviourTreeRunner : LivingEntity {
 
         // The main behaviour tree asset
         public BehaviourTree tree;
@@ -12,7 +12,12 @@ namespace TheKiwiCoder {
         Context context;
         [SerializeField]MeshFilter meshFilter;
         // Start is called before the first frame update
-        void Start() {
+        private void Awake()
+        {
+            OnDeath += onDeath;
+        }
+        protected override void Start() {
+            base.Start();
             context = CreateBehaviourTreeContext();
             tree = tree.Clone();
             tree.Bind(context);
@@ -42,6 +47,14 @@ namespace TheKiwiCoder {
                     n.OnDrawGizmos();
                 }
             });
+        }
+        void onDeath()
+        {
+            if (GameManager.instance.firstDestroyedGrave)
+            {
+                return;
+            }
+            GameManager.instance.firstDestroyedGrave=true;
         }
     }
 }

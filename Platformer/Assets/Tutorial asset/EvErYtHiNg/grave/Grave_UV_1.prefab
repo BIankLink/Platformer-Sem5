@@ -228,7 +228,6 @@ GameObject:
   - component: {fileID: 6030268351581583089}
   - component: {fileID: 4892314101009812898}
   - component: {fileID: 4892314101009812899}
-  - component: {fileID: 4892314101009812896}
   - component: {fileID: 8867850051643630500}
   m_Layer: 0
   m_Name: Grave_UV_1
@@ -342,23 +341,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 1
+  slowDuration: 1
   tree: {fileID: 11400000, guid: b2578b0bc9eb90f48aaf106b94d99ba1, type: 2}
   wayPoints: []
   meshFilter: {fileID: 4103926472724895238}
---- !u!114 &4892314101009812896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5237454840025798436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f696d47f653b0dd419a84a734a234608, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 1
-  slowDuration: 1
 --- !u!65 &8867850051643630500
 BoxCollider:
   m_ObjectHideFlags: 0
