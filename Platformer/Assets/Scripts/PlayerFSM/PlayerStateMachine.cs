@@ -96,7 +96,10 @@ public class PlayerStateMachine : LivingEntity
     [HideInInspector] public Vector3 DashMultiplier { get; set; } = Vector3.zero;
     protected override void Start()
     {
-        base.Start();
+        if (LevelManager.instance.newGame)
+        {
+            base.Start();
+        }
         attackCooldownTimer = attackCooldown;
         
        
@@ -252,13 +255,10 @@ public class PlayerStateMachine : LivingEntity
         {
             hit.gameObject.GetComponent<FallingPlatforms>().Fall();
         }
-        if (hit.gameObject.CompareTag("Dead"))
-        {
-            TakeDamage(health);
-        }
+        
         if (hit.gameObject.GetComponentInParent<MovingPlatform>())
         {
-            externalMoveSpeed = hit.gameObject.GetComponentInParent<MovingPlatform>().lastMoveDirection;
+            externalMoveSpeed = hit.gameObject.GetComponentInParent<MovingPlatform>().lastMoveDirection*0.5f;
         }
         else
         {

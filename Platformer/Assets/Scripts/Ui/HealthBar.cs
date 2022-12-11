@@ -11,14 +11,21 @@ public class HealthBar : MonoBehaviour
     {
         player = GameManager.instance.player;
         
-        fill.fillAmount = player.health/player.startingHealth;
+        
     }
     private void Update()
     {
-        
-        if (player.health!= player.startingHealth)
+        if (player != null)
         {
-            fill.fillAmount = player.health/player.startingHealth;
+            if (player.health != player.startingHealth)
+            {
+                fill.fillAmount = player.health / player.startingHealth;
+            }
+        }
+        if (player == null && GameManager.instance.player!= null)
+        {
+            player = GameManager.instance.player;
+            fill.fillAmount = player.health / player.startingHealth;
         }
     }
 }

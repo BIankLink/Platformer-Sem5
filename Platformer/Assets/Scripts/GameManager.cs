@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using GlobalEnums;
 
+
 public class GameManager : MonoBehaviour
 {
     #region Singelton
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         instance = this;
-
+        save = GetComponent<SaveMachine>();
         AudioManager.instance.Play("Ambience");
 
 
@@ -32,15 +33,17 @@ public class GameManager : MonoBehaviour
         if (LevelManager.instance.newGame)
         {
             SceneManager.LoadScene("Tutorial", LoadSceneMode.Additive);
-            StartCoroutine(spawn(Player, startPos.position, startPos.rotation));
-            player = Player.GetComponent<PlayerStateMachine>();
-            PlayerData p = new PlayerData(player);
+            player = Instantiate(Player, startPos.position, startPos.rotation).GetComponent<PlayerStateMachine>();
+            //StartCoroutine(spawn(Player, startPos.position, startPos.rotation));
 
-            //put values in p
-            SaveData s = new SaveData();
-            s.playerData = p;
+            //PlayerData p = new PlayerData(player);
 
-            SerializationManager.Save("Save", s);
+            ////put values in p
+            //SaveData s = new SaveData();
+            //s.playerData = p;
+
+            //SerializationManager.Save("Save", s);
+            save.mysave();
             LevelManager.instance.newGame = false;
 
 
@@ -52,8 +55,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform startPos;
     public PlayerStateMachine player;
     [SerializeField] List<SaveTrigger> saveTriggers = new List<SaveTrigger>();
-    public bool firstDestroyedGrave;
+    public bool firstDestroyedGrave=false;
     public GameObject fadeblackSplash2;
+    SaveMachine save;
+    [HideInInspector]public bool onlyOnce;
     //public Button Load;
 
    
@@ -72,26 +77,18 @@ public class GameManager : MonoBehaviour
         //    controller.SetupAi(true);
         //}
     }
+    
     private void Update()
-    {
-      
-
-        //if (deathPanel.activeInHierarchy)
-        //{
-        //    if (Input.GetButtonDown("AButton"))
-        //    {
-        //        Reload();
-        //    }
-        //}
-        
-       
-       
-    }
-    private void FixedUpdate()
     {
         if (firstDestroyedGrave)
         {
-            fadeblackSplash2.SetActive(true);
+            
+            if (!onlyOnce)
+            {
+                fadeblackSplash2.SetActive(true);
+                onlyOnce = true;
+                save.mysave();
+            }
         }
     }
     public void Reload()
@@ -104,7 +101,7 @@ public class GameManager : MonoBehaviour
     public void Loaded()
     {
         
-        Vector3 pos = new Vector3(SaveData.current.playerData.position.x, SaveData.current.playerData.position.y+1,0);
+        Vector3 pos = new Vector3(SaveData.current.playerData.position.x, SaveData.current.playerData.position.y+5f,0);
         for(int i = 0; i < saveTriggers.Count; i++)
         {
             if (Vector3.Distance(saveTriggers[i].transform.position,pos)<=3)
@@ -114,9 +111,10 @@ public class GameManager : MonoBehaviour
             }
         }
         Quaternion rot = SaveData.current.playerData.rotation;
-        StartCoroutine(spawn(Player, pos, rot));
+        //StartCoroutine(spawn(Player, pos, rot));
+        player = Instantiate(Player, pos, rot).GetComponent<PlayerStateMachine>();
         firstDestroyedGrave = SaveData.current.playerData.firstBlood;
-        player = Player.GetComponent<PlayerStateMachine>();
+        //player = Player.GetComponent<PlayerStateMachine>();
         player.health = SaveData.current.playerData.lives;
   
     }
@@ -130,9 +128,11 @@ public class GameManager : MonoBehaviour
 
     }
 
-    IEnumerator spawn(GameObject player,Vector3 pos,Quaternion rot)
+    IEnumerator spawn(GameObject PlayerObj,Vector3 pos,Quaternion rot)
     {
         yield return new WaitForSeconds(0);
-        Instantiate(player, pos, rot);
+        player = Instantiate(PlayerObj, pos, rot).GetComponent<PlayerStateMachine>();
+        
+
     }
 }

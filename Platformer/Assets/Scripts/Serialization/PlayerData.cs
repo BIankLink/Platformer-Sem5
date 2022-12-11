@@ -20,7 +20,7 @@ public class PlayerData
         lives = player.health;
         position = player.transform.position;
         rotation = player.transform.rotation;
-        firstBlood = GameManager.instance.firstDestroyedGrave;
+        firstBlood = GameManager.instance.onlyOnce;
         //position = new float[3];
         //position[0] = player.transform.position.x;
         //position[1] = player.transform.position.y;
