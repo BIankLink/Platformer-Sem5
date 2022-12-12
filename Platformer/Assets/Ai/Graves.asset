@@ -48,7 +48,7 @@ MonoBehaviour:
     Player: {fileID: 0}
   description: 
   drawGizmos: 0
-  duration: 1
+  duration: 0.04
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
     WayPoints: []
     moveToRandomPosition: {x: 0, y: 0, z: 0}
     itself: {fileID: 0}
-    damage: 20
+    damage: 1
     Player: {fileID: 0}
 --- !u!114 &389546767539189864
 MonoBehaviour:

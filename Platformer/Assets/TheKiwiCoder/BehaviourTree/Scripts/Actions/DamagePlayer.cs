@@ -6,10 +6,14 @@ using Unity.Burst.CompilerServices;
 
 public class DamagePlayer : ActionNode
 {
-    protected override void OnStart() {
+    protected override void OnStart()
+    {
+        
     }
 
-    protected override void OnStop() {
+    protected override void OnStop()
+    {
+        
     }
 
     protected override State OnUpdate() {
@@ -20,14 +24,10 @@ public class DamagePlayer : ActionNode
         if (damageableObject != null)
         {
             damageableObject.TakeDamage(blackboard.damage);
-            return State.Running;
-        }
-        if (damageableObject == null)
-        {
-            return State.Failure;
+            return State.Success;
         }
         }
+        return State.Failure;
         
-        return State.Success;
     }
 }

@@ -9,6 +9,7 @@ namespace TheKiwiCoder {
 
         protected override void OnStart() {
             startTime = Time.time;
+            
         }
 
         protected override void OnStop() {

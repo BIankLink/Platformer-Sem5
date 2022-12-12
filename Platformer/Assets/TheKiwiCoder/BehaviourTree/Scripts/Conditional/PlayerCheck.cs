@@ -11,7 +11,11 @@ namespace TheKiwiCoder
         public override bool Condition()
         {
             
-            return target;
+            if(target == null)
+            {
+                return false;
+            }
+            return true;
         }
 
         protected override void OnStart()
@@ -34,7 +38,7 @@ namespace TheKiwiCoder
             {
                 target.gameObject.GetComponent<PlayerStateMachine>().MoveSpeed /= 2;
                 player = target;
-                Debug.Log(target.gameObject.GetComponent<PlayerStateMachine>().MoveSpeed);
+                
                 
             }
             if(player!= null)

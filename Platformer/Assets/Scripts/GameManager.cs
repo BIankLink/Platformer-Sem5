@@ -43,9 +43,10 @@ public class GameManager : MonoBehaviour
             //s.playerData = p;
 
             //SerializationManager.Save("Save", s);
+            player.health = player.startingHealth;
             save.mysave();
+            
             LevelManager.instance.newGame = false;
-
 
         }
            
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<SaveTrigger> saveTriggers = new List<SaveTrigger>();
     public bool firstDestroyedGrave=false;
     public GameObject fadeblackSplash2;
+    [SerializeField] HealthBar healthBar;
     SaveMachine save;
     [HideInInspector]public bool onlyOnce;
     //public Button Load;
@@ -90,6 +92,7 @@ public class GameManager : MonoBehaviour
                 save.mysave();
             }
         }
+        
     }
     public void Reload()
     {   
@@ -113,9 +116,10 @@ public class GameManager : MonoBehaviour
         Quaternion rot = SaveData.current.playerData.rotation;
         //StartCoroutine(spawn(Player, pos, rot));
         player = Instantiate(Player, pos, rot).GetComponent<PlayerStateMachine>();
-        firstDestroyedGrave = SaveData.current.playerData.firstBlood;
+        onlyOnce = SaveData.current.playerData.firstBlood;
         //player = Player.GetComponent<PlayerStateMachine>();
         player.health = SaveData.current.playerData.lives;
+        healthBar.fill.fillAmount = player.health / player.startingHealth;
   
     }
     public void Die()
